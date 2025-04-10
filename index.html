@@ -6,24 +6,26 @@
     <title>Mama's Top Picks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Amatic+SC:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #4CAF50;
-            --primary-light: #8BC34A;
-            --primary-dark: #2E7D32;
+            --primary-color: #5D5FEF; /* Blue-purple instead of green */
+            --primary-light: #8286FF;
+            --primary-dark: #4245C3;
             --accent-color: #FF9800;
             --text-color: #333;
             --bg-color: #f9f9f9;
             --card-color: #fff;
             --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --link-color: #3F51B5;
+            --link-hover-color: #303F9F;
             
             /* Category Colors */
             --supplements-color: #8E44AD;
             --cleaning-color: #3498DB;
             --cookware-color: #E74C3C;
-            --drinks-color: #2ECC71;
+            --drinks-color: #1ABC9C; /* Changed from green */
             --other-consumables-color: #F39C12;
             --pantry-color: #16A085;
             --personal-care-color: #9B59B6;
@@ -35,24 +37,60 @@
             --bread-color: #F1C40F;
             --fridge-color: #3498DB;
             --dental-color: #9B59B6;
-            --drink-color: #2ECC71;
+            --drink-color: #1ABC9C; /* Changed from green */
+        }
+
+        /* Dark mode theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #7376FF; /* Lighter blue-purple for dark mode */
+                --primary-light: #9597FF;
+                --primary-dark: #5658D0;
+                --accent-color: #FFA726;
+                --text-color: #e0e0e0;
+                --bg-color: #121212;
+                --card-color: #1e1e1e;
+                --shadow: 0 4px 12px rgba(0,0,0,0.3);
+                --link-color: #7986CB;
+                --link-hover-color: #9FA8DA;
+                
+                /* Adjust category colors to be slightly brighter in dark mode */
+                --supplements-color: #9B59B6;
+                --cleaning-color: #3498DB;
+                --cookware-color: #E74C3C;
+                --drinks-color: #1DDBB8; /* Brighter teal for dark mode */
+                --other-consumables-color: #F39C12;
+                --pantry-color: #16A085;
+                --personal-care-color: #9B59B6;
+                --medical-color: #E74C3C;
+                --bags-color: #546E7A;
+                --electronics-color: #90A4AE;
+                --clothing-color: #26C6DA;
+                --books-color: #E67E22;
+                --bread-color: #F4D03F;
+                --fridge-color: #5DADE2;
+                --dental-color: #AF7AC5;
+                --drink-color: #1DDBB8; /* Brighter teal for dark mode */
+            }
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif; /* New font for the entire site */
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
-            background: linear-gradient(135deg, #88c97a 0%, #2E7D32 50%, #155724 100%);
+            background: linear-gradient(135deg, var(--supplements-color) 0%, var(--cleaning-color) 30%, 
+                        var(--pantry-color) 50%, var(--clothing-color) 70%, var(--books-color) 100%);
             color: white;
             text-align: center;
             padding: 3rem 1rem;
@@ -92,15 +130,22 @@
             left: 0;
             right: 0;
             height: 20px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none"><path d="M0,0 C300,30 900,30 1200,0 L1200,30 L0,30 Z" fill="white"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none"><path d="M0,0 C300,30 900,30 1200,0 L1200,30 L0,30 Z" fill="%23f9f9f9"/></svg>');
             background-size: 100% 100%;
             z-index: 2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .header-decor {
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" preserveAspectRatio="none"><path d="M0,0 C300,30 900,30 1200,0 L1200,30 L0,30 Z" fill="%23121212"/></svg>');
+            }
         }
 
         h1 {
             margin-bottom: 0.7rem;
             font-size: 3.5rem;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif; /* Same font as the rest of the page now */
+            font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             letter-spacing: 1px;
         }
@@ -111,7 +156,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             opacity: 0.9;
         }
 
@@ -130,9 +175,10 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: var(--shadow);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        .search-bar, .category-filter, .brand-filter {
+        .search-bar, .category-filter {
             flex: 1;
             min-width: 250px;
         }
@@ -156,6 +202,8 @@
             border-radius: 4px;
             font-size: 1rem;
             transition: all 0.3s ease;
+            background-color: var(--card-color);
+            color: var(--text-color);
         }
 
         input[type="text"] {
@@ -165,7 +213,21 @@
         input[type="text"]:focus, select:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+            box-shadow: 0 0 0 3px rgba(93, 95, 239, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            input[type="text"], select {
+                border-color: #444;
+            }
+            
+            input[type="text"]:focus, select:focus {
+                box-shadow: 0 0 0 3px rgba(115, 118, 255, 0.3);
+            }
+            
+            .search-icon {
+                color: #999;
+            }
         }
 
         label {
@@ -186,7 +248,7 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
             position: relative;
             border-top: 5px solid #ccc; /* Default border color, will be overridden */
         }
@@ -212,6 +274,12 @@
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .product-card:hover {
+                box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            }
         }
 
         .product-category {
@@ -252,14 +320,14 @@
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary-dark);
+            color: var(--link-color);
             text-decoration: none;
             display: block;
             transition: color 0.3s ease;
         }
 
         .product-name:hover {
-            color: var(--primary-color);
+            color: var(--link-hover-color);
         }
 
         .product-brand {
@@ -275,6 +343,16 @@
             margin-top: 0.5rem;
         }
 
+        @media (prefers-color-scheme: dark) {
+            .product-brand {
+                color: #aaa;
+            }
+            
+            .product-notes {
+                color: #bbb;
+            }
+        }
+
         .no-results {
             text-align: center;
             grid-column: 1 / -1;
@@ -282,6 +360,7 @@
             background-color: var(--card-color);
             border-radius: 8px;
             box-shadow: var(--shadow);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         .no-results i {
@@ -297,6 +376,7 @@
             background-color: var(--primary-dark);
             color: white;
             margin-top: 3rem;
+            transition: background-color 0.3s;
         }
 
         .affiliate-notice {
@@ -343,7 +423,7 @@
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid rgba(76, 175, 80, 0.2);
+            border: 5px solid rgba(93, 95, 239, 0.2);
             border-radius: 50%;
             border-top-color: var(--primary-color);
             animation: spin 1s linear infinite;
@@ -353,6 +433,13 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .spinner {
+                border-color: rgba(115, 118, 255, 0.1);
+                border-top-color: var(--primary-color);
+            }
         }
 
         @media (max-width: 768px) {
@@ -388,13 +475,6 @@
                 <select id="category">
                     <option value="">All Categories</option>
                     <!-- Categories will be populated by JS -->
-                </select>
-            </div>
-            <div class="brand-filter">
-                <label for="brand">Filter by Brand</label>
-                <select id="brand">
-                    <option value="">All Brands</option>
-                    <!-- Brands will be populated by JS -->
                 </select>
             </div>
         </div>
@@ -853,7 +933,6 @@
             const productsContainer = document.getElementById('products-container');
             const searchInput = document.getElementById('search');
             const categorySelect = document.getElementById('category');
-            const brandSelect = document.getElementById('brand');
             const backToTop = document.getElementById('back-to-top');
 
             // Category colors mapping
@@ -883,15 +962,6 @@
                 option.value = category;
                 option.textContent = category;
                 categorySelect.appendChild(option);
-            });
-
-            // Get unique brands and populate the dropdown
-            const brands = [...new Set(productsData.map(product => product.Brand))].sort();
-            brands.forEach(brand => {
-                const option = document.createElement('option');
-                option.value = brand;
-                option.textContent = brand;
-                brandSelect.appendChild(option);
             });
 
             // Function to render products
@@ -935,18 +1005,17 @@
                 });
             }
 
-            // Filter products based on search, category, and brand
+            // Filter products based on search and category
             function filterProducts() {
                 const searchTerm = searchInput.value.toLowerCase();
                 const selectedCategory = categorySelect.value;
-                const selectedBrand = brandSelect.value;
                 
                 const filteredProducts = productsData.filter(product => {
-                    const matchesSearch = product.Product.toLowerCase().includes(searchTerm);
+                    const matchesSearch = product.Product.toLowerCase().includes(searchTerm) || 
+                                         product.Brand.toLowerCase().includes(searchTerm);
                     const matchesCategory = selectedCategory === '' || product.Category === selectedCategory;
-                    const matchesBrand = selectedBrand === '' || product.Brand === selectedBrand;
                     
-                    return matchesSearch && matchesCategory && matchesBrand;
+                    return matchesSearch && matchesCategory;
                 });
                 
                 renderProducts(filteredProducts);
@@ -955,7 +1024,6 @@
             // Event listeners
             searchInput.addEventListener('input', filterProducts);
             categorySelect.addEventListener('change', filterProducts);
-            brandSelect.addEventListener('change', filterProducts);
 
             // Back to top button logic
             window.addEventListener('scroll', () => {
