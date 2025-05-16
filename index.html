@@ -3,1514 +3,746 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama's Top Picks</title>
+    <title>NontoxicGoods.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Basic SEO Metadata -->
+    <title>NontoxicGoods.com - Discover Products Free from Harmful Chemicals</title>
+    <meta name="description" content="A curated collection of non-toxic products for your home, personal care, and more.">
+    <link rel="canonical" href="https://nontoxicgoods.com">
+
+    <!-- Open Graph / Facebook Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nontoxicgoods.com">
+    <meta property="og:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
+    <meta property="og:description" content="Discover our carefully selected collection of non-toxic, environmentally friendly products.">
+    <meta property="og:image" content="https://nontoxicgoods.com/social.png">
+    <meta property="og:site_name" content="NontoxicGoods">
+
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nontoxicgoods.com">
+    <meta name="twitter:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
+    <meta name="twitter:description" content="Discover our carefully selected collection of non-toxic, environmentally friendly products.">
+    <meta name="twitter:image" content="https://nontoxicgoods.com/social.png">
+
+    <!-- Favicon (Leaf Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
     <style>
+        /* Base Styles and Variables */
         :root {
-            --primary-color: #5D5FEF;
-            --primary-light: #8286FF;
-            --primary-dark: #4245C3;
-            --accent-color: #FF9800;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --card-color: #fff;
-            --shadow: 0 4px 12px rgba(0,0,0,0.1);
-            --link-color: #3F51B5;
-            --link-hover-color: #303F9F;
+            /* Light Theme (default) */
+            --background: #f9f5f1;
+            --background-card: #ffffff;
+            --text-primary: #3e3a39;
+            --text-secondary: #5a5655;
+            --accent: #d8b3a5;
+            --accent-light: #e8d1c9;
+            --border: #e6e0dc;
+            --shadow: rgba(0, 0, 0, 0.05);
             
-            /* Category Colors */
-            --supplements-color: #8E44AD;
-            --cleaning-color: #3498DB;
-            --cookware-color: #E74C3C;
-            --drinks-color: #1ABC9C;
-            --other-consumables-color: #F39C12;
-            --pantry-color: #16A085;
-            --personal-care-color: #9B59B6;
-            --medical-color: #E74C3C;
-            --bags-color: #34495E;
-            --electronics-color: #7F8C8D;
-            --clothing-color: #1ABC9C;
-            --books-color: #D35400;
-            --bread-color: #F1C40F;
-            --fridge-color: #3498DB;
-            --dental-color: #9B59B6;
-            --drink-color: #1ABC9C;
-            --usa-color: #3A5998;
+            /* Common variables */
+            --border-radius: 8px;
+            --container-max-width: 1200px;
+            --header-font: 'Playfair Display', serif;
+            --body-font: 'Lora', serif;
+            --ui-font: 'DM Sans', sans-serif;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
         }
 
-        /* Dark mode theme */
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --background: #3e3a39;
+            --background-card: #4e4a49;
+            --text-primary: #f9f5f1;
+            --text-secondary: #e6e0dc;
+            --accent: #d8b3a5;
+            --accent-light: #86716a;
+            --border: #555050;
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media query for dark theme preference */
         @media (prefers-color-scheme: dark) {
             :root {
-                --primary-color: #7376FF;
-                --primary-light: #9597FF;
-                --primary-dark: #5658D0;
-                --accent-color: #FFA726;
-                --text-color: #e0e0e0;
-                --bg-color: #121212;
-                --card-color: #1e1e1e;
-                --shadow: 0 4px 12px rgba(0,0,0,0.3);
-                --link-color: #7986CB;
-                --link-hover-color: #9FA8DA;
-                
-                /* Adjusted category colors for dark mode */
-                --supplements-color: #9B59B6;
-                --cleaning-color: #3498DB;
-                --cookware-color: #E74C3C;
-                --drinks-color: #1DDBB8;
-                --other-consumables-color: #F39C12;
-                --pantry-color: #16A085;
-                --personal-care-color: #9B59B6;
-                --medical-color: #E74C3C;
-                --bags-color: #546E7A;
-                --electronics-color: #90A4AE;
-                --clothing-color: #26C6DA;
-                --books-color: #E67E22;
-                --bread-color: #F4D03F;
-                --fridge-color: #5DADE2;
-                --dental-color: #AF7AC5;
-                --drink-color: #1DDBB8;
-                --usa-color: #4A6EAF;
+                --background: #3e3a39;
+                --background-card: #4e4a49;
+                --text-primary: #f9f5f1;
+                --text-secondary: #e6e0dc;
+                --accent: #d8b3a5;
+                --accent-light: #86716a;
+                --border: #555050;
+                --shadow: rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Override for users who specifically chose light theme */
+            [data-theme="light"] {
+                --background: #f9f5f1;
+                --background-card: #ffffff;
+                --text-primary: #3e3a39;
+                --text-secondary: #5a5655;
+                --accent: #d8b3a5;
+                --accent-light: #e8d1c9;
+                --border: #e6e0dc;
+                --shadow: rgba(0, 0, 0, 0.05);
             }
         }
 
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: var(--body-font);
+            background-color: var(--background);
+            color: var(--text-primary);
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Modern header with gradient background */
-        header {
-            background: linear-gradient(135deg, var(--supplements-color) 0%, var(--cleaning-color) 30%, 
-                        var(--pantry-color) 50%, var(--clothing-color) 70%, var(--books-color) 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        /* Modern animated dots pattern for header */
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 20%),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 20%);
-            opacity: 0.8;
-            z-index: 0;
-        }
-
-        /* Removed the curved decoration as requested */
-        .header-decor {
-            display: none;
-        }
-
-        h1 {
-            margin-bottom: 0.7rem;
-            font-size: 3.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 1px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
-            max-width: 1200px;
+            width: 90%;
+            max-width: var(--container-max-width);
             margin: 0 auto;
-            padding: 1.5rem;
+            padding: var(--spacing-md);
         }
 
-        /* Sticky filter bar */
-        .filters-container {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: var(--bg-color);
-            padding: 1rem 0;
-            margin-bottom: 1rem;
-            transition: background-color 0.3s;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        .filters {
+        h1, h2, h3, h4 {
+            font-family: var(--header-font);
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        button, input, select {
+            font-family: var(--ui-font);
+            border: none;
+            outline: none;
+        }
+
+        /* Header Styles */
+        header {
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-family: var(--ui-font);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Theme Switch */
+        .theme-switch-wrapper {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            background-color: var(--card-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: background-color 0.3s, box-shadow 0.3s;
+            align-items: center;
+            justify-content: center;
+            margin-top: var(--spacing-md);
         }
 
-        .search-bar, .category-filter, .country-filter {
-            flex: 1;
-            min-width: 250px;
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 48px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .slider {
+            background-color: var(--text-secondary);
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+        }
+
+        .slider:before {
+            background-color: var(--background);
+            bottom: 4px;
+            content: "";
+            height: 16px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 16px;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        #theme-mode {
+            margin-left: var(--spacing-sm);
+            font-family: var(--ui-font);
+            font-size: 0.9rem;
+        }
+
+        /* Filters Section */
+        .filters {
+            margin: var(--spacing-lg) 0;
         }
 
         .search-container {
-            position: relative;
+            margin-bottom: var(--spacing-lg);
         }
 
-        .search-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #777;
-        }
-
-        input[type="text"], select {
+        #search {
             width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: var(--spacing-md);
             font-size: 1rem;
+            border-radius: var(--border-radius);
+            background-color: var(--background-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
             transition: all 0.3s ease;
-            background-color: var(--card-color);
-            color: var(--text-color);
         }
 
-        input[type="text"] {
-            padding-left: 2.5rem;
+        #search:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-light);
         }
 
-        input[type="text"]:focus, select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(93, 95, 239, 0.2);
+        .filter-categories, .filter-countries {
+            margin-bottom: var(--spacing-lg);
         }
 
-        @media (prefers-color-scheme: dark) {
-            input[type="text"], select {
-                border-color: #444;
-            }
-            
-            input[type="text"]:focus, select:focus {
-                box-shadow: 0 0 0 3px rgba(115, 118, 255, 0.3);
-            }
-            
-            .search-icon {
-                color: #999;
-            }
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        /* Quick filter buttons */
-        .quick-filters {
+        .filter-chips {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
         }
 
-        .quick-filter-btn {
-            border: none;
+        .filter-chip {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background-color: var(--background-card);
+            border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 0.5rem 1rem;
+            font-family: var(--ui-font);
             font-size: 0.9rem;
+            color: var(--text-secondary);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+        }
+
+        .filter-chip:hover {
+            background-color: var(--accent-light);
+            color: var(--text-primary);
+        }
+
+        .filter-chip.active {
+            background-color: var(--accent);
             color: white;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            font-weight: 500;
+            border-color: var(--accent);
         }
 
-        /* Specific color styles for filter buttons */
-        .quick-filter-btn.usa-filter {
-            background-color: white;
-            color: var(--usa-color);
-            border: 2px solid var(--usa-color);
+        .clear-btn {
+            background-color: transparent;
+            color: var(--accent);
+            font-family: var(--ui-font);
+            font-size: 0.9rem;
+            border: 1px solid var(--accent);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        .quick-filter-btn.usa-filter:hover, 
-        .quick-filter-btn.usa-filter.active {
-            background-color: var(--usa-color);
+        .clear-btn:hover {
+            background-color: var(--accent);
             color: white;
         }
 
-        .quick-filter-btn.supplements-filter {
-            background-color: var(--supplements-color);
-        }
-
-        .quick-filter-btn.clothing-filter {
-            background-color: var(--clothing-color);
-        }
-
-        .quick-filter-btn.pantry-filter {
-            background-color: var(--pantry-color);
-        }
-
-        .quick-filter-btn.cleaning-filter {
-            background-color: var(--cleaning-color);
-        }
-
-        .quick-filter-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        .quick-filter-btn.active {
-            box-shadow: 0 0 0 2px rgba(255,255,255,0.7);
+        /* Products Section */
+        #products-count {
+            margin-bottom: var(--spacing-md);
+            font-family: var(--ui-font);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(1, 1fr);
+            gap: var(--spacing-md);
         }
 
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--text-secondary);
+            font-family: var(--ui-font);
+        }
+
+        /* Product Card Styles */
         .product-card {
-            background-color: var(--card-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
-            position: relative;
-            border-top: 5px solid #ccc;
+            display: block;
+            background-color: var(--background-card);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            box-shadow: 0 2px 8px var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 100%;
         }
-
-        /* Category-specific border colors */
-        .product-card.category-supplements { border-top-color: var(--supplements-color); }
-        .product-card.category-cleaning { border-top-color: var(--cleaning-color); }
-        .product-card.category-cookware { border-top-color: var(--cookware-color); }
-        .product-card.category-drinks { border-top-color: var(--drinks-color); }
-        .product-card.category-drink { border-top-color: var(--drink-color); }
-        .product-card.category-other-consumables { border-top-color: var(--other-consumables-color); }
-        .product-card.category-pantry { border-top-color: var(--pantry-color); }
-        .product-card.category-personal-care { border-top-color: var(--personal-care-color); }
-        .product-card.category-medical { border-top-color: var(--medical-color); }
-        .product-card.category-bags { border-top-color: var(--bags-color); }
-        .product-card.category-electronics { border-top-color: var(--electronics-color); }
-        .product-card.category-clothing { border-top-color: var(--clothing-color); }
-        .product-card.category-books { border-top-color: var(--books-color); }
-        .product-card.category-bread { border-top-color: var(--bread-color); }
-        .product-card.category-fridge { border-top-color: var(--fridge-color); }
-        .product-card.category-dental { border-top-color: var(--dental-color); }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px var(--shadow);
         }
 
-        @media (prefers-color-scheme: dark) {
-            .product-card:hover {
-                box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-            }
-        }
-
-        .product-category {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0.3rem 0.8rem;
-            border-radius: 0 8px 0 8px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: white;
-            background-color: #ccc;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .category-icon {
-            font-size: 0.9rem;
-        }
-
-        /* Category-specific label colors */
-        .product-category.supplements { background-color: var(--supplements-color); }
-        .product-category.cleaning { background-color: var(--cleaning-color); }
-        .product-category.cookware { background-color: var(--cookware-color); }
-        .product-category.drinks { background-color: var(--drinks-color); }
-        .product-category.drink { background-color: var(--drink-color); }
-        .product-category.other-consumables { background-color: var(--other-consumables-color); }
-        .product-category.pantry { background-color: var(--pantry-color); }
-        .product-category.personal-care { background-color: var(--personal-care-color); }
-        .product-category.medical { background-color: var(--medical-color); }
-        .product-category.bags { background-color: var(--bags-color); }
-        .product-category.electronics { background-color: var(--electronics-color); }
-        .product-category.clothing { background-color: var(--clothing-color); }
-        .product-category.books { background-color: var(--books-color); }
-        .product-category.bread { background-color: var(--bread-color); }
-        .product-category.fridge { background-color: var(--fridge-color); }
-        .product-category.dental { background-color: var(--dental-color); }
-
-        .product-content {
-            padding: 1.5rem;
-        }
-
-        .product-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-name {
-            margin-bottom: 0.5rem;
+        .product-title {
+            font-family: var(--header-font);
             font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--link-color);
-            text-decoration: none;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .product-name:hover {
-            color: var(--link-hover-color);
+            margin-bottom: var(--spacing-xs);
         }
 
         .product-brand {
+            font-family: var(--ui-font);
             font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .origin-flag {
-            font-size: 1.2rem;
-            margin-left: 0.2rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: var(--spacing-xs);
         }
 
         .product-notes {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 0.5rem;
-            line-height: 1.4;
+            font-family: var(--body-font);
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
         }
 
-        @media (prefers-color-scheme: dark) {
-            .product-brand {
-                color: #aaa;
-            }
-            
-            .product-notes {
-                color: #bbb;
-            }
-        }
-
-        .product-actions {
+        .product-meta {
             display: flex;
             justify-content: space-between;
-            margin-top: 1rem;
-            align-items: center;
+            font-family: var(--ui-font);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
 
-        .copy-link-btn {
-            background: transparent;
-            border: none;
-            color: var(--link-color);
-            font-size: 0.9rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-            transition: all 0.2s ease;
+        /* Category colors */
+        .product-card[data-category="Personal Care"] {
+            border-left: 4px solid #e6a4b4;
         }
 
-        .copy-link-btn:hover {
-            background-color: rgba(93, 95, 239, 0.1);
+        .product-card[data-category="Kitchen"] {
+            border-left: 4px solid #b6d7a8;
         }
 
-        .product-made-in {
-            font-size: 0.85rem;
-            color: #777;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
+        .product-card[data-category="Cleaning"] {
+            border-left: 4px solid #9fc5e8;
         }
 
-        @media (prefers-color-scheme: dark) {
-            .copy-link-btn {
-                color: var(--link-color);
-            }
-            
-            .copy-link-btn:hover {
-                background-color: rgba(115, 118, 255, 0.2);
-            }
-            
-            .product-made-in {
-                color: #999;
-            }
+        .product-card[data-category="Home"] {
+            border-left: 4px solid #d5a6bd;
         }
 
-        .no-results {
-            text-align: center;
-            grid-column: 1 / -1;
-            padding: 2rem;
-            background-color: var(--card-color);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: background-color 0.3s, box-shadow 0.3s;
+        .product-card[data-category="Beauty"] {
+            border-left: 4px solid #c27ba0;
         }
 
-        .no-results i {
-            font-size: 3rem;
-            color: var(--primary-light);
-            margin-bottom: 1rem;
-            display: block;
-        }
-
+        /* Footer Styles */
         footer {
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-lg) 0;
+            border-top: 1px solid var(--border);
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--primary-dark);
-            color: white;
-            margin-top: 3rem;
-            transition: background-color 0.3s;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .footer-section p {
+            color: var(--text-secondary);
+            font-family: var(--ui-font);
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
         }
 
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-        }
-
-        .footer-section a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
-
-        .copyright {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .affiliate-notice {
-            font-style: italic;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            opacity: 0.9;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: var(--primary-color);
-            color: white;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 90;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--primary-dark);
-        }
-
-        /* Loader */
-        .loader {
-            text-align: center;
-            padding: 2rem;
-            grid-column: 1 / -1;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(93, 95, 239, 0.2);
-            border-radius: 50%;
-            border-top-color: var(--primary-color);
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .spinner {
-                border-color: rgba(115, 118, 255, 0.1);
-                border-top-color: var(--primary-color);
-            }
-        }
-
-        /* About section */
-        .about-section {
-            background-color: var(--card-color);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .about-section h2 {
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-        }
-
-        .about-section p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Notification */
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .notification.show {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
+        /* Responsive Breakpoints */
+        @media (min-width: 500px) {
             .products-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--spacing-lg);
+            }
+            
+            .search-container {
+                width: 100%;
+                margin-bottom: var(--spacing-md);
+            }
+            
+            .filter-categories, .filter-countries {
+                flex: 1;
+                min-width: 200px;
+                margin-bottom: var(--spacing-md);
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>Mama's Top Picks</h1>
-            <p class="subtitle">Family-vetted goods. Avoid toxins, expect high-quality, and support Made in USA companies.</p>
+        <div class="container">
+            <h1>NontoxicGoods.com</h1>
+            <p class="tagline">Discover products free from harmful chemicals</p>
+            
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span id="theme-mode">Light Mode</span>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="about-section">
-            <h2>About Our Non-Toxic Product Picks</h2>
-            <p>Welcome to our carefully curated selection of high-quality, non-toxic products. We prioritize items that are free from harmful chemicals, heirloom quality, and whenever possible, made in the USA.</p>
-            <p>Each product has been thoroughly researched, and many have been personally tested by our family. We consider factors like ingredient safety, manufacturing practices, and third-party testing to ensure we're recommending only the best options for your home and family.</p>
-        </div>
-        
-        <div class="filters-container">
-            <div class="filters">
-                <div class="search-bar">
-                    <label for="search">Search Products</label>
-                    <div class="search-container">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" id="search" placeholder="Type product name or brand...">
-                    </div>
-                </div>
-                <div class="category-filter">
-                    <label for="category">Filter by Category</label>
-                    <select id="category">
-                        <option value="">All Categories</option>
-                        <!-- Categories will be populated by JS -->
-                    </select>
-                </div>
-                <div class="country-filter">
-                    <label for="country">Filter by Made In</label>
-                    <select id="country">
-                        <option value="">All Countries</option>
-                        <!-- Countries will be populated by JS -->
-                    </select>
-                </div>
+    <main class="container">
+        <section class="filters">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search products...">
             </div>
             
-            <div class="quick-filters">
-                <button class="quick-filter-btn usa-filter" data-country="USA">🇺🇸 Made in USA</button>
-                <button class="quick-filter-btn supplements-filter" data-category="Supplements"><i class="fas fa-pills"></i> Supplements</button>
-                <button class="quick-filter-btn clothing-filter" data-category="Clothing"><i class="fas fa-shirt"></i> Clothing</button>
-                <button class="quick-filter-btn pantry-filter" data-category="Pantry"><i class="fas fa-cookie"></i> Pantry</button>
-                <button class="quick-filter-btn cleaning-filter" data-category="Cleaning"><i class="fas fa-spray-can-sparkles"></i> Cleaning</button>
+            <div class="filter-categories">
+                <h3>Categories</h3>
+                <div id="category-filters" class="filter-chips"></div>
             </div>
-        </div>
-
-        <div id="products-container" class="products-grid">
-            <!-- Products will be populated by JS -->
-            <div class="loader">
-                <div class="spinner"></div>
-                <p>Loading products...</p>
+            
+            <div class="filter-countries">
+                <h3>Made In</h3>
+                <div id="country-filters" class="filter-chips"></div>
             </div>
-        </div>
-    </div>
+            
+            <button id="clear-filters" class="clear-btn">Clear All Filters</button>
+        </section>
 
-    <div class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <div class="notification" id="notification">Link copied to clipboard!</div>
+        <section class="products">
+            <div id="products-count">Showing <span id="count">0</span> products</div>
+            <div id="products-grid" class="products-grid">
+                <!-- Products will be loaded here via JavaScript -->
+                <div class="loading">Loading products...</div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Family-focused product research to help you find safe, high-quality goods.</p>
-                <p>We prioritize toxin-free, well-tested products.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Categories</h3>
-                <ul id="footer-categories">
-                    <!-- Will be populated by JS -->
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Origin Countries</h3>
-                <ul id="footer-countries">
-                    <!-- Will be populated by JS -->
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Questions or suggestions?</p>
-                <p>Email: <a href="mailto:toppicks@vibecodemama.com">toppicks@vibecodemama.com</a></p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2025 Mama's Top Picks - All products carefully selected for quality and safety</p>
-            <p class="affiliate-notice">If you choose to make a purchase through some of the links on this page, we'll receive a small thank-you commission as an Amazon affiliate—at no cost to you!</p>
+        <div class="container">
+            <p>&copy; 2025 NontoxicGoods.com - A curated collection of non-toxic products</p>
+            <p><em>If you choose to make a purchase through some of the links on this page, we may receive a small thank-you commission as an Amazon affiliate–at no cost to you! Thank you for your support!</em></p>
         </div>
     </footer>
 
+    <!-- Templates -->
+    <template id="product-card-template">
+        <a class="product-card" href="" target="_blank">
+            <h3 class="product-title"></h3>
+            <p class="product-brand"></p>
+            <p class="product-notes"></p>
+            <div class="product-meta">
+                <span class="product-country"></span>
+                <span class="product-category"></span>
+            </div>
+        </a>
+    </template>
+
+    <template id="filter-chip-template">
+        <button class="filter-chip" data-value=""></button>
+    </template>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Product data from CSV (converted to JS array)
-            const productsData = [
-                {
-                    "Product": "Creatine Monohydrate (from Creapure)",
-                    "Category": "Supplements",
-                    "Link": "https://www.bareperformancenutrition.com/products/creatine-monohydrate",
-                    "Notes": "NSF Certified for Sport.",
-                    "Brand": "Bare Performance Nutrition",
-                    "MadeIn": "Germany"
-                },
-                {
-                    "Product": "Creatine Monohydrate (from Creapure)",
-                    "Category": "Supplements",
-                    "Link": "https://centenariusnutrition.com/products/creatine?variant=44378488504551",
-                    "Notes": "",
-                    "Brand": "Centenarius Nutrition",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Whey Isolate Protein Powder, Unflavored",
-                    "Category": "Supplements",
-                    "Link": "https://tahanutrition.com/collections/whey-protein-isolate/products/taha-natural-unflavored-whey-protein-isolate",
-                    "Notes": "This brand's flavored versions contain monk fruit extract.",
-                    "Brand": "TAHA Nutrition",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Vitamin D3 (2500IU)",
-                    "Category": "Supplements",
-                    "Link": "https://puori.com/products/d3-vitamin-d-2500",
-                    "Notes": "All of Puori's products are batch-tested for contaminants (heavy metals, BPA, glyphosate, label accuracy, etc)",
-                    "Brand": "Puori",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Collagen Peptides (Hydrolyzed Bovine Type 1 and 3)",
-                    "Category": "Supplements",
-                    "Link": "https://puori.com/collections/proteins-collagen/products/cp1-pure-collagen-peptides",
-                    "Notes": "All of Puori's products are batch-tested for contaminants (heavy metals, BPA, glyphosate, label accuracy, etc)",
-                    "Brand": "Puori",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Collagen (Hydrolyzed Wild-Caught Marine Fish, Types 1, 2, 3, and 4)",
-                    "Category": "Supplements",
-                    "Link": "https://centenariusnutrition.com/products/marine-collagen?variant=46405264015591",
-                    "Notes": "",
-                    "Brand": "Centenarius Nutrition",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Whey Concentrate Protein Powder, Vanilla",
-                    "Category": "Supplements",
-                    "Link": "https://puori.com/collections/muscle-strength/products/pw1-whey-protein-bourbon-vanilla?variant=43020536676445",
-                    "Notes": "All of Puori's products are batch-tested for contaminants (heavy metals, BPA, glyphosate, label accuracy, etc)",
-                    "Brand": "Puori",
-                    "MadeIn": "Canada"
-                },
-                {
-                    "Product": "Whey Concentrate Protein Powder, Chocolate",
-                    "Category": "Supplements",
-                    "Link": "https://puori.com/products/pw1-whey-protein-dark-chocolate?variant=43020555812957",
-                    "Notes": "All of Puori's products are batch-tested for contaminants (heavy metals, BPA, glyphosate, label accuracy, etc)",
-                    "Brand": "Puori",
-                    "MadeIn": "Canada"
-                },
-                {
-                    "Product": "Vitamin K2 as MK-7",
-                    "Category": "Supplements",
-                    "Link": "https://healthyorigins.com/products/vitamin-k2-as-mk-7-100mcg",
-                    "Notes": "K2 from natto. Menaquinone 7 has superior absorption.",
-                    "Brand": "Healthy Origins",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Omega-3 Fish Oil",
-                    "Category": "Supplements",
-                    "Link": "https://carlsonlabs.com/maximum-omega-2000/",
-                    "Notes": "Some fish oil supplements can be rancid. This one is lab tested for potency and freshness.",
-                    "Brand": "Carlson Labs",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Multipurpose Cleaner",
-                    "Category": "Cleaning",
-                    "Link": "https://back-to-basics-llc.myshopify.com/products/back-to-basics-cleaner-than-clean",
-                    "Notes": "Safe for skin too!",
-                    "Brand": "Back to Basics",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Non-stick Pan",
-                    "Category": "Cookware",
-                    "Link": "https://fromourplace.com/products/titanium-always-pan-pro",
-                    "Notes": "No coating! Non-stick properties come from pattern of the titanium cook surface.",
-                    "Brand": "Our Place",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Nattokinase",
-                    "Category": "Supplements",
-                    "Link": "https://arthurandrew.com/products/nattovena",
-                    "Notes": "Effective dosage is closer to 10,000 IU. We take 2 of these a day on an empty stomach.",
-                    "Brand": "Arthur Andrew Medical",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Matcha, Organic Ceremonial",
-                    "Category": "Drinks",
-                    "Link": "https://www.jadeleafmatcha.com/products/organic-teahouse-edition-ceremonial-matcha-pouches",
-                    "Notes": "Passed heavy metals testing. 35mg caffeine per 1/2 tsp. Sourced from Japan.",
-                    "Brand": "Jade Leaf",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Paper Towels, Bamboo",
-                    "Category": "Cleaning",
-                    "Link": "https://www.reelpaper.com/products/bamboo-paper-towels",
-                    "Notes": "Free of plastic, BPA, chlorine and dyes. Recycled paper towels can contain PFAS from receipt paper; bamboo avoids this.",
-                    "Brand": "Reel Paper",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Toilet Paper, Bamboo",
-                    "Category": "Other Consumables",
-                    "Link": "https://www.reelpaper.com/collections/shop-all/toilet-paper",
-                    "Notes": "Free of plastic, BPA, chlorine and dyes. Recycled toilet paper can contain PFAS from receipt paper; bamboo avoids this.",
-                    "Brand": "Reel Paper",
-                    "MadeIn": "China"
-                },
-                {
-                    "Product": "Xylitol Mints",
-                    "Category": "Pantry",
-                    "Link": "https://zellies.com/collections/mints",
-                    "Notes": "Made in the USA and Canada.",
-                    "Brand": "Zellies",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Instant Coffee, Organic",
-                    "Category": "Drinks",
-                    "Link": "https://store.cafealtura.com/products/organic-instant-coffee?variant=33899358519428",
-                    "Notes": "",
-                    "Brand": "Cafe Altura",
-                    "MadeIn": "European Union"
-                },
-                {
-                    "Product": "Instant Coffee, Organic Decaf",
-                    "Category": "Drinks",
-                    "Link": "https://store.cafealtura.com/products/decaf-organic-instant-coffee?variant=34156159467652",
-                    "Notes": "",
-                    "Brand": "Cafe Altura",
-                    "MadeIn": "European Union"
-                },
-                {
-                    "Product": "Gelatin, Grass-Fed Beef",
-                    "Category": "Pantry",
-                    "Link": "https://greatlakeswellness.com/products/beef-gelatin-single-can?selling_plan=1241153671",
-                    "Notes": "",
-                    "Brand": "Great Lakes Wellness",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Tallow-Based Skincare",
-                    "Category": "Other Consumables",
-                    "Link": "https://www.bellotallow.com/",
-                    "Notes": "Uses American Grassfed Association Certified suet and tests for PFAS contamination.",
-                    "Brand": "Bello Tallow",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Protein Bars",
-                    "Category": "Pantry",
-                    "Link": "https://eatjacob.com/",
-                    "Notes": "Grass-fed protein and fat, sweetened with honey, nothing artificial.",
-                    "Brand": "Jacob",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Glycine Powder",
-                    "Category": "Supplements",
-                    "Link": "https://centenariusnutrition.com/products/glycine?variant=40697134645421",
-                    "Notes": "Pharmaceutical-grade Glycine from Japan.",
-                    "Brand": "Centenarius Nutrition",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Sourdough Bakery Products",
-                    "Category": "Bread",
-                    "Link": "https://ovenfreshdelivery.com/",
-                    "Notes": "",
-                    "Brand": "Bread of Heaven",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Instant Coffee, Low-Acid Organic",
-                    "Category": "Drinks",
-                    "Link": "https://fabulacoffee.com/products/organic-craft-instant-coffee-regular",
-                    "Notes": "Mold-free!",
-                    "Brand": "Fabula Coffee",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Instant Coffee, Decaf, Low-Acid Organic",
-                    "Category": "Drink",
-                    "Link": "https://fabulacoffee.com/products/organic-craft-instant-coffee-decaf?_pos=2&_sid=8ad6e8bb6&_ss=r",
-                    "Notes": "Mold-free!",
-                    "Brand": "Fabula Coffee",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Kitchen Knife Set",
-                    "Category": "Cookware",
-                    "Link": "https://www.biancoinstruments.com/product-page/cucina-napoli-5-piece-boxed-knife-set",
-                    "Notes": "One piece stainless steel including the handle. Made in USA.",
-                    "Brand": "Bianco Instruments",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Nail Care Tools and Tweezers",
-                    "Category": "Personal Care",
-                    "Link": "https://www.biancoinstruments.com/pro-nail-tech-nippers-cutters",
-                    "Notes": "Made in USA.",
-                    "Brand": "Bianco Instruments",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Tourniquet, ETQ (Everyday Tourniquet)",
-                    "Category": "Medical",
-                    "Link": "https://www.snakestaffsystems.com/buy-now",
-                    "Notes": "Small and easy to carry, but often sold out. Made in USA.",
-                    "Brand": "Snakestaff Systems",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Magnesium, Malate and Glycinate",
-                    "Category": "Supplements",
-                    "Link": "https://innovixlabs.com/products/advanced-magnesium",
-                    "Notes": "Passed heavy metals testing.",
-                    "Brand": "Innovix Labs",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Toothpaste, Fluoride-Free Hydroxyapatite",
-                    "Category": "Personal Care",
-                    "Link": "https://getsuperteeth.com/products/prebiotic-mineral-toothpaste-3-pack-bundle",
-                    "Notes": "Avoid nano hydroxyapatite, which may end up in the bloodstream and cause inflammation. This uses micro hydroxyapatite.",
-                    "Brand": "Superteeth",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Backpacks, Casual",
-                    "Category": "Bags",
-                    "Link": "https://remoteeq.com/",
-                    "Notes": "Made in USA: San Diego, CA.",
-                    "Brand": "Remote Eq",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Waist Packs, Pouches, and Packing Cubes",
-                    "Category": "Bags",
-                    "Link": "https://www.hartfordgearco.com/",
-                    "Notes": "Made in USA: Hartford, CT.",
-                    "Brand": "Hartford Gear Co.",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Medical Supplies and IFAK Pouches",
-                    "Category": "Medical",
-                    "Link": "https://ltcreed.com/",
-                    "Notes": "",
-                    "Brand": "LTC Creed",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Blue-Light-Free Tablet Computer",
-                    "Category": "Electronics",
-                    "Link": "https://daylightcomputer.com/product",
-                    "Notes": "",
-                    "Brand": "Daylight Computer",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Organic Cotton Clothing for Men and Women",
-                    "Category": "Clothing",
-                    "Link": "https://wearpact.com/",
-                    "Notes": "",
-                    "Brand": "Pact",
-                    "MadeIn": "India"
-                },
-                {
-                    "Product": "Shoes, Kids, Leather with Minimal Sole",
-                    "Category": "Clothing",
-                    "Link": "https://starryknightdesign.com/",
-                    "Notes": "Made in Corvallis, Oregon. American Hand Rubbed leather is all USA hides.",
-                    "Brand": "Starry Knight Design",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "eBooks for download",
-                    "Category": "Books",
-                    "Link": "https://standardebooks.org/bulk-downloads/collections",
-                    "Notes": "Classic books in electronic format.",
-                    "Brand": "Standard eBooks",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Sunglasses",
-                    "Category": "Clothing",
-                    "Link": "https://www.randolphusa.com/",
-                    "Notes": "Very high quality. Made in USA.",
-                    "Brand": "Randolph Engineering",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Sunglasses",
-                    "Category": "Clothing",
-                    "Link": "https://aoeyewear.com/",
-                    "Notes": "Very high quality. Made in USA.",
-                    "Brand": "American Optical",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Socks, Kids and Adults",
-                    "Category": "Clothing",
-                    "Link": "https://www.smartwool.com/",
-                    "Notes": "High percentage merino wool, minimal nylon to reduce microplastics.",
-                    "Brand": "Smartwool",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Shoes, Minimalist Barefoot",
-                    "Category": "Clothing",
-                    "Link": "https://xeroshoes.com/",
-                    "Notes": "Wide toe box promotes foot health.",
-                    "Brand": "Xero Shoes",
-                    "MadeIn": "China"
-                },
-                {
-                    "Product": "Shoes, Minimalist Barefoot",
-                    "Category": "Clothing",
-                    "Link": "https://www.vivobarefoot.com/us/",
-                    "Notes": "",
-                    "Brand": "Vivobarefoot",
-                    "MadeIn": "Vietnam"
-                },
-                {
-                    "Product": "Shoes, Minimalist Barefoot",
-                    "Category": "Clothing",
-                    "Link": "https://weartolos.com/",
-                    "Notes": "Wide toe box promotes foot health.",
-                    "Brand": "Tolos",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Organic Cotton Clothing for Men, Women, and Kids",
-                    "Category": "Clothing",
-                    "Link": "https://matethelabel.com/",
-                    "Notes": "Avoids pesticides, formaldehyde, microplastics, carcinogens, endocrine-disrupters, and non-organic dyes.",
-                    "Brand": "Mate the Label",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Organic Cotton Clothing for Kids",
-                    "Category": "Clothing",
-                    "Link": "https://monicaandandy.com/",
-                    "Notes": "Code WELCOME20 for 20% off. Also check for (frequent) sales.",
-                    "Brand": "Monica & Andy",
-                    "MadeIn": "India"
-                },
-                {
-                    "Product": "Organic Cotton for Women and Men",
-                    "Category": "Clothing",
-                    "Link": "https://www.happyearthapparel.com/",
-                    "Notes": "",
-                    "Brand": "Happy Earth Apparel",
-                    "MadeIn": "India"
-                },
-                {
-                    "Product": "Salt, Maldon Sea Salt Flakes",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/4id3pqv",
-                    "Notes": "Low or non-detectable heavy metals contamination.",
-                    "Brand": "Maldon",
-                    "MadeIn": "England"
-                },
-                {
-                    "Product": "Salt, Morton Iodized Salt",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/3FY8vt2",
-                    "Notes": "Low or non-detectable heavy metals contamination.",
-                    "Brand": "Morton",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Salt, Diamond Crystal Kosher Salt",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/42uMRnZ",
-                    "Notes": "Non-detectable heavy metals contamination.",
-                    "Brand": "Diamond Crystal Kosher Salt",
-                    "MadeIn": "USA"
-                },
-                {
-                    "Product": "Butter, Salted, Organic",
-                    "Category": "Fridge",
-                    "Link": "https://amzn.to/4cqthxx",
-                    "Notes": "PFAS-free wrapper.",
-                    "Brand": "365 Whole Foods",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Butter, Salted, Organic",
-                    "Category": "Fridge",
-                    "Link": "https://amzn.to/4iawT8q",
-                    "Notes": "PFAS-free wrapper.",
-                    "Brand": "Horizon Organic",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Coconut Oil, Organic Virgin",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/42pKdQa",
-                    "Notes": "One of the lowest phthalate contamination",
-                    "Brand": "Dr Bronner's",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Spices and Herbs",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/3G2m2A1",
-                    "Notes": "This brand consistently tests low in heavy metals contamination.",
-                    "Brand": "Simply Organic",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Ghee, Organic Valley Pasture-Raised",
-                    "Category": "Pantry",
-                    "Link": "https://amzn.to/44hPU5i",
-                    "Notes": "Low in phthalate contamination.",
-                    "Brand": "Organic Valley",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Disinfectant Wipes",
-                    "Category": "Cleaning",
-                    "Link": "https://amzn.to/4iaxirq",
-                    "Notes": "No dyes or artificial fragrances. Bleach free, active ingredient: thymol.",
-                    "Brand": "Seventh Generation",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Wet Wipes, Face and Diaper Wipes",
-                    "Category": "Personal Care",
-                    "Link": "https://amzn.to/3GgVsmw",
-                    "Notes": "Plastic-free. Made in UK.",
-                    "Brand": "Jackson Reece",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Dry Wipes, 100% Cotton",
-                    "Category": "Personal Care",
-                    "Link": "https://amzn.to/4j6fkYl",
-                    "Notes": "Add water to make a wet wipe!",
-                    "Brand": "Whoopsie Wipes",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Facial Tissues",
-                    "Category": "Personal Care",
-                    "Link": "https://amzn.to/4jnDn4z",
-                    "Notes": "Recycled tissues can contain BPA from receipt paper. Bamboo tissues avoid this, but can be less soft feeling. These are one of the softer brands.",
-                    "Brand": "Caboo",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Cotton Buds",
-                    "Category": "Personal Care",
-                    "Link": "https://amzn.to/4j5LnHU",
-                    "Notes": "Chlorine-free. Made with organic cotton and bamboo.",
-                    "Brand": "Clean Skin Club",
-                    "MadeIn": ""
-                },
-                {
-                    "Product": "Dental Floss Picks",
-                    "Category": "Personal Care",
-                    "Link": "https://amzn.to/3YnDbu6",
-                    "Notes": "BPA and PFAS free!",
-                    "Brand": "The Humble Co.",
-                    "MadeIn": ""
-                }
-            ];
-
-            const productsContainer = document.getElementById('products-container');
+            // State
+            let products = [];
+            let activeFilters = {
+                categories: new Set(),
+                countries: new Set(),
+                search: ''
+            };
+            
+            // DOM elements
+            const productsGrid = document.getElementById('products-grid');
+            const productsCount = document.getElementById('count');
             const searchInput = document.getElementById('search');
-            const categorySelect = document.getElementById('category');
-            const countrySelect = document.getElementById('country');
-            const backToTop = document.getElementById('back-to-top');
-            const notification = document.getElementById('notification');
-            const quickFilterBtns = document.querySelectorAll('.quick-filter-btn');
-            const footerCategories = document.getElementById('footer-categories');
-            const footerCountries = document.getElementById('footer-countries');
-
-            // Map countries to flag emojis
-            const countryFlags = {
-                'USA': '🇺🇸',
-                'Germany': '🇩🇪',
-                'Canada': '🇨🇦',
-                'China': '🇨🇳',
-                'European Union': '🇪🇺',
-                'England': '🇬🇧',
-                'India': '🇮🇳',
-                'Vietnam': '🇻🇳',
-                'UK': '🇬🇧'
-            };
-
-            // Map for category icons
-            const categoryIcons = {
-                'Supplements': '<i class="fas fa-pills category-icon"></i>',
-                'Cleaning': '<i class="fas fa-spray-can-sparkles category-icon"></i>',
-                'Cookware': '<i class="fas fa-utensils category-icon"></i>',
-                'Drinks': '<i class="fas fa-mug-hot category-icon"></i>',
-                'Drink': '<i class="fas fa-mug-hot category-icon"></i>',
-                'Other Consumables': '<i class="fas fa-box-open category-icon"></i>',
-                'Pantry': '<i class="fas fa-cookie category-icon"></i>',
-                'Personal Care': '<i class="fas fa-shower category-icon"></i>',
-                'Medical': '<i class="fas fa-kit-medical category-icon"></i>',
-                'Bags': '<i class="fas fa-shopping-bag category-icon"></i>',
-                'Electronics': '<i class="fas fa-laptop category-icon"></i>',
-                'Clothing': '<i class="fas fa-shirt category-icon"></i>',
-                'Books': '<i class="fas fa-book category-icon"></i>',
-                'Bread': '<i class="fas fa-bread-slice category-icon"></i>',
-                'Fridge': '<i class="fas fa-refrigerator category-icon"></i>'
-            };
-
-            // Get unique categories and populate the dropdown
-            const categories = [...new Set(productsData.map(product => product.Category))].sort();
-            categories.forEach(category => {
-                // Populate category dropdown
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categorySelect.appendChild(option);
-                
-                // Add to footer categories
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = "#";
-                a.textContent = category;
-                a.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    categorySelect.value = category;
-                    filterProducts();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                li.appendChild(a);
-                footerCategories.appendChild(li);
-            });
-
-            // Get unique countries and populate the dropdown
-            const countries = [...new Set(productsData.map(product => product.MadeIn).filter(country => country))].sort();
-            countries.forEach(country => {
-                // Populate country dropdown
-                const option = document.createElement('option');
-                option.value = country;
-                const flag = countryFlags[country] || '';
-                option.textContent = flag ? `${flag} ${country}` : country;
-                countrySelect.appendChild(option);
-                
-                // Add to footer countries
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = "#";
-                a.textContent = flag ? `${flag} ${country}` : country;
-                a.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    countrySelect.value = country;
-                    filterProducts();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                li.appendChild(a);
-                footerCountries.appendChild(li);
-            });
-
-            // Function to get flag emoji for a country
-            function getCountryFlag(country) {
-                return countryFlags[country] || '';
+            const categoryFilters = document.getElementById('category-filters');
+            const countryFilters = document.getElementById('country-filters');
+            const clearFiltersButton = document.getElementById('clear-filters');
+            const themeToggle = document.getElementById('checkbox');
+            const themeLabel = document.getElementById('theme-mode');
+            
+            // Templates
+            const productCardTemplate = document.getElementById('product-card-template');
+            const filterChipTemplate = document.getElementById('filter-chip-template');
+            
+            // ===== Theme Toggle =====
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeLabel.textContent = 'Dark Mode';
+                    themeToggle.checked = true;
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                    themeLabel.textContent = 'Light Mode';
+                    themeToggle.checked = false;
+                }
             }
-
-            // Function to get category icon
-            function getCategoryIcon(category) {
-                return categoryIcons[category] || '<i class="fas fa-tag category-icon"></i>';
+            
+            // Check for saved theme preference or use OS preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme === 'dark');
+            } else {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setTheme(prefersDark);
             }
-
-            // Function to render products
-            function renderProducts(products) {
-                if (products.length === 0) {
-                    productsContainer.innerHTML = `
-                        <div class="no-results">
-                            <i class="fas fa-search"></i>
-                            <h3>No products found</h3>
-                            <p>Try adjusting your search or filter criteria</p>
-                        </div>
-                    `;
+            
+            // Theme switch event
+            themeToggle.addEventListener('change', (e) => {
+                setTheme(e.target.checked);
+            });
+            
+            // ===== Data Loading =====
+            async function loadData() {
+                try {
+                    // Change this URL to the actual CSV file path in your repository
+                    const response = await fetch('products.csv');
+                    const csvData = await response.text();
+                    
+                    // Parse CSV to JSON
+                    Papa.parse(csvData, {
+                        header: true,
+                        dynamicTyping: true,
+                        complete: function(results) {
+                            products = results.data;
+                            
+                            // Remove any empty rows (often happens with CSVs)
+                            products = products.filter(product => product.Title && product.Title.trim() !== '');
+                            
+                            initializeFilters();
+                            renderProducts();
+                        },
+                        error: function(error) {
+                            console.error('Error parsing CSV:', error);
+                            productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
+                }
+            }
+            
+            // ===== Initialize Filter Chips =====
+            function initializeFilters() {
+                // Extract unique categories and countries
+                const categories = [...new Set(products.map(p => p.Category))].filter(Boolean).sort();
+                const countries = [...new Set(products.map(p => p['Made In']))].filter(Boolean).sort();
+                
+                // Create category filter chips
+                categories.forEach(category => {
+                    const chip = createFilterChip(category, 'category');
+                    categoryFilters.appendChild(chip);
+                });
+                
+                // Create country filter chips
+                countries.forEach(country => {
+                    const chip = createFilterChip(country, 'country');
+                    countryFilters.appendChild(chip);
+                });
+            }
+            
+            function createFilterChip(value, type) {
+                const chipClone = filterChipTemplate.content.cloneNode(true);
+                const chip = chipClone.querySelector('.filter-chip');
+                
+                chip.textContent = value;
+                chip.dataset.value = value;
+                chip.dataset.type = type;
+                
+                chip.addEventListener('click', toggleFilter);
+                
+                return chip;
+            }
+            
+            // ===== Filter Functionality =====
+            function toggleFilter(e) {
+                const chip = e.currentTarget;
+                const value = chip.dataset.value;
+                const type = chip.dataset.type;
+                
+                // Toggle active state
+                chip.classList.toggle('active');
+                
+                // Update active filters
+                if (type === 'category') {
+                    if (chip.classList.contains('active')) {
+                        activeFilters.categories.add(value);
+                    } else {
+                        activeFilters.categories.delete(value);
+                    }
+                } else if (type === 'country') {
+                    if (chip.classList.contains('active')) {
+                        activeFilters.countries.add(value);
+                    } else {
+                        activeFilters.countries.delete(value);
+                    }
+                }
+                
+                renderProducts();
+            }
+            
+            function clearFilters() {
+                // Reset active filters
+                activeFilters.categories.clear();
+                activeFilters.countries.clear();
+                activeFilters.search = '';
+                
+                // Reset UI
+                searchInput.value = '';
+                document.querySelectorAll('.filter-chip').forEach(chip => {
+                    chip.classList.remove('active');
+                });
+                
+                renderProducts();
+            }
+            
+            // ===== Search Functionality =====
+            function handleSearch(e) {
+                activeFilters.search = e.target.value.toLowerCase().trim();
+                renderProducts();
+            }
+            
+            // ===== Rendering Products =====
+            function renderProducts() {
+                // Clear the products grid
+                productsGrid.innerHTML = '';
+                
+                // Filter products based on active filters
+                const filteredProducts = products.filter(product => {
+                    // Category filter
+                    if (activeFilters.categories.size > 0 && !activeFilters.categories.has(product.Category)) {
+                        return false;
+                    }
+                    
+                    // Country filter
+                    if (activeFilters.countries.size > 0 && !activeFilters.countries.has(product['Made In'])) {
+                        return false;
+                    }
+                    
+                    // Search filter
+                    if (activeFilters.search) {
+                        const searchableText = `
+                            ${product.Title || ''} 
+                            ${product.Brand || ''} 
+                            ${product.Notes || ''} 
+                            ${product['Made In'] || ''} 
+                            ${product.Category || ''}
+                        `.toLowerCase();
+                        
+                        if (!searchableText.includes(activeFilters.search)) {
+                            return false;
+                        }
+                    }
+                    
+                    return true;
+                });
+                
+                // Update count
+                productsCount.textContent = filteredProducts.length;
+                
+                // If no products found
+                if (filteredProducts.length === 0) {
+                    productsGrid.innerHTML = '<div class="no-results">No products found. Try adjusting your filters.</div>';
                     return;
                 }
-
-                productsContainer.innerHTML = '';
                 
-                products.forEach(product => {
-                    const productCard = document.createElement('div');
-                    productCard.className = 'product-card';
-                    
-                    // Add category-specific class for styling
-                    if (product.Category) {
-                        const categoryClass = product.Category.toLowerCase().replace(/\s+/g, '-');
-                        productCard.classList.add(`category-${categoryClass}`);
-                    }
-                    
-                    // Get country flag
-                    const flag = getCountryFlag(product.MadeIn);
-                    
-                    // Get category icon
-                    const categoryIcon = getCategoryIcon(product.Category);
-                    
-                    // Clean up the category class for the label
-                    const categoryClass = product.Category ? product.Category.toLowerCase().replace(/\s+/g, '-') : '';
-                    
-                    productCard.innerHTML = `
-                        <div class="product-category ${categoryClass}">
-                            ${categoryIcon} ${product.Category}
-                        </div>
-                        <div class="product-content">
-                            <a href="${product.Link}" class="product-name" target="_blank">${product.Product}</a>
-                            <div class="product-brand">
-                                <i class="fas fa-tag"></i> ${product.Brand}
-                                ${flag ? `<span class="origin-flag">${flag}</span>` : ''}
-                            </div>
-                            ${product.Notes ? `<div class="product-notes">${product.Notes}</div>` : ''}
-                            <div class="product-actions">
-                                <button class="copy-link-btn" data-link="${product.Link}">
-                                    <i class="fas fa-copy"></i> Copy Link
-                                </button>
-                                ${product.MadeIn ? `<div class="product-made-in">
-                                    <i class="fas fa-map-marker-alt"></i> Made in ${product.MadeIn}
-                                </div>` : ''}
-                            </div>
-                        </div>
-                    `;
-                    
-                    productsContainer.appendChild(productCard);
-                });
-                
-                // Add event listeners to copy buttons
-                document.querySelectorAll('.copy-link-btn').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const link = this.getAttribute('data-link');
-                        navigator.clipboard.writeText(link).then(() => {
-                            showNotification('Link copied to clipboard!');
-                        }).catch(err => {
-                            showNotification('Failed to copy link!');
-                            console.error('Could not copy text: ', err);
-                        });
-                    });
+                // Render each product card
+                filteredProducts.forEach(product => {
+                    const card = createProductCard(product);
+                    productsGrid.appendChild(card);
                 });
             }
-
-            // Show notification
-            function showNotification(message) {
-                notification.textContent = message;
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 2000);
-            }
-
-            // Filter products based on search, category, and made in country
-            function filterProducts() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const selectedCategory = categorySelect.value;
-                const selectedCountry = countrySelect.value;
-                
-                const filteredProducts = productsData.filter(product => {
-                    const matchesSearch = product.Product.toLowerCase().includes(searchTerm) || 
-                                         product.Brand.toLowerCase().includes(searchTerm);
-                    const matchesCategory = selectedCategory === '' || product.Category === selectedCategory;
-                    const matchesCountry = selectedCountry === '' || product.MadeIn === selectedCountry;
-                    
-                    return matchesSearch && matchesCategory && matchesCountry;
-                });
-                
-                renderProducts(filteredProducts);
-                
-                // Update active state of quick filter buttons
-                quickFilterBtns.forEach(btn => {
-                    if (btn.dataset.category && btn.dataset.category === selectedCategory) {
-                        btn.classList.add('active');
-                    } else if (btn.dataset.country && btn.dataset.country === selectedCountry) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                });
-            }
-
-            // Event listeners
-            searchInput.addEventListener('input', filterProducts);
-            categorySelect.addEventListener('change', filterProducts);
-            countrySelect.addEventListener('change', filterProducts);
             
-            // Quick filter buttons
-            quickFilterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Reset other filters first
-                    if (this.dataset.category) {
-                        categorySelect.value = this.dataset.category;
-                        countrySelect.value = '';
-                    } else if (this.dataset.country) {
-                        countrySelect.value = this.dataset.country;
-                        categorySelect.value = '';
-                    }
-                    filterProducts();
-                });
-            });
-
-            // Back to top button logic
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            // Initial render
-            renderProducts(productsData);
+            function createProductCard(product) {
+                const cardClone = productCardTemplate.content.cloneNode(true);
+                const card = cardClone.querySelector('.product-card');
+                
+                // Set card data
+                card.href = product.Link || '#';
+                card.dataset.category = product.Category || '';
+                
+                card.querySelector('.product-title').textContent = product.Title || 'Untitled Product';
+                card.querySelector('.product-brand').textContent = product.Brand || '';
+                card.querySelector('.product-notes').textContent = product.Notes || '';
+                card.querySelector('.product-country').textContent = product['Made In'] ? `Made in ${product['Made In']}` : '';
+                card.querySelector('.product-category').textContent = product.Category || '';
+                
+                return card;
+            }
+            
+            // ===== Event Listeners =====
+            searchInput.addEventListener('input', handleSearch);
+            clearFiltersButton.addEventListener('click', clearFilters);
+            
+            // ===== Initialize =====
+            loadData();
         });
     </script>
 </body>
