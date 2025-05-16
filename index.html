@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NontoxicGoods.com</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Basic SEO Metadata -->
     <title>NontoxicGoods.com - Discover Products Free from Harmful Chemicals</title>
     <meta name="description" content="A curated collection of non-toxic products for your home, personal care, and more.">
     <link rel="canonical" href="https://nontoxicgoods.com">
@@ -29,6 +24,11 @@
 
     <!-- Favicon (Leaf Emoji) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         /* Base Styles and Variables */
         :root {
@@ -41,6 +41,14 @@
             --accent-light: #e8d1c9;
             --border: #e6e0dc;
             --shadow: rgba(0, 0, 0, 0.05);
+            
+            /* Category Colors */
+            --category-personal-care: #e6a4b4;
+            --category-kitchen: #b6d7a8;
+            --category-cleaning: #9fc5e8;
+            --category-home: #d5a6bd;
+            --category-beauty: #c27ba0;
+            --category-supplements: #ffd966;
             
             /* Common variables */
             --border-radius: 8px;
@@ -55,18 +63,6 @@
             --spacing-xl: 3rem;
         }
 
-        /* Dark Theme */
-        [data-theme="dark"] {
-            --background: #3e3a39;
-            --background-card: #4e4a49;
-            --text-primary: #f9f5f1;
-            --text-secondary: #e6e0dc;
-            --accent: #d8b3a5;
-            --accent-light: #86716a;
-            --border: #555050;
-            --shadow: rgba(0, 0, 0, 0.2);
-        }
-
         /* Media query for dark theme preference */
         @media (prefers-color-scheme: dark) {
             :root {
@@ -78,18 +74,6 @@
                 --accent-light: #86716a;
                 --border: #555050;
                 --shadow: rgba(0, 0, 0, 0.2);
-            }
-            
-            /* Override for users who specifically chose light theme */
-            [data-theme="light"] {
-                --background: #f9f5f1;
-                --background-card: #ffffff;
-                --text-primary: #3e3a39;
-                --text-secondary: #5a5655;
-                --accent: #d8b3a5;
-                --accent-light: #e8d1c9;
-                --border: #e6e0dc;
-                --shadow: rgba(0, 0, 0, 0.05);
             }
         }
 
@@ -155,72 +139,10 @@
             margin-bottom: var(--spacing-lg);
         }
 
-        /* Theme Switch */
-        .theme-switch-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: var(--spacing-md);
-        }
-
-        .theme-switch {
-            display: inline-block;
-            height: 24px;
-            position: relative;
-            width: 48px;
-        }
-
-        .theme-switch input {
-            display: none;
-        }
-
-        .slider {
-            background-color: var(--text-secondary);
-            bottom: 0;
-            cursor: pointer;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: .4s;
-        }
-
-        .slider:before {
-            background-color: var(--background);
-            bottom: 4px;
-            content: "";
-            height: 16px;
-            left: 4px;
-            position: absolute;
-            transition: .4s;
-            width: 16px;
-        }
-
-        input:checked + .slider {
-            background-color: var(--accent);
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(24px);
-        }
-
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
-
-        #theme-mode {
-            margin-left: var(--spacing-sm);
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-        }
-
         /* Filters Section */
         .filters {
             margin: var(--spacing-lg) 0;
+            position: relative;
         }
 
         .search-container {
@@ -255,7 +177,8 @@
         }
 
         .filter-chip {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             padding: var(--spacing-xs) var(--spacing-md);
             background-color: var(--background-card);
             border: 1px solid var(--border);
@@ -273,9 +196,55 @@
         }
 
         .filter-chip.active {
-            background-color: var(--accent);
             color: white;
-            border-color: var(--accent);
+            border-color: transparent;
+        }
+
+        .flag-emoji {
+            margin-right: var(--spacing-xs);
+        }
+
+        /* Category-specific filter chip colors */
+        .filter-chip[data-category="Personal Care"] {
+            border-left: 3px solid var(--category-personal-care);
+        }
+        .filter-chip[data-category="Personal Care"].active {
+            background-color: var(--category-personal-care);
+        }
+
+        .filter-chip[data-category="Kitchen"] {
+            border-left: 3px solid var(--category-kitchen);
+        }
+        .filter-chip[data-category="Kitchen"].active {
+            background-color: var(--category-kitchen);
+        }
+
+        .filter-chip[data-category="Cleaning"] {
+            border-left: 3px solid var(--category-cleaning);
+        }
+        .filter-chip[data-category="Cleaning"].active {
+            background-color: var(--category-cleaning);
+        }
+
+        .filter-chip[data-category="Home"] {
+            border-left: 3px solid var(--category-home);
+        }
+        .filter-chip[data-category="Home"].active {
+            background-color: var(--category-home);
+        }
+
+        .filter-chip[data-category="Beauty"] {
+            border-left: 3px solid var(--category-beauty);
+        }
+        .filter-chip[data-category="Beauty"].active {
+            background-color: var(--category-beauty);
+        }
+
+        .filter-chip[data-category="Supplements"] {
+            border-left: 3px solid var(--category-supplements);
+        }
+        .filter-chip[data-category="Supplements"].active {
+            background-color: var(--category-supplements);
         }
 
         .clear-btn {
@@ -288,6 +257,7 @@
             border-radius: var(--border-radius);
             cursor: pointer;
             transition: all 0.2s ease;
+            align-self: flex-start;
         }
 
         .clear-btn:hover {
@@ -319,7 +289,8 @@
 
         /* Product Card Styles */
         .product-card {
-            display: block;
+            display: flex;
+            flex-direction: column;
             background-color: var(--background-card);
             border-radius: var(--border-radius);
             padding: var(--spacing-md);
@@ -360,27 +331,37 @@
             font-family: var(--ui-font);
             font-size: 0.8rem;
             color: var(--text-secondary);
+            margin-top: auto;
         }
 
-        /* Category colors */
+        .product-country {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Category border colors */
         .product-card[data-category="Personal Care"] {
-            border-left: 4px solid #e6a4b4;
+            border-left: 4px solid var(--category-personal-care);
         }
 
         .product-card[data-category="Kitchen"] {
-            border-left: 4px solid #b6d7a8;
+            border-left: 4px solid var(--category-kitchen);
         }
 
         .product-card[data-category="Cleaning"] {
-            border-left: 4px solid #9fc5e8;
+            border-left: 4px solid var(--category-cleaning);
         }
 
         .product-card[data-category="Home"] {
-            border-left: 4px solid #d5a6bd;
+            border-left: 4px solid var(--category-home);
         }
 
         .product-card[data-category="Beauty"] {
-            border-left: 4px solid #c27ba0;
+            border-left: 4px solid var(--category-beauty);
+        }
+
+        .product-card[data-category="Supplements"] {
+            border-left: 4px solid var(--category-supplements);
         }
 
         /* Footer Styles */
@@ -420,6 +401,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: var(--spacing-lg);
+                align-items: flex-start;
             }
             
             .search-container {
@@ -440,14 +422,6 @@
         <div class="container">
             <h1>NontoxicGoods.com</h1>
             <p class="tagline">Discover products free from harmful chemicals</p>
-            
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                </label>
-                <span id="theme-mode">Light Mode</span>
-            </div>
         </div>
     </header>
 
@@ -482,7 +456,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 NontoxicGoods.com - A curated collection of non-toxic products</p>
-            <p><em>If you choose to make a purchase through some of the links on this page, we may receive a small thank-you commission as an Amazon affiliate–at no cost to you! Thank you for your support!</em></p>
+            <p><em>If you choose to make a purchase through some of the links on this page, we may receive a small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your support!</em></p>
         </div>
     </footer>
 
@@ -493,7 +467,7 @@
             <p class="product-brand"></p>
             <p class="product-notes"></p>
             <div class="product-meta">
-                <span class="product-country"></span>
+                <span class="product-country"><span class="flag-emoji"></span> <span class="country-name"></span></span>
                 <span class="product-category"></span>
             </div>
         </a>
@@ -522,41 +496,46 @@
             const categoryFilters = document.getElementById('category-filters');
             const countryFilters = document.getElementById('country-filters');
             const clearFiltersButton = document.getElementById('clear-filters');
-            const themeToggle = document.getElementById('checkbox');
-            const themeLabel = document.getElementById('theme-mode');
             
             // Templates
             const productCardTemplate = document.getElementById('product-card-template');
             const filterChipTemplate = document.getElementById('filter-chip-template');
             
-            // ===== Theme Toggle =====
-            function setTheme(isDark) {
-                if (isDark) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    themeLabel.textContent = 'Dark Mode';
-                    themeToggle.checked = true;
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    themeLabel.textContent = 'Light Mode';
-                    themeToggle.checked = false;
-                }
-            }
+            // Country flag emoji mapping
+            const countryFlags = {
+                'USA': '🇺🇸',
+                'Canada': '🇨🇦',
+                'China': '🇨🇳',
+                'Japan': '🇯🇵',
+                'Korea': '🇰🇷',
+                'UK': '🇬🇧',
+                'France': '🇫🇷',
+                'Germany': '🇩🇪',
+                'Italy': '🇮🇹',
+                'Spain': '🇪🇸',
+                'Australia': '🇦🇺',
+                'New Zealand': '🇳🇿',
+                'India': '🇮🇳',
+                'Brazil': '🇧🇷',
+                'Mexico': '🇲🇽',
+                'Sweden': '🇸🇪',
+                'Switzerland': '🇨🇭',
+                'Netherlands': '🇳🇱',
+                'Belgium': '🇧🇪',
+                'Denmark': '🇩🇰',
+                'Finland': '🇫🇮',
+                'Norway': '🇳🇴',
+                'Portugal': '🇵🇹',
+                'Greece': '🇬🇷',
+                'Russia': '🇷🇺',
+                'Turkey': '🇹🇷'
+                // Add more country-flag pairs as needed
+            };
             
-            // Check for saved theme preference or use OS preference
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme === 'dark');
-            } else {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                setTheme(prefersDark);
+            // Helper function to get flag emoji for a country
+            function getFlagEmoji(country) {
+                return countryFlags[country] || '🌎'; // Default to globe if no specific flag
             }
-            
-            // Theme switch event
-            themeToggle.addEventListener('change', (e) => {
-                setTheme(e.target.checked);
-            });
             
             // ===== Data Loading =====
             async function loadData() {
@@ -612,7 +591,22 @@
                 const chipClone = filterChipTemplate.content.cloneNode(true);
                 const chip = chipClone.querySelector('.filter-chip');
                 
-                chip.textContent = value;
+                // Set up the chip differently based on type
+                if (type === 'category') {
+                    chip.textContent = value;
+                    chip.dataset.category = value;
+                } else if (type === 'country') {
+                    // Add flag emoji for country
+                    const flagSpan = document.createElement('span');
+                    flagSpan.className = 'flag-emoji';
+                    flagSpan.textContent = getFlagEmoji(value);
+                    
+                    const countryName = document.createTextNode(value);
+                    
+                    chip.appendChild(flagSpan);
+                    chip.appendChild(countryName);
+                }
+                
                 chip.dataset.value = value;
                 chip.dataset.type = type;
                 
@@ -731,7 +725,14 @@
                 card.querySelector('.product-title').textContent = product.Title || 'Untitled Product';
                 card.querySelector('.product-brand').textContent = product.Brand || '';
                 card.querySelector('.product-notes').textContent = product.Notes || '';
-                card.querySelector('.product-country').textContent = product['Made In'] ? `Made in ${product['Made In']}` : '';
+                
+                if (product['Made In']) {
+                    card.querySelector('.flag-emoji').textContent = getFlagEmoji(product['Made In']);
+                    card.querySelector('.country-name').textContent = `Made in ${product['Made In']}`;
+                } else {
+                    card.querySelector('.product-country').style.display = 'none';
+                }
+                
                 card.querySelector('.product-category').textContent = product.Category || '';
                 
                 return card;
