@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NontoxicGoods.com - Discover Products Free from Harmful Chemicals</title>
-    <meta name="description" content="A curated collection of non-toxic products for your home, personal care, and more.">
+    <title>NontoxicGoods.com - Cleaner Products for a Healthier Life</title>
+    <meta name="description"
+        content="A curated collection of non-toxic products for your home, personal care, and more.">
     <link rel="canonical" href="https://nontoxicgoods.com">
 
     <!-- Open Graph / Facebook Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nontoxicgoods.com">
     <meta property="og:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
-    <meta property="og:description" content="Discover our carefully selected collection of non-toxic, environmentally friendly products.">
+    <meta property="og:description"
+        content="A carefully selected collection of non-toxic products that my own family uses every day.">
     <meta property="og:image" content="https://nontoxicgoods.com/social.png">
     <meta property="og:site_name" content="NontoxicGoods">
 
@@ -19,16 +22,20 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://nontoxicgoods.com">
     <meta name="twitter:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
-    <meta name="twitter:description" content="Discover our carefully selected collection of non-toxic, environmentally friendly products.">
+    <meta name="twitter:description"
+        content="A carefully selected collection of non-toxic products that my own family uses every day.">
     <meta name="twitter:image" content="https://nontoxicgoods.com/social.png">
 
     <!-- Favicon (Leaf Emoji) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         /* Base Styles and Variables */
         :root {
@@ -41,26 +48,26 @@
             --accent-light: #e8d1c9;
             --border: #e6e0dc;
             --shadow: rgba(0, 0, 0, 0.05);
-            
+
             /* Category Colors */
             --category-personal-care: #e6a4b4;
-        --category-kitchen: #b6d7a8;
-        --category-cleaning: #9fc5e8;
-        --category-home: #d5a6bd;
-        --category-beauty: #c27ba0;
-        --category-supplements: #ffd966;
-        --category-bags: #8c9a9e;
-        --category-books: #a18594;
-        --category-bread: #d2b48c;
-        --category-clothing: #75a3a3;
-        --category-drinks: #5499c7;
-        --category-electronics: #e2b6b3;
-        --category-fridge: #b3d9ff;
-        --category-medical: #f7dc6f;
-        --category-pantry: #a3e4d7;
-        --category-cookware: #b87333;
-        --category-other-consumables: #a9a9a9;
-            
+            --category-kitchen: #b6d7a8;
+            --category-cleaning: #9fc5e8;
+            --category-home: #d5a6bd;
+            --category-beauty: #c27ba0;
+            --category-supplements: #ffd966;
+            --category-bags: #8c9a9e;
+            --category-books: #a18594;
+            --category-bread: #d2b48c;
+            --category-clothing: #75a3a3;
+            --category-drinks: #5499c7;
+            --category-electronics: #e2b6b3;
+            --category-fridge: #b3d9ff;
+            --category-medical: #f7dc6f;
+            --category-pantry: #a3e4d7;
+            --category-cookware: #b87333;
+            --category-other-consumables: #a9a9a9;
+
             /* Common variables */
             --border-radius: 8px;
             --container-max-width: 1200px;
@@ -115,7 +122,10 @@
             text-decoration: none;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--header-font);
             margin-bottom: var(--spacing-md);
             font-weight: 600;
@@ -131,7 +141,9 @@
             margin-bottom: var(--spacing-sm);
         }
 
-        button, input, select {
+        button,
+        input,
+        select {
             font-family: var(--ui-font);
             border: none;
             outline: none;
@@ -176,7 +188,8 @@
             box-shadow: 0 0 0 2px var(--accent-light);
         }
 
-        .filter-categories, .filter-countries {
+        .filter-categories,
+        .filter-countries {
             margin-bottom: var(--spacing-lg);
         }
 
@@ -207,20 +220,20 @@
         }
 
         .filter-chip.active {
-        color: black;
-        border-color: transparent;
-        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
-        font-weight: 500;
-    }
-    
-    /* Add a dark text version for lighter background colors */
-    .filter-chip[data-category="Supplements"].active,
-    .filter-chip[data-category="Bread"].active,
-    .filter-chip[data-category="Medical"].active,
-    .filter-chip[data-category="Pantry"].active,
-    .filter-chip[data-category="Fridge"].active {
-        color: var(--text-primary);
-    }
+            color: black;
+            border-color: transparent;
+            text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+        }
+
+        /* Add a dark text version for lighter background colors */
+        .filter-chip[data-category="Supplements"].active,
+        .filter-chip[data-category="Bread"].active,
+        .filter-chip[data-category="Medical"].active,
+        .filter-chip[data-category="Pantry"].active,
+        .filter-chip[data-category="Fridge"].active {
+            color: var(--text-primary);
+        }
 
         .flag-emoji {
             margin-right: var(--spacing-xs);
@@ -230,6 +243,7 @@
         .filter-chip[data-category="Personal Care"] {
             border-left: 3px solid var(--category-personal-care);
         }
+
         .filter-chip[data-category="Personal Care"].active {
             background-color: var(--category-personal-care);
         }
@@ -237,6 +251,7 @@
         .filter-chip[data-category="Kitchen"] {
             border-left: 3px solid var(--category-kitchen);
         }
+
         .filter-chip[data-category="Kitchen"].active {
             background-color: var(--category-kitchen);
         }
@@ -244,6 +259,7 @@
         .filter-chip[data-category="Cleaning"] {
             border-left: 3px solid var(--category-cleaning);
         }
+
         .filter-chip[data-category="Cleaning"].active {
             background-color: var(--category-cleaning);
         }
@@ -251,6 +267,7 @@
         .filter-chip[data-category="Home"] {
             border-left: 3px solid var(--category-home);
         }
+
         .filter-chip[data-category="Home"].active {
             background-color: var(--category-home);
         }
@@ -258,6 +275,7 @@
         .filter-chip[data-category="Beauty"] {
             border-left: 3px solid var(--category-beauty);
         }
+
         .filter-chip[data-category="Beauty"].active {
             background-color: var(--category-beauty);
         }
@@ -265,96 +283,109 @@
         .filter-chip[data-category="Supplements"] {
             border-left: 3px solid var(--category-supplements);
         }
+
         .filter-chip[data-category="Supplements"].active {
             background-color: var(--category-supplements);
         }
-        .filter-chip[data-category="Bags"], 
-    .product-card[data-category="Bags"] {
-        border-left: 4px solid var(--category-bags);
-    }
-    .filter-chip[data-category="Bags"].active {
-        background-color: var(--category-bags);
-    }
 
-    .filter-chip[data-category="Books"], 
-    .product-card[data-category="Books"] {
-        border-left: 4px solid var(--category-books);
-    }
-    .filter-chip[data-category="Books"].active {
-        background-color: var(--category-books);
-    }
+        .filter-chip[data-category="Bags"],
+        .product-card[data-category="Bags"] {
+            border-left: 4px solid var(--category-bags);
+        }
 
-    .filter-chip[data-category="Bread"], 
-    .product-card[data-category="Bread"] {
-        border-left: 4px solid var(--category-bread);
-    }
-    .filter-chip[data-category="Bread"].active {
-        background-color: var(--category-bread);
-    }
+        .filter-chip[data-category="Bags"].active {
+            background-color: var(--category-bags);
+        }
 
-    .filter-chip[data-category="Clothing"], 
-    .product-card[data-category="Clothing"] {
-        border-left: 4px solid var(--category-clothing);
-    }
-    .filter-chip[data-category="Clothing"].active {
-        background-color: var(--category-clothing);
-    }
+        .filter-chip[data-category="Books"],
+        .product-card[data-category="Books"] {
+            border-left: 4px solid var(--category-books);
+        }
 
-    .filter-chip[data-category="Cookware"], 
-.product-card[data-category="Cookware"] {
-    border-left: 4px solid var(--category-cookware);
-}
-.filter-chip[data-category="Cookware"].active {
-    background-color: var(--category-cookware);
-}
+        .filter-chip[data-category="Books"].active {
+            background-color: var(--category-books);
+        }
 
-.filter-chip[data-category="Other Consumables"], 
-.product-card[data-category="Other Consumables"] {
-    border-left: 4px solid var(--category-other-consumables);
-}
-.filter-chip[data-category="Other Consumables"].active {
-    background-color: var(--category-other-consumables);
-}
+        .filter-chip[data-category="Bread"],
+        .product-card[data-category="Bread"] {
+            border-left: 4px solid var(--category-bread);
+        }
 
-    .filter-chip[data-category="Drinks"], 
-    .product-card[data-category="Drinks"] {
-        border-left: 4px solid var(--category-drinks);
-    }
-    .filter-chip[data-category="Drinks"].active {
-        background-color: var(--category-drinks);
-    }
+        .filter-chip[data-category="Bread"].active {
+            background-color: var(--category-bread);
+        }
 
-    .filter-chip[data-category="Electronics"], 
-    .product-card[data-category="Electronics"] {
-        border-left: 4px solid var(--category-electronics);
-    }
-    .filter-chip[data-category="Electronics"].active {
-        background-color: var(--category-electronics);
-    }
+        .filter-chip[data-category="Clothing"],
+        .product-card[data-category="Clothing"] {
+            border-left: 4px solid var(--category-clothing);
+        }
 
-    .filter-chip[data-category="Fridge"], 
-    .product-card[data-category="Fridge"] {
-        border-left: 4px solid var(--category-fridge);
-    }
-    .filter-chip[data-category="Fridge"].active {
-        background-color: var(--category-fridge);
-    }
+        .filter-chip[data-category="Clothing"].active {
+            background-color: var(--category-clothing);
+        }
 
-    .filter-chip[data-category="Medical"], 
-    .product-card[data-category="Medical"] {
-        border-left: 4px solid var(--category-medical);
-    }
-    .filter-chip[data-category="Medical"].active {
-        background-color: var(--category-medical);
-    }
+        .filter-chip[data-category="Cookware"],
+        .product-card[data-category="Cookware"] {
+            border-left: 4px solid var(--category-cookware);
+        }
 
-    .filter-chip[data-category="Pantry"], 
-    .product-card[data-category="Pantry"] {
-        border-left: 4px solid var(--category-pantry);
-    }
-    .filter-chip[data-category="Pantry"].active {
-        background-color: var(--category-pantry);
-    }
+        .filter-chip[data-category="Cookware"].active {
+            background-color: var(--category-cookware);
+        }
+
+        .filter-chip[data-category="Other Consumables"],
+        .product-card[data-category="Other Consumables"] {
+            border-left: 4px solid var(--category-other-consumables);
+        }
+
+        .filter-chip[data-category="Other Consumables"].active {
+            background-color: var(--category-other-consumables);
+        }
+
+        .filter-chip[data-category="Drinks"],
+        .product-card[data-category="Drinks"] {
+            border-left: 4px solid var(--category-drinks);
+        }
+
+        .filter-chip[data-category="Drinks"].active {
+            background-color: var(--category-drinks);
+        }
+
+        .filter-chip[data-category="Electronics"],
+        .product-card[data-category="Electronics"] {
+            border-left: 4px solid var(--category-electronics);
+        }
+
+        .filter-chip[data-category="Electronics"].active {
+            background-color: var(--category-electronics);
+        }
+
+        .filter-chip[data-category="Fridge"],
+        .product-card[data-category="Fridge"] {
+            border-left: 4px solid var(--category-fridge);
+        }
+
+        .filter-chip[data-category="Fridge"].active {
+            background-color: var(--category-fridge);
+        }
+
+        .filter-chip[data-category="Medical"],
+        .product-card[data-category="Medical"] {
+            border-left: 4px solid var(--category-medical);
+        }
+
+        .filter-chip[data-category="Medical"].active {
+            background-color: var(--category-medical);
+        }
+
+        .filter-chip[data-category="Pantry"],
+        .product-card[data-category="Pantry"] {
+            border-left: 4px solid var(--category-pantry);
+        }
+
+        .filter-chip[data-category="Pantry"].active {
+            background-color: var(--category-pantry);
+        }
 
         .clear-btn {
             background-color: transparent;
@@ -441,6 +472,13 @@
             font-size: 0.8rem;
             color: var(--text-secondary);
             margin-top: auto;
+            position: relative;
+        }
+
+        .product-category {
+            margin-left: auto;
+            position: absolute;
+            right: 0;
         }
 
         .product-country {
@@ -476,13 +514,70 @@
         /* Footer Styles */
         footer {
             margin-top: var(--spacing-xl);
-            padding: var(--spacing-lg) 0;
+            padding: var(--spacing-xl) 0;
             border-top: 1px solid var(--border);
-            text-align: center;
             color: var(--text-secondary);
             font-family: var(--ui-font);
             font-size: 0.9rem;
+            background-color: var(--background);
         }
+
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-column h4 {
+            font-family: var(--header-font);
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+
+        .footer-logo {
+            font-family: var(--header-font);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+
+        .footer-email a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-email a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive footer */
+        @media (min-width: 768px) {
+            .footer-grid {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .footer-column {
+                padding: 0 var(--spacing-md);
+            }
+
+            .footer-column:first-child {
+                padding-left: 0;
+            }
+
+            .footer-column:last-child {
+                padding-right: 0;
+            }
+        }
+
 
         /* Responsive Breakpoints */
         @media (min-width: 500px) {
@@ -495,7 +590,7 @@
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             .products-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -505,20 +600,21 @@
             .products-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
-            
+
             .filters {
                 display: flex;
                 flex-wrap: wrap;
                 gap: var(--spacing-lg);
                 align-items: flex-start;
             }
-            
+
             .search-container {
                 width: 100%;
                 margin-bottom: var(--spacing-md);
             }
-            
-            .filter-categories, .filter-countries {
+
+            .filter-categories,
+            .filter-countries {
                 flex: 1;
                 min-width: 200px;
                 margin-bottom: var(--spacing-md);
@@ -526,11 +622,13 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1>NontoxicGoods.com</h1>
-            <p class="tagline">Discover products free from harmful chemicals</p>
+            <p class="tagline">Cleaner products for a healthier life.</p>
+            <p>The best and healthiest things I've found that my family uses every day!</p>
         </div>
     </header>
 
@@ -539,17 +637,17 @@
             <div class="search-container">
                 <input type="text" id="search" placeholder="Search products...">
             </div>
-            
+
             <div class="filter-categories">
                 <h3>Categories</h3>
                 <div id="category-filters" class="filter-chips"></div>
             </div>
-            
+
             <div class="filter-countries">
                 <h3>Made In</h3>
                 <div id="country-filters" class="filter-chips"></div>
             </div>
-            
+
             <button id="clear-filters" class="clear-btn">Clear All Filters</button>
         </section>
 
@@ -564,8 +662,26 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 NontoxicGoods.com - A curated collection of non-toxic products</p>
-            <p><em>If you choose to make a purchase through some of the links on this page, we may receive a small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your support!</em></p>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">NontoxicGoods</div>
+                    <p>&copy; 2025 NontoxicGoods.com</p>
+                    <p>A curated collection of non-toxic products for a healthier life.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p>Have feedback, updates, or product suggestions?</p>
+                    <p>We'd love to hear from you!</p>
+                    <p class="footer-email"><a href="mailto:hellof@nontoxicgoods.com">hellof@nontoxicgoods.com</a></p>
+                </div>
+
+                <div class="footer-column">
+                    <p><em>If you choose to make a purchase through some of the links on this page, we may receive a
+                            small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your
+                            support!</em></p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -589,7 +705,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // State
             let products = [];
             let activeFilters = {
@@ -597,7 +713,7 @@
                 countries: new Set(),
                 search: ''
             };
-            
+
             // DOM elements
             const productsGrid = document.getElementById('products-grid');
             const productsCount = document.getElementById('count');
@@ -605,11 +721,11 @@
             const categoryFilters = document.getElementById('category-filters');
             const countryFilters = document.getElementById('country-filters');
             const clearFiltersButton = document.getElementById('clear-filters');
-            
+
             // Templates
             const productCardTemplate = document.getElementById('product-card-template');
             const filterChipTemplate = document.getElementById('filter-chip-template');
-            
+
             // Country flag emoji mapping
             const countryFlags = {
                 'USA': '🇺🇸',
@@ -640,33 +756,33 @@
                 'Turkey': '🇹🇷'
                 // Add more country-flag pairs as needed
             };
-            
+
             // Helper function to get flag emoji for a country
             function getFlagEmoji(country) {
                 return countryFlags[country] || '🌎'; // Default to globe if no specific flag
             }
-            
+
             // ===== Data Loading =====
             async function loadData() {
                 try {
                     // Change this URL to the actual CSV file path in your repository
                     const response = await fetch('products.csv');
                     const csvData = await response.text();
-                    
+
                     // Parse CSV to JSON
                     Papa.parse(csvData, {
                         header: true,
                         dynamicTyping: true,
-                        complete: function(results) {
+                        complete: function (results) {
                             products = results.data;
-                            
+
                             // Remove any empty rows (often happens with CSVs)
                             products = products.filter(product => product.Title && product.Title.trim() !== '');
-                            
+
                             initializeFilters();
                             renderProducts();
                         },
-                        error: function(error) {
+                        error: function (error) {
                             console.error('Error parsing CSV:', error);
                             productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
                         }
@@ -676,30 +792,30 @@
                     productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
                 }
             }
-            
+
             // ===== Initialize Filter Chips =====
             function initializeFilters() {
                 // Extract unique categories and countries
                 const categories = [...new Set(products.map(p => p.Category))].filter(Boolean).sort();
                 const countries = [...new Set(products.map(p => p['Made In']))].filter(Boolean).sort();
-                
+
                 // Create category filter chips
                 categories.forEach(category => {
                     const chip = createFilterChip(category, 'category');
                     categoryFilters.appendChild(chip);
                 });
-                
+
                 // Create country filter chips
                 countries.forEach(country => {
                     const chip = createFilterChip(country, 'country');
                     countryFilters.appendChild(chip);
                 });
             }
-            
+
             function createFilterChip(value, type) {
                 const chipClone = filterChipTemplate.content.cloneNode(true);
                 const chip = chipClone.querySelector('.filter-chip');
-                
+
                 // Set up the chip differently based on type
                 if (type === 'category') {
                     chip.textContent = value;
@@ -709,30 +825,30 @@
                     const flagSpan = document.createElement('span');
                     flagSpan.className = 'flag-emoji';
                     flagSpan.textContent = getFlagEmoji(value);
-                    
+
                     const countryName = document.createTextNode(value);
-                    
+
                     chip.appendChild(flagSpan);
                     chip.appendChild(countryName);
                 }
-                
+
                 chip.dataset.value = value;
                 chip.dataset.type = type;
-                
+
                 chip.addEventListener('click', toggleFilter);
-                
+
                 return chip;
             }
-            
+
             // ===== Filter Functionality =====
             function toggleFilter(e) {
                 const chip = e.currentTarget;
                 const value = chip.dataset.value;
                 const type = chip.dataset.type;
-                
+
                 // Toggle active state
                 chip.classList.toggle('active');
-                
+
                 // Update active filters
                 if (type === 'category') {
                     if (chip.classList.contains('active')) {
@@ -747,48 +863,48 @@
                         activeFilters.countries.delete(value);
                     }
                 }
-                
+
                 renderProducts();
             }
-            
+
             function clearFilters() {
                 // Reset active filters
                 activeFilters.categories.clear();
                 activeFilters.countries.clear();
                 activeFilters.search = '';
-                
+
                 // Reset UI
                 searchInput.value = '';
                 document.querySelectorAll('.filter-chip').forEach(chip => {
                     chip.classList.remove('active');
                 });
-                
+
                 renderProducts();
             }
-            
+
             // ===== Search Functionality =====
             function handleSearch(e) {
                 activeFilters.search = e.target.value.toLowerCase().trim();
                 renderProducts();
             }
-            
+
             // ===== Rendering Products =====
             function renderProducts() {
                 // Clear the products grid
                 productsGrid.innerHTML = '';
-                
+
                 // Filter products based on active filters
                 const filteredProducts = products.filter(product => {
                     // Category filter
                     if (activeFilters.categories.size > 0 && !activeFilters.categories.has(product.Category)) {
                         return false;
                     }
-                    
+
                     // Country filter
                     if (activeFilters.countries.size > 0 && !activeFilters.countries.has(product['Made In'])) {
                         return false;
                     }
-                    
+
                     // Search filter
                     if (activeFilters.search) {
                         const searchableText = `
@@ -798,62 +914,63 @@
                             ${product['Made In'] || ''} 
                             ${product.Category || ''}
                         `.toLowerCase();
-                        
+
                         if (!searchableText.includes(activeFilters.search)) {
                             return false;
                         }
                     }
-                    
+
                     return true;
                 });
-                
+
                 // Update count
                 productsCount.textContent = filteredProducts.length;
-                
+
                 // If no products found
                 if (filteredProducts.length === 0) {
                     productsGrid.innerHTML = '<div class="no-results">No products found. Try adjusting your filters.</div>';
                     return;
                 }
-                
+
                 // Render each product card
                 filteredProducts.forEach(product => {
                     const card = createProductCard(product);
                     productsGrid.appendChild(card);
                 });
             }
-            
+
             function createProductCard(product) {
                 const cardClone = productCardTemplate.content.cloneNode(true);
                 const card = cardClone.querySelector('.product-card');
-                
+
                 // Set card data
                 card.href = product.Link || '#';
                 card.dataset.category = product.Category || '';
-                
+
                 card.querySelector('.product-title').textContent = product.Title || 'Untitled Product';
                 card.querySelector('.product-brand').textContent = product.Brand || '';
                 card.querySelector('.product-notes').textContent = product.Notes || '';
-                
+
                 if (product['Made In']) {
                     card.querySelector('.flag-emoji').textContent = getFlagEmoji(product['Made In']);
                     card.querySelector('.country-name').textContent = `Made in ${product['Made In']}`;
                 } else {
                     card.querySelector('.product-country').style.display = 'none';
                 }
-                
+
                 card.querySelector('.product-category').textContent = product.Category || '';
-                
+
                 return card;
             }
-            
+
             // ===== Event Listeners =====
             searchInput.addEventListener('input', handleSearch);
             clearFiltersButton.addEventListener('click', clearFilters);
-            
+
             // ===== Initialize =====
             loadData();
         });
     </script>
 </body>
+
 </html>
