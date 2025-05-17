@@ -53,12 +53,13 @@
         --category-books: #a18594;
         --category-bread: #d2b48c;
         --category-clothing: #75a3a3;
-        --category-drink: #85c1e9;
         --category-drinks: #5499c7;
         --category-electronics: #e2b6b3;
         --category-fridge: #b3d9ff;
         --category-medical: #f7dc6f;
         --category-pantry: #a3e4d7;
+        --category-cookware: #b87333;
+        --category-other-consumables: #a9a9a9;
             
             /* Common variables */
             --border-radius: 8px;
@@ -299,13 +300,21 @@
         background-color: var(--category-clothing);
     }
 
-    .filter-chip[data-category="Drink"], 
-    .product-card[data-category="Drink"] {
-        border-left: 4px solid var(--category-drink);
-    }
-    .filter-chip[data-category="Drink"].active {
-        background-color: var(--category-drink);
-    }
+    .filter-chip[data-category="Cookware"], 
+.product-card[data-category="Cookware"] {
+    border-left: 4px solid var(--category-cookware);
+}
+.filter-chip[data-category="Cookware"].active {
+    background-color: var(--category-cookware);
+}
+
+.filter-chip[data-category="Other Consumables"], 
+.product-card[data-category="Other Consumables"] {
+    border-left: 4px solid var(--category-other-consumables);
+}
+.filter-chip[data-category="Other Consumables"].active {
+    background-color: var(--category-other-consumables);
+}
 
     .filter-chip[data-category="Drinks"], 
     .product-card[data-category="Drinks"] {
