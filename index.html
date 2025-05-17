@@ -992,29 +992,6 @@
             // ===== Initialize =====
             loadData();
         });
-        // Set the build time
-        document.addEventListener('DOMContentLoaded', function () {
-            // For a production site, you would replace this with your actual build timestamp
-            // This is just a placeholder that shows the current time
-            const now = new Date();
-
-            // Format the date in Central Time (America/Chicago)
-            const options = {
-                timeZone: 'America/Chicago',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZoneName: 'short'
-            };
-
-            const formatter = new Intl.DateTimeFormat('en-US', options);
-            const formattedDate = formatter.format(now);
-
-            // Update the build time in the footer
-            document.getElementById('build-time').textContent = `Last updated: ${formattedDate}`;
-        });
     </script>
 </body>
 
