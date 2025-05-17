@@ -522,7 +522,7 @@
         /* Footer Styles */
         footer {
             margin-top: var(--spacing-xl);
-            padding: var(--spacing-xl) 0;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
             border-top: 1px solid var(--border);
             color: var(--text-secondary);
             font-family: var(--ui-font);
@@ -534,6 +534,7 @@
             display: flex;
             flex-direction: column;
             gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
         }
 
         .footer-column {
@@ -564,6 +565,14 @@
 
         .footer-email a:hover {
             text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border);
         }
 
         /* Responsive footer */
@@ -675,7 +684,8 @@
                     <div class="footer-logo">NontoxicGoods.com</div>
                     <p>&copy; 2025 NontoxicGoods.com</p>
                     <p>A curated collection of non-toxic products for a healthier life.</p>
-                    <p>Read more about clean eating and non-toxic living at <a href="https://tallowandgrace.com">tallowandgrace.com</a>.</a></p>
+                    <p>Read more about clean eating and non-toxic living at <a
+                            href="https://tallowandgrace.com">tallowandgrace.com</a>.</a></p>
                 </div>
 
                 <div class="footer-column">
@@ -690,6 +700,9 @@
                             small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your
                             support!</em></p>
                 </div>
+            </div>
+            <div class="last-updated">
+                <span id="build-time">Last updated: </span>
             </div>
         </div>
     </footer>
@@ -978,6 +991,29 @@
 
             // ===== Initialize =====
             loadData();
+        });
+        // Set the build time
+        document.addEventListener('DOMContentLoaded', function () {
+            // For a production site, you would replace this with your actual build timestamp
+            // This is just a placeholder that shows the current time
+            const now = new Date();
+
+            // Format the date in Central Time (America/Chicago)
+            const options = {
+                timeZone: 'America/Chicago',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZoneName: 'short'
+            };
+
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            const formattedDate = formatter.format(now);
+
+            // Update the build time in the footer
+            document.getElementById('build-time').textContent = `Last updated: ${formattedDate}`;
         });
     </script>
 </body>
