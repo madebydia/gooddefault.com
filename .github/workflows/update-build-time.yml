@@ -1,0 +1,36 @@
+name: Update Build Time
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  update-timestamp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update timestamp
+        run: |
+          # Get current time in Central Time (America/Chicago)
+          TIMESTAMP=$(TZ=America/Chicago date '+%B %d, %Y at %I:%M %p CDT')
+          
+          # Replace timestamp in index.html
+          sed -i "s|<span id=\"build-time\">Last updated: .*</span>|<span id=\"build-time\">Last updated: $TIMESTAMP</span>|g" index.html
+          
+          # Show the change in logs
+          echo "Updated timestamp to: $TIMESTAMP"
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add index.html
+          
+          # Only commit and push if there are changes
+          git diff-index --quiet HEAD || (git commit -m "Update timestamp to $(TZ=America/Chicago date '+%B %d, %Y at %I:%M %p CDT')" && git push)
