@@ -67,6 +67,7 @@
             --category-pantry: #a3e4d7;
             --category-cookware: #b87333;
             --category-other-consumables: #a9a9a9;
+            --category-storage-organization: #9370db;
 
             /* Common variables */
             --border-radius: 8px;
@@ -386,6 +387,15 @@
         .filter-chip[data-category="Pantry"].active {
             background-color: var(--category-pantry);
         }
+        
+        .filter-chip[data-category="Storage & Organization"],
+    .product-card[data-category="Storage & Organization"] {
+        border-left: 4px solid var(--category-storage-organization);
+    }
+
+    .filter-chip[data-category="Storage & Organization"].active {
+        background-color: var(--category-storage-organization);
+    }
 
         .clear-btn {
             background-color: transparent;
