@@ -68,6 +68,7 @@
             --category-cookware: #b87333;
             --category-other-consumables: #a9a9a9;
             --category-storage-organization: #9370db;
+            --category-tableware: #dda0dd;
 
             /* Common variables */
             --border-radius: 8px;
@@ -232,7 +233,8 @@
         .filter-chip[data-category="Bread"].active,
         .filter-chip[data-category="Medical"].active,
         .filter-chip[data-category="Pantry"].active,
-        .filter-chip[data-category="Fridge"].active {
+        .filter-chip[data-category="Fridge"].active,
+        .filter-chip[data-category="Tableware"].active {
             color: var(--text-primary);
         }
 
@@ -289,6 +291,7 @@
             background-color: var(--category-supplements);
         }
 
+        /* Bags Category */
         .filter-chip[data-category="Bags"],
         .product-card[data-category="Bags"] {
             border-left: 4px solid var(--category-bags);
@@ -298,6 +301,20 @@
             background-color: var(--category-bags);
         }
 
+        /* Beauty Category */
+        .filter-chip[data-category="Beauty"] {
+            border-left: 3px solid var(--category-beauty);
+        }
+
+        .filter-chip[data-category="Beauty"].active {
+            background-color: var(--category-beauty);
+        }
+
+        .product-card[data-category="Beauty"] {
+            border-left: 4px solid var(--category-beauty);
+        }
+
+        /* Books Category */
         .filter-chip[data-category="Books"],
         .product-card[data-category="Books"] {
             border-left: 4px solid var(--category-books);
@@ -307,6 +324,7 @@
             background-color: var(--category-books);
         }
 
+        /* Bread Category */
         .filter-chip[data-category="Bread"],
         .product-card[data-category="Bread"] {
             border-left: 4px solid var(--category-bread);
@@ -316,6 +334,20 @@
             background-color: var(--category-bread);
         }
 
+        /* Cleaning Category */
+        .filter-chip[data-category="Cleaning"] {
+            border-left: 3px solid var(--category-cleaning);
+        }
+
+        .filter-chip[data-category="Cleaning"].active {
+            background-color: var(--category-cleaning);
+        }
+
+        .product-card[data-category="Cleaning"] {
+            border-left: 4px solid var(--category-cleaning);
+        }
+
+        /* Clothing Category */
         .filter-chip[data-category="Clothing"],
         .product-card[data-category="Clothing"] {
             border-left: 4px solid var(--category-clothing);
@@ -325,6 +357,7 @@
             background-color: var(--category-clothing);
         }
 
+        /* Cookware Category */
         .filter-chip[data-category="Cookware"],
         .product-card[data-category="Cookware"] {
             border-left: 4px solid var(--category-cookware);
@@ -334,15 +367,7 @@
             background-color: var(--category-cookware);
         }
 
-        .filter-chip[data-category="Other Consumables"],
-        .product-card[data-category="Other Consumables"] {
-            border-left: 4px solid var(--category-other-consumables);
-        }
-
-        .filter-chip[data-category="Other Consumables"].active {
-            background-color: var(--category-other-consumables);
-        }
-
+        /* Drinks Category */
         .filter-chip[data-category="Drinks"],
         .product-card[data-category="Drinks"] {
             border-left: 4px solid var(--category-drinks);
@@ -352,6 +377,7 @@
             background-color: var(--category-drinks);
         }
 
+        /* Electronics Category */
         .filter-chip[data-category="Electronics"],
         .product-card[data-category="Electronics"] {
             border-left: 4px solid var(--category-electronics);
@@ -361,6 +387,7 @@
             background-color: var(--category-electronics);
         }
 
+        /* Fridge Category */
         .filter-chip[data-category="Fridge"],
         .product-card[data-category="Fridge"] {
             border-left: 4px solid var(--category-fridge);
@@ -370,6 +397,33 @@
             background-color: var(--category-fridge);
         }
 
+        /* Home Category */
+        .filter-chip[data-category="Home"] {
+            border-left: 3px solid var(--category-home);
+        }
+
+        .filter-chip[data-category="Home"].active {
+            background-color: var(--category-home);
+        }
+
+        .product-card[data-category="Home"] {
+            border-left: 4px solid var(--category-home);
+        }
+
+        /* Kitchen Category */
+        .filter-chip[data-category="Kitchen"] {
+            border-left: 3px solid var(--category-kitchen);
+        }
+
+        .filter-chip[data-category="Kitchen"].active {
+            background-color: var(--category-kitchen);
+        }
+
+        .product-card[data-category="Kitchen"] {
+            border-left: 4px solid var(--category-kitchen);
+        }
+
+        /* Medical Category */
         .filter-chip[data-category="Medical"],
         .product-card[data-category="Medical"] {
             border-left: 4px solid var(--category-medical);
@@ -379,6 +433,17 @@
             background-color: var(--category-medical);
         }
 
+        /* Other Consumables Category */
+        .filter-chip[data-category="Other Consumables"],
+        .product-card[data-category="Other Consumables"] {
+            border-left: 4px solid var(--category-other-consumables);
+        }
+
+        .filter-chip[data-category="Other Consumables"].active {
+            background-color: var(--category-other-consumables);
+        }
+
+        /* Pantry Category */
         .filter-chip[data-category="Pantry"],
         .product-card[data-category="Pantry"] {
             border-left: 4px solid var(--category-pantry);
@@ -387,15 +452,52 @@
         .filter-chip[data-category="Pantry"].active {
             background-color: var(--category-pantry);
         }
-        
-        .filter-chip[data-category="Storage & Organization"],
-    .product-card[data-category="Storage & Organization"] {
-        border-left: 4px solid var(--category-storage-organization);
-    }
 
-    .filter-chip[data-category="Storage & Organization"].active {
-        background-color: var(--category-storage-organization);
-    }
+        /* Personal Care Category */
+        .filter-chip[data-category="Personal Care"] {
+            border-left: 3px solid var(--category-personal-care);
+        }
+
+        .filter-chip[data-category="Personal Care"].active {
+            background-color: var(--category-personal-care);
+        }
+
+        .product-card[data-category="Personal Care"] {
+            border-left: 4px solid var(--category-personal-care);
+        }
+
+        /* Storage & Organization Category */
+        .filter-chip[data-category="Storage & Organization"],
+        .product-card[data-category="Storage & Organization"] {
+            border-left: 4px solid var(--category-storage-organization);
+        }
+
+        .filter-chip[data-category="Storage & Organization"].active {
+            background-color: var(--category-storage-organization);
+        }
+
+        /* Supplements Category */
+        .filter-chip[data-category="Supplements"] {
+            border-left: 3px solid var(--category-supplements);
+        }
+
+        .filter-chip[data-category="Supplements"].active {
+            background-color: var(--category-supplements);
+        }
+
+        .product-card[data-category="Supplements"] {
+            border-left: 4px solid var(--category-supplements);
+        }
+
+        /* Tableware Category */
+        .filter-chip[data-category="Tableware"],
+        .product-card[data-category="Tableware"] {
+            border-left: 4px solid var(--category-tableware);
+        }
+
+        .filter-chip[data-category="Tableware"].active {
+            background-color: var(--category-tableware);
+        }
 
         .clear-btn {
             background-color: transparent;
@@ -502,31 +604,6 @@
         .product-country {
             display: flex;
             align-items: center;
-        }
-
-        /* Category border colors */
-        .product-card[data-category="Personal Care"] {
-            border-left: 4px solid var(--category-personal-care);
-        }
-
-        .product-card[data-category="Kitchen"] {
-            border-left: 4px solid var(--category-kitchen);
-        }
-
-        .product-card[data-category="Cleaning"] {
-            border-left: 4px solid var(--category-cleaning);
-        }
-
-        .product-card[data-category="Home"] {
-            border-left: 4px solid var(--category-home);
-        }
-
-        .product-card[data-category="Beauty"] {
-            border-left: 4px solid var(--category-beauty);
-        }
-
-        .product-card[data-category="Supplements"] {
-            border-left: 4px solid var(--category-supplements);
         }
 
         /* Footer Styles */
@@ -693,7 +770,7 @@
                 <div class="footer-column">
                     <div class="footer-logo">NontoxicGoods.com</div>
                     <p>&copy; 2025 NontoxicGoods.com</p>
-                    <p>A curated collection of non-toxic products for a healthier life.</p>
+                    <p>A curated collection of <span id="total-product-count"></span> non-toxic products for a healthier life.</p>
                     <p>Read more about clean eating and non-toxic living at <b><a
                             href="https://thecarnivoremama.com">thecarnivoremama.com</a></b>.</p>
                 </div>
@@ -712,7 +789,7 @@
                 </div>
             </div>
             <div class="last-updated">
-                <span id="build-time">Last updated: May 23, 2025 at 04:17 PM CDT</span>
+                <span id="build-time">Last updated: June 11, 2025 at 08:09 AM CDT</span>
             </div>
         </div>
     </footer>
@@ -749,6 +826,7 @@
             // DOM elements
             const productsGrid = document.getElementById('products-grid');
             const productsCount = document.getElementById('count');
+            const totalProductCount = document.getElementById('total-product-count');
             const searchInput = document.getElementById('search');
             const categoryFilters = document.getElementById('category-filters');
             const countryFilters = document.getElementById('country-filters');
@@ -810,6 +888,9 @@
 
                             // Remove any empty rows (often happens with CSVs)
                             products = products.filter(product => product.Title && product.Title.trim() !== '');
+
+                            // Update total product count in footer
+                            totalProductCount.textContent = products.length;
 
                             initializeFilters();
                             renderProducts();
