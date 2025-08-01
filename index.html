@@ -26,9 +26,8 @@
         content="A carefully selected collection of non-toxic products that my own family uses every day.">
     <meta name="twitter:image" content="https://nontoxicgoods.com/social.png">
 
-    <!-- Favicon (Leaf Emoji) -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,6 +156,13 @@
             padding: var(--spacing-lg) 0;
             text-align: center;
             border-bottom: 1px solid var(--border);
+        }
+
+        .header-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--spacing-md);
+            display: block;
         }
 
         .tagline {
@@ -731,6 +737,7 @@
 <body>
     <header>
         <div class="container">
+            <img src="logo.png" alt="NontoxicGoods.com Logo" class="header-logo">
             <h1>NontoxicGoods.com</h1>
             <p class="tagline">Cleaner products for a healthier life.</p>
             <p><i>The best and healthiest things I've found that my family uses every day!</i></p>
