@@ -795,7 +795,7 @@
                 </div>
             </div>
             <div class="last-updated">
-                <span id="build-time">Last updated: August 01, 2025 at 01:28 PM CDT</span>
+                <span id="build-time">Last updated: January 24, 2026 at 12:27 PM CDT</span>
             </div>
         </div>
     </footer>
@@ -893,7 +893,7 @@
                             products = results.data;
 
                             // Remove any empty rows (often happens with CSVs)
-                            products = products.filter(product => product.Title && product.Title.trim() !== '');
+                            products = products.filter(product => product.Name && product.Name.trim() !== '');
 
                             // Update total product count in footer
                             totalProductCount.textContent = products.length;
@@ -1027,10 +1027,10 @@
                     // Search filter
                     if (activeFilters.search) {
                         const searchableText = `
-                            ${product.Title || ''} 
-                            ${product.Brand || ''} 
-                            ${product.Notes || ''} 
-                            ${product['Made In'] || ''} 
+                            ${product.Name || ''}
+                            ${product.Brand || ''}
+                            ${product.Notes || ''}
+                            ${product['Made In'] || ''}
                             ${product.Category || ''}
                         `.toLowerCase();
 
@@ -1066,7 +1066,7 @@
                 card.href = product.Link || '#';
                 card.dataset.category = product.Category || '';
 
-                card.querySelector('.product-title').textContent = product.Title || 'Untitled Product';
+                card.querySelector('.product-title').textContent = product.Name || 'Untitled Product';
                 card.querySelector('.product-brand').textContent = product.Brand || '';
                 card.querySelector('.product-notes').textContent = product.Notes || '';
 

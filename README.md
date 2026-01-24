@@ -20,7 +20,7 @@ NontoxicGoods.com is a curated collection of non-toxic products spanning categor
 
 1. **Clone the repository**
    ```
-   git clone https://github.com/ruthmade/nontoxicgoods.com.git
+   git clone https://github.com/meimakes/nontoxicgoods.com.git
    cd nontoxicgoods.com
    ```
 
