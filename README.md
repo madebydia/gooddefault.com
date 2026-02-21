@@ -2,6 +2,9 @@
 
 A searchable, filterable static website for discovering non-toxic products. This site loads product data from a CSV file, allowing for easy updates and maintenance.
 
+Built by [@meimakes](https://x.com/meimakes)
+
+
 ## 🌿 About
 
 NontoxicGoods.com is a curated collection of non-toxic products spanning categories like Personal Care, Kitchen, Cleaning, and more.
