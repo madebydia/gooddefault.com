@@ -1,0 +1,27 @@
+# NontoxicGoods.com
+
+> A curated collection of evidence-based non-toxic products for home, personal care, and family use. Maintained by Mei Park.
+
+## What This Site Is
+
+NontoxicGoods.com is a curated product directory focused on genuinely non-toxic alternatives for everyday household and personal care products. Every product listed is personally used and vetted. No sponsored placements.
+
+## Categories
+
+- Household cleaners
+- Personal care and skincare
+- Baby and toddler products
+- Kitchen and food storage
+- Supplements and wellness
+
+## Who Maintains This
+
+Mei Park — indie builder, former engineering director, stay-at-home mom focused on creating healthier home environments. Also runs:
+
+- [The Undercurrent](https://www.theundercurrent.dev): Newsletter on dev tools and AI for builders.
+- [Raising Pixels](https://www.raisingpixels.dev): Newsletter on computational thinking and raising tech-native kids.
+- [meimakes.com](https://meimakes.com): Main site with open source tools and projects.
+
+## Contact
+
+For product suggestions or corrections: visit the site and use the contact method provided.
