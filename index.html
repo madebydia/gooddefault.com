@@ -69,6 +69,7 @@
             --category-other-consumables: #a9a9a9;
             --category-storage-organization: #9370db;
             --category-tableware: #dda0dd;
+            --category-baby: #f8c8dc;
 
             /* Common variables */
             --border-radius: 8px;
@@ -504,6 +505,16 @@
 
         .filter-chip[data-category="Tableware"].active {
             background-color: var(--category-tableware);
+        }
+
+        /* Baby Category */
+        .filter-chip[data-category="Baby"],
+        .product-card[data-category="Baby"] {
+            border-left: 4px solid var(--category-baby);
+        }
+
+        .filter-chip[data-category="Baby"].active {
+            background-color: var(--category-baby);
         }
 
         .clear-btn {

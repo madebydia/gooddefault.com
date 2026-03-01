@@ -10,9 +10,19 @@ NontoxicGoods.com is a curated product directory focused on genuinely non-toxic 
 
 - Household cleaners
 - Personal care and skincare
-- Baby and toddler products
+- Baby and toddler products (strollers, car seats)
 - Kitchen and food storage
+- Cookware (PFAS-free non-stick)
 - Supplements and wellness
+- Clothing and shoes (PFAS-free outdoor gear, daily wear)
+- Home (mattresses, carpets, furniture)
+- Beauty and cosmetics
+- Medical supplies
+- Bags and accessories
+
+## Data Source
+
+Product data includes items sourced from PFAS Central (pfascentral.org), a project of the Green Science Policy Institute, which maintains a verified list of PFAS-free products across many categories.
 
 ## Who Maintains This
 
