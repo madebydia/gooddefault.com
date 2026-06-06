@@ -2,7 +2,7 @@
 
 A searchable, filterable static website for discovering non-toxic products. This site loads product data from a CSV file, allowing for easy updates and maintenance.
 
-Built by [@meimakes](https://x.com/meimakes)
+Built by [@madebydia](https://x.com/madebydia)
 
 
 ## 🌿 About
@@ -23,7 +23,7 @@ NontoxicGoods.com is a curated collection of non-toxic products spanning categor
 
 1. **Clone the repository**
    ```
-   git clone https://github.com/meimakes/nontoxicgoods.com.git
+   git clone https://github.com/madebydia/nontoxicgoods.com.git
    cd nontoxicgoods.com
    ```
 
