@@ -115,6 +115,9 @@
         <div>
           <h2 class="font-serif font-black text-4xl uppercase tracking-tighter leading-none mb-4">Good<br>Default</h2>
           <p class="text-stone-400 max-w-md">The searchable catalog of better household defaults. Research-backed, zero sponsored content.</p>
+          <p class="text-stone-500 max-w-xl mt-4 text-sm leading-relaxed">
+            Some links may earn a small commission, including Amazon links. As an Amazon Associate I earn from qualifying purchases. No brand can pay to be listed; the catalog is built from materials, testing, and real-home usefulness.
+          </p>
         </div>
         <div class="flex flex-wrap gap-6 text-sm font-bold uppercase tracking-widest text-stone-400">
           <a href="./" class="hover:text-white transition-colors">Home</a>
@@ -203,6 +206,17 @@
         return [product.Category, product.Name, product.Brand].map(normalizeKey).join("|");
       }
 
+      function slugify(value) {
+        return normalizeKey(value)
+          .replace(/&/g, " and ")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function productSlug(product) {
+        return slugify(`${product.Brand} ${product.Name}`) || slugify(productKey(product));
+      }
+
       function dedupeProducts(products) {
         const seen = new Set();
         return products.filter((product) => {
@@ -239,8 +253,9 @@
 
       function productCard(product) {
         const compareUrl = `compare.html?category=${encodeURIComponent(product.Category)}&item=${encodeURIComponent(product.Name)}`;
+        const catalogUrl = `catalog.html?category=${encodeURIComponent(product.Category)}#${encodeURIComponent(productSlug(product))}`;
         return `
-          <article class="group">
+          <article id="${esc(productSlug(product))}" class="group scroll-mt-28">
             <a href="${esc(product.Link)}" target="_blank" rel="noopener" class="block no-underline">
               <div class="relative aspect-square mb-6 overflow-hidden border-2 border-stone-900 rounded-sm product-tile">
                 <div class="absolute top-4 left-4">
@@ -252,7 +267,10 @@
             </a>
             <p class="text-stone-500 text-sm font-bold mb-2">${esc(product.Brand)}${product["Made In"] ? ` · Made in ${esc(product["Made In"])}` : ""}</p>
             <p class="text-stone-600 text-sm leading-relaxed">${esc(product.Notes)}</p>
-            <a href="${compareUrl}" class="mt-4 inline-flex text-xs font-black uppercase tracking-widest text-stone-900 border-b-2 border-stone-900 hover:bg-stone-200 transition-colors">Compare category</a>
+            <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+              <a href="${compareUrl}" class="inline-flex text-xs font-black uppercase tracking-widest text-stone-900 border-b-2 border-stone-900 hover:bg-stone-200 transition-colors">Compare category</a>
+              <a href="${catalogUrl}" class="inline-flex text-xs font-black uppercase tracking-widest text-stone-500 border-b border-stone-400 hover:text-stone-900 hover:border-stone-900 transition-colors">Product link</a>
+            </div>
           </article>
         `;
       }
@@ -271,19 +289,41 @@
         return params.get("category") || "All";
       }
 
-      function setCategory(category, updateUrl = true) {
+      function queryFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("q") || "";
+      }
+
+      function updateUrl() {
+        const url = new URL(window.location.href);
+        if (state.category === "All") {
+          url.searchParams.delete("category");
+        } else {
+          url.searchParams.set("category", state.category);
+        }
+
+        if (state.query.trim()) {
+          url.searchParams.set("q", state.query.trim());
+        } else {
+          url.searchParams.delete("q");
+        }
+
+        window.history.replaceState(null, "", url);
+      }
+
+      function setCategory(category, updateLocation = true) {
         state.category = category || "All";
         state.visible = 24;
 
-        if (updateUrl) {
-          const url = new URL(window.location.href);
-          if (state.category === "All") {
-            url.searchParams.delete("category");
-          } else {
-            url.searchParams.set("category", state.category);
-          }
-          window.history.replaceState(null, "", url);
-        }
+        if (updateLocation) updateUrl();
+      }
+
+      function setQuery(query, updateLocation = true) {
+        state.query = query || "";
+        search.value = state.query;
+        state.visible = 24;
+
+        if (updateLocation) updateUrl();
       }
 
       function renderFilters() {
@@ -307,6 +347,26 @@
         loadMore.classList.toggle("hidden", visibleProducts.length >= products.length);
       }
 
+      function showLinkedProductIfNeeded() {
+        if (!window.location.hash) return;
+        const targetId = decodeURIComponent(window.location.hash.slice(1));
+        const targetIndex = filteredProducts().findIndex((product) => productSlug(product) === targetId);
+        if (targetIndex >= state.visible) {
+          state.visible = targetIndex + 1;
+        }
+      }
+
+      function scrollToLinkedProduct() {
+        if (!window.location.hash) return;
+        const targetId = decodeURIComponent(window.location.hash.slice(1));
+        window.setTimeout(() => {
+          const target = document.getElementById(targetId);
+          if (!target) return;
+          const top = target.getBoundingClientRect().top + window.scrollY - 96;
+          window.scrollTo({ top, behavior: "smooth" });
+        }, 250);
+      }
+
       filters.addEventListener("click", (event) => {
         const button = event.target.closest("button[data-category]");
         if (!button) return;
@@ -316,8 +376,7 @@
       });
 
       search.addEventListener("input", () => {
-        state.query = search.value;
-        state.visible = 24;
+        setQuery(search.value);
         render();
       });
 
@@ -339,8 +398,11 @@
         const requestedCategory = categoryFromUrl();
         const categories = new Set(state.products.map((product) => product.Category));
         setCategory(requestedCategory === "All" || categories.has(requestedCategory) ? requestedCategory : "All", false);
+        setQuery(queryFromUrl(), false);
+        showLinkedProductIfNeeded();
         renderFilters();
         render();
+        scrollToLinkedProduct();
       }).catch(() => {
         resultCount.textContent = "Could not load the catalog CSVs.";
       });
