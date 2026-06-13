@@ -306,10 +306,10 @@
     "width": 900
   },
   "cookware|ceramic non-stick cookware|caraway": {
-    "height": 900,
-    "source": "generated-fallback:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 628,
+    "source": "https://images.ctfassets.net/vitsw3itv0qj/6UvvKWbxiMN36bMEnpOMkJ/e368f3688b68980b68f1ff1bc6216b95/Ceramic_Cookware_Set_-_Cream_-_Presentation.jpg",
+    "src": "assets/products/cookware-caraway-ceramic-non-stick-cookware-f25bb348.jpg",
+    "width": 1200
   },
   "cookware|ceramic non-stick cookware|greenlife": {
     "height": 2000,
@@ -840,10 +840,10 @@
     "width": 900
   },
   "tableware|stainless steel drinkware|hydro flask": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 630,
+    "source": "https://www.hydroflask.com/media/catalog/product/cache/a4168e139fa90233e65914f7f0907f47/w/3/w32cts114_32ozwideflexcap_oat_straighton_1_1.jpg",
+    "src": "assets/products/tableware-hydro-flask-stainless-steel-drinkware-a185b126.jpg",
+    "width": 1200
   },
   "tableware|stainless steel flatware|liberty tabletop": {
     "height": 624,
