@@ -53,7 +53,8 @@ def main() -> int:
     img.verify()
     img = Image.open(io.BytesIO(raw))
     w, h = img.size
-    if w < 200 or h < 200:
+    # Accept product shots (square-ish) and wide brand logos alike.
+    if w < 200 or h < 60:
         print(f"ERROR: image too small ({w}x{h})", file=sys.stderr)
         return 4
     if img.mode in ("RGBA", "P", "LA"):

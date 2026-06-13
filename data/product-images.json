@@ -144,28 +144,28 @@
     "width": 900
   },
   "clothing|clothing and shoes|h&m": {
-    "height": 900,
-    "source": "generated-replacement:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 634,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/H%26M-Logo.svg?width=900",
+    "src": "assets/products/clothing-h-and-m-clothing-and-shoes-dab8dde8.jpg",
+    "width": 960
   },
   "clothing|clothing|uniqlo": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 427,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Uniqlo_logo_Japanese.svg?width=900",
+    "src": "assets/products/clothing-uniqlo-clothing-db9a563f.jpg",
+    "width": 960
   },
   "clothing|clothing|zara": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 404,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zara_Logo.svg?width=900",
+    "src": "assets/products/clothing-zara-clothing-cbfc7ffe.jpg",
+    "width": 960
   },
   "clothing|denim and apparel|levi strauss & co.": {
-    "height": 900,
-    "source": "generated-replacement:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 394,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Levis-logo-quer.svg?width=900",
+    "src": "assets/products/clothing-levi-strauss-and-co-denim-and-apparel-c94f4d25.jpg",
+    "width": 960
   },
   "clothing|merino wool clothing|minus33": {
     "height": 1280,
@@ -390,10 +390,10 @@
     "width": 1200
   },
   "fridge|butter, salted, organic|365 whole foods": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 960,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Whole_Foods_Market_201x_logo.svg?width=900",
+    "src": "assets/products/fridge-365-whole-foods-butter-salted-organic-1a001cb5.jpg",
+    "width": 960
   },
   "fridge|butter, salted, organic|horizon organic": {
     "height": 900,
@@ -822,10 +822,10 @@
     "width": 1200
   },
   "tableware|insulated stainless steel tumbler|yeti": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 263,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/YETI_Holdings_logo.svg?width=900",
+    "src": "assets/products/tableware-yeti-insulated-stainless-steel-tumbler-0145a2f6.jpg",
+    "width": 960
   },
   "tableware|silicone straw tops for mason jars (sippy cups)|mason bottle": {
     "height": 1000,
@@ -858,10 +858,10 @@
     "width": 1000
   },
   "tableware|stainless steel plates and bowls|snow peak": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 226,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Snow_Peak_logo.svg?width=900",
+    "src": "assets/products/tableware-snow-peak-stainless-steel-plates-and-bowls-2625fee8.jpg",
+    "width": 960
   },
   "tableware|titanium plate|snow peak": {
     "height": 1500,
