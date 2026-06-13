@@ -498,10 +498,10 @@
     "width": 983
   },
   "pantry|coconut oil, organic virgin|dr bronner\u2019s": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 2048,
+    "source": "https://cdn.shopify.com/s/files/1/0424/3475/6772/files/dr-bronners-virgin-coconut-oil-14oz-whole-kernel-1.jpg?v=1739602235",
+    "src": "assets/products/pantry-dr-bronner-s-coconut-oil-organic-virgin-35fa39a8.jpg",
+    "width": 2048
   },
   "pantry|food packaging|chick-fil-a": {
     "height": 667,
