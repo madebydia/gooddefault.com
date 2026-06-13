@@ -168,10 +168,10 @@
     "width": 900
   },
   "clothing|merino wool clothing|minus33": {
-    "height": 900,
-    "source": "https://minus33.com/cdn/shop/files/merino_wool_boxer_briefs_311NV-1.jpg?v=1769537172&width=900",
-    "src": "assets/products/clothing-minus33-merino-wool-clothing-ba46f816.jpg",
-    "width": 900
+    "height": 1280,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-minus33-merino-wool-clothing-user-20260613.jpg",
+    "width": 1280
   },
   "clothing|mizzle shoes (water-repellent)|allbirds": {
     "height": 720,
@@ -180,10 +180,10 @@
     "width": 710
   },
   "clothing|organic cotton clothing for kids|monica & andy": {
-    "height": 900,
-    "source": "generated-replacement:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 824,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-monica-andy-organic-cotton-clothing-for-kids-user-20260613.jpg",
+    "width": 1280
   },
   "clothing|organic cotton clothing for men and women|pact": {
     "height": 1200,
@@ -258,10 +258,10 @@
     "width": 1000
   },
   "clothing|shoes, minimalist barefoot|vivobarefoot": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 800,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-vivobarefoot-shoes-minimalist-barefoot-user-20260613.jpg",
+    "width": 1200
   },
   "clothing|shoes, minimalist barefoot|xero shoes": {
     "height": 1238,
