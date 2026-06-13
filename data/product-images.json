@@ -84,10 +84,10 @@
     "width": 1800
   },
   "beauty|skincare|hydropeptide": {
-    "height": 900,
-    "source": "generated-replacement:beauty",
-    "src": "assets/products/fallback-beauty-medical.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "https://cdn.shopify.com/s/files/1/0027/5179/1157/files/012224_New_Retail_Packaging_Firm-A-FixNectar_PDP.jpg?v=1713463889",
+    "src": "assets/products/beauty-hydropeptide-skincare-13ca1555.jpg",
+    "width": 1000
   },
   "books|ebooks for download|standard ebooks": {
     "height": 548,
@@ -210,10 +210,10 @@
     "width": 538
   },
   "clothing|outdoor apparel|vaude": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 300,
+    "source": "https://www.vaude.com/media/catalog/product/cache/2765542505660baab28ecd555e27366e/4/7/47441_964_6__474419645600_0e2c26b5.jpg",
+    "src": "assets/products/clothing-vaude-outdoor-apparel-7ee46333.jpg",
+    "width": 240
   },
   "clothing|outdoor footwear|keen": {
     "height": 543,
@@ -294,10 +294,10 @@
     "width": 2400
   },
   "cookware|ceramic cookware|xtrema": {
-    "height": 900,
-    "source": "generated-fallback:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 2048,
+    "source": "https://cdn.shopify.com/s/files/1/2996/3722/files/HomeCookSet_45_ltgr_2048x_653b380f-71b5-46ea-a0d3-2a4347e2c877.jpg?v=1770933815",
+    "src": "assets/products/cookware-xtrema-ceramic-cookware-6b0d086f.jpg",
+    "width": 2048
   },
   "cookware|ceramic non-stick cookware|blue diamond": {
     "height": 900,
@@ -312,10 +312,10 @@
     "width": 900
   },
   "cookware|ceramic non-stick cookware|greenlife": {
-    "height": 900,
-    "source": "generated-replacement:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 2000,
+    "source": "https://cdn.shopify.com/s/files/1/0444/7109/1363/files/NCCC008889-001-6-2000x2000-1478e37.jpg?v=1749060756",
+    "src": "assets/products/cookware-greenlife-ceramic-non-stick-cookware-7fea5029.jpg",
+    "width": 2000
   },
   "cookware|ceramic non-stick cookware|greenpan": {
     "height": 800,
@@ -402,16 +402,16 @@
     "width": 900
   },
   "home|furniture|ikea": {
-    "height": 900,
-    "source": "generated-fallback:home",
-    "src": "assets/products/fallback-home.jpg",
+    "height": 506,
+    "source": "https://www.ikea.com/ext/ingkadam/m/13ed3dbdf555ed0b/original/PH199578.jpg?f=xl",
+    "src": "assets/products/home-ikea-furniture-5b9997ae.jpg",
     "width": 900
   },
   "home|home carpet|interface": {
-    "height": 900,
-    "source": "generated-replacement:home",
-    "src": "assets/products/fallback-home.jpg",
-    "width": 900
+    "height": 318,
+    "source": "https://shop.interface.com/dw/image/v2/BGTH_PRD/on/demandware.static/-/Library-Sites-int-content-global/default/dw5c4ecabc/images/nav/ams-nav/nav-carpet-tile-area-rugs-2026.jpg",
+    "src": "assets/products/home-interface-home-carpet-3e4e0001.jpg",
+    "width": 566
   },
   "home|home carpet|shaw": {
     "height": 506,
@@ -540,10 +540,10 @@
     "width": 900
   },
   "pantry|salt, maldon sea salt flakes|maldon": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 683,
+    "source": "https://maldonsalt.com/wp-content/uploads/2020/10/MALDON_XMAS25_6004-1024x683.jpg",
+    "src": "assets/products/pantry-maldon-salt-maldon-sea-salt-flakes-ce6b608b.jpg",
+    "width": 1024
   },
   "pantry|salt, morton iodized salt|morton": {
     "height": 300,
@@ -570,16 +570,16 @@
     "width": 708
   },
   "personal care|cotton buds|clean skin club": {
-    "height": 900,
-    "source": "generated-fallback:personal",
-    "src": "assets/products/fallback-personal-care.jpg",
-    "width": 900
+    "height": 1080,
+    "source": "https://cdn.shopify.com/s/files/1/2774/0528/files/sensitive_skin_towels_50_count.png?v=1767892557",
+    "src": "assets/products/personal-care-clean-skin-club-cotton-buds-d4021ab5.jpg",
+    "width": 1080
   },
   "personal care|dental floss picks|the humble co.": {
-    "height": 900,
-    "source": "generated-fallback:personal",
-    "src": "assets/products/fallback-personal-care.jpg",
-    "width": 900
+    "height": 2500,
+    "source": "https://cdn.shopify.com/s/files/1/2399/2041/files/humble-midnatt-studio-shoot-36_1d91ceb2-42d5-4b76-985e-b02acf94fb8b.jpg?v=1768488064",
+    "src": "assets/products/personal-care-the-humble-co-dental-floss-picks-4ef9dee8.jpg",
+    "width": 2000
   },
   "personal care|dental floss|coco floss": {
     "height": 1024,
@@ -612,10 +612,10 @@
     "width": 300
   },
   "personal care|facial tissues|caboo": {
-    "height": 900,
-    "source": "generated-fallback:personal",
-    "src": "assets/products/fallback-personal-care.jpg",
-    "width": 900
+    "height": 1667,
+    "source": "https://cabooproducts.com/cdn/shop/files/SHOT22a_Adult-Wipe-Wrapped-Papper_1709_main_c129996b-3414-47ba-8576-54eb843f4d1e_2500x1667.jpg?v=1747758511",
+    "src": "assets/products/personal-care-caboo-facial-tissues-211736ad.jpg",
+    "width": 2500
   },
   "personal care|nail care tools and tweezers|bianco instruments": {
     "height": 1080,
@@ -732,10 +732,10 @@
     "width": 2000
   },
   "supplements|collagen|momentous supplements": {
-    "height": 900,
-    "source": "generated-fallback:supplements",
-    "src": "assets/products/fallback-supplements.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "https://www.livemomentous.com/cdn/shop/files/Collagen_HERO_Jar_1.png?v=1776800578&width=1200",
+    "src": "assets/products/supplements-momentous-supplements-collagen-72c315b0.jpg",
+    "width": 1000
   },
   "supplements|creatine monohydrate (from creapure)|bare performance nutrition": {
     "height": 1200,
@@ -816,10 +816,10 @@
     "width": 1766
   },
   "tableware|baby spoon and fork|liberty tabletop": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 624,
+    "source": "https://libertytabletop.com/cdn/shop/files/Picture1.jpg?crop=center&height=1200&v=1778778604&width=1200",
+    "src": "assets/products/tableware-liberty-tabletop-baby-spoon-and-fork-e025c3c8.jpg",
+    "width": 1200
   },
   "tableware|insulated stainless steel tumbler|yeti": {
     "height": 900,
@@ -828,10 +828,10 @@
     "width": 900
   },
   "tableware|silicone straw tops for mason jars (sippy cups)|mason bottle": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "https://cdn.shopify.com/s/files/1/1000/3488/files/Drink_Top.png?v=1778877210",
+    "src": "assets/products/tableware-mason-bottle-silicone-straw-tops-for-mason-jars-sippy-cups-913c6446.jpg",
+    "width": 1000
   },
   "tableware|stackable mason jar glasses|ball": {
     "height": 900,
@@ -846,16 +846,16 @@
     "width": 900
   },
   "tableware|stainless steel flatware|liberty tabletop": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 624,
+    "source": "https://libertytabletop.com/cdn/shop/files/Picture1.jpg?crop=center&height=1200&v=1778778604&width=1200",
+    "src": "assets/products/tableware-liberty-tabletop-stainless-steel-flatware-5a1e3d6b.jpg",
+    "width": 1200
   },
   "tableware|stainless steel mason jar straw cup / sippy cup for kids|mason bottle": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "https://cdn.shopify.com/s/files/1/1000/3488/files/DrinkBottleMBB.png?v=1776100577",
+    "src": "assets/products/tableware-mason-bottle-stainless-steel-mason-jar-straw-cup-sippy-cup-for-kids-e66adf32.jpg",
+    "width": 1000
   },
   "tableware|stainless steel plates and bowls|snow peak": {
     "height": 900,
