@@ -1,4 +1,16 @@
 {
+  "baby|cleartex line car seats|chicco": {
+    "height": 917,
+    "source": "https://www.chiccousa.com/on/demandware.static/-/Sites-Chicco-Library/default/dw8b160cec/images/Landing/three-c/hero-sustainable-product-landing.jpg",
+    "src": "assets/products/baby-chicco-cleartex-line-car-seats-eccd5a48.jpg",
+    "width": 1440
+  },
+  "baby|fllo convertible car seat|clek": {
+    "height": 600,
+    "source": "https://clekinc.com/cdn/shop/files/Clek-Fllo-Convertible-Car-Seat-product-dimensions-side.jpg?v=1661797062&width=750",
+    "src": "assets/products/baby-clek-fllo-convertible-car-seat-b935faac.jpg",
+    "width": 600
+  },
   "baby|jordan knox convertible car seat|uppababy": {
     "height": 528,
     "source": "https://back.uppababy.com/media/95/6a/43/1762260707/BFCM25_TrendingNow_Teaser-US_Dark.webp?ts=1762892029",
@@ -11,11 +23,23 @@
     "src": "assets/products/baby-nuna-pipa-infant-car-seat-8e05f89a.jpg",
     "width": 1920
   },
+  "baby|purecosi mico 30 infant car seat|maxi-cosi": {
+    "height": 900,
+    "source": "generated-replacement:baby",
+    "src": "assets/products/fallback-baby.jpg",
+    "width": 900
+  },
   "baby|safewash emblem convertible car seat|britax": {
     "height": 630,
     "source": "https://cdne1britaxus.azureedge.net/bri/uploads/_1200x630_fit_center-center_82_none/Britax-Safety-You-Can-Trust-Car-Seats-Strollers.png?mtime=1684854959",
     "src": "assets/products/baby-britax-safewash-emblem-convertible-car-seat-0eedadfd.jpg",
     "width": 1200
+  },
+  "baby|strollers|bumbleride": {
+    "height": 1080,
+    "source": "https://bumbleride.com/cdn/shop/files/EraSandSqr1080-2.jpg?v=1652105699",
+    "src": "assets/products/baby-bumbleride-strollers-af54b67d.jpg",
+    "width": 1080
   },
   "bags|backpacks, casual|remote eq": {
     "height": 991,
@@ -23,11 +47,47 @@
     "src": "assets/products/bags-remote-eq-backpacks-casual-132e9ece.jpg",
     "width": 672
   },
+  "bags|lunch bags pfas-free|planetbox": {
+    "height": 832,
+    "source": "https://www.planetbox.com/cdn/shop/files/PBX-Lunchbox-5020-Product02-lagoonCC-edit_1.jpg?v=1773330629&width=832",
+    "src": "assets/products/bags-planetbox-lunch-bags-pfas-free-399b4fc9.jpg",
+    "width": 832
+  },
   "bags|waist packs, pouches, and packing cubes|hartford gear co.": {
     "height": 2160,
     "source": "provided-by-diana",
     "src": "assets/products/bags-hartford-gear-co-waist-packs-pouches-and-packing-cubes-65fc71ea.jpg",
     "width": 2160
+  },
+  "bags|zipper lunch box and flip snack bag|fluf": {
+    "height": 556,
+    "source": "https://us.fluf.ca/cdn/shop/files/Fluf-Bags-Mega_810x.png?v=1713800097",
+    "src": "assets/products/bags-fluf-zipper-lunch-box-and-flip-snack-bag-50ed64e0.jpg",
+    "width": 810
+  },
+  "beauty|clean at sephora products|sephora": {
+    "height": 900,
+    "source": "generated-fallback:beauty",
+    "src": "assets/products/fallback-beauty-medical.jpg",
+    "width": 900
+  },
+  "beauty|cosmetics|crunchi": {
+    "height": 1500,
+    "source": "https://crunchi.com/cdn/shop/files/DPM_July31-713_b6a8c8b2-f337-4397-adb5-ebae030eed86.jpg?v=1706049860&width=2048",
+    "src": "assets/products/beauty-crunchi-cosmetics-d499750f.jpg",
+    "width": 1500
+  },
+  "beauty|cosmetics|fluency beauty": {
+    "height": 1256,
+    "source": "https://fluencybeauty.com/cdn/shop/files/product6shopify.png?v=1710457980",
+    "src": "assets/products/beauty-fluency-beauty-cosmetics-e70f7344.jpg",
+    "width": 1800
+  },
+  "beauty|skincare|hydropeptide": {
+    "height": 900,
+    "source": "generated-replacement:beauty",
+    "src": "assets/products/fallback-beauty-medical.jpg",
+    "width": 900
   },
   "books|ebooks for download|standard ebooks": {
     "height": 548,
@@ -35,11 +95,29 @@
     "src": "assets/products/books-standard-ebooks-ebooks-for-download-b26ce9fa.jpg",
     "width": 652
   },
+  "cleaning|bamboo toilet paper pfas-free|betterway": {
+    "height": 630,
+    "source": "https://www.gobetterway.com/cdn/shop/files/og_4e258090-41fd-4da9-98d2-462396637f59.jpg?v=1602006643",
+    "src": "assets/products/cleaning-betterway-bamboo-toilet-paper-pfas-free-b1e02597.jpg",
+    "width": 1200
+  },
+  "cleaning|bamboo toilet paper pfas-free|seek bamboo": {
+    "height": 2048,
+    "source": "https://seekbamboo.com/cdn/shop/articles/PFAS-Free-Toilet-Paper.webp?v=1733489982&width=2048",
+    "src": "assets/products/cleaning-seek-bamboo-bamboo-toilet-paper-pfas-free-b04ed12d.jpg",
+    "width": 2048
+  },
   "cleaning|disinfectant wipes|seventh generation": {
     "height": 300,
     "source": "https://m.media-amazon.com/images/I/8176CJO4XtL._AC_SY300_SX300_QL70_ML2_.jpg",
     "src": "assets/products/cleaning-seventh-generation-disinfectant-wipes-39506ff4.jpg",
     "width": 285
+  },
+  "cleaning|paper towels and tissue|scott brand": {
+    "height": 900,
+    "source": "generated-fallback:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
   },
   "cleaning|paper towels, bamboo|reel paper": {
     "height": 1024,
@@ -47,17 +125,119 @@
     "src": "assets/products/cleaning-reel-paper-paper-towels-bamboo-4d439c25.jpg",
     "width": 1024
   },
+  "cleaning|stain and water repellent spray|detrapel": {
+    "height": 900,
+    "source": "generated-fallback:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "cleaning|waterproof spray, pfas-free|nikwax": {
+    "height": 900,
+    "source": "generated-fallback:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "clothing|beta lightweight jacket|arc'teryx": {
+    "height": 900,
+    "source": "generated-replacement:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|clothing and shoes|h&m": {
+    "height": 900,
+    "source": "generated-replacement:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|clothing|uniqlo": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|clothing|zara": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|denim and apparel|levi strauss & co.": {
+    "height": 900,
+    "source": "generated-replacement:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|merino wool clothing|minus33": {
+    "height": 900,
+    "source": "https://minus33.com/cdn/shop/files/merino_wool_boxer_briefs_311NV-1.jpg?v=1769537172&width=900",
+    "src": "assets/products/clothing-minus33-merino-wool-clothing-ba46f816.jpg",
+    "width": 900
+  },
+  "clothing|mizzle shoes (water-repellent)|allbirds": {
+    "height": 720,
+    "source": "https://www.allbirds.com/cdn/shop/files/25Q4_Waterproof_Collections-Header_Waterproof-Men_Mobile_1x1_4bbd9a92-9f86-455c-b554-1788e036ef79.jpg?v=1759178852&width=1024",
+    "src": "assets/products/clothing-allbirds-mizzle-shoes-water-repellent-fbe02e3f.jpg",
+    "width": 710
+  },
+  "clothing|organic cotton clothing for kids|monica & andy": {
+    "height": 900,
+    "source": "generated-replacement:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
   "clothing|organic cotton clothing for men and women|pact": {
     "height": 1200,
     "source": "https://static.wearpact.com/img/metadata/general-1758055303.jpg",
     "src": "assets/products/clothing-pact-organic-cotton-clothing-for-men-and-women-71310e79.jpg",
     "width": 990
   },
+  "clothing|organic cotton clothing for men, women, and kids|mate the label": {
+    "height": 1067,
+    "source": "https://matethelabel.com/cdn/shop/files/260218_BC_MATE_MARCH_CAMPAIGN_09_ORGANIC_STRUCTURED_COTTON_CROPPED_TEE_MOCHA_0076.jpg?v=1772551955&width=800",
+    "src": "assets/products/clothing-mate-the-label-organic-cotton-clothing-for-men-women-and-kids-2291aab1.jpg",
+    "width": 800
+  },
+  "clothing|organic cotton for women and men|happy earth apparel": {
+    "height": 1067,
+    "source": "https://www.happyearthapparel.com/cdn/shop/files/YSCAOP_0.jpg?v=1775520397&width=800",
+    "src": "assets/products/clothing-happy-earth-apparel-organic-cotton-for-women-and-men-f1d8fb1a.jpg",
+    "width": 800
+  },
   "clothing|outdoor apparel|prana": {
     "height": 306,
     "source": "https://media.columbia.com/i/columbiasprtswr/s26_pra_fathersday_gpb?fmt=auto&$aem_pjpeg$",
     "src": "assets/products/clothing-prana-outdoor-apparel-4e126caf.jpg",
     "width": 538
+  },
+  "clothing|outdoor apparel|vaude": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|outdoor footwear|keen": {
+    "height": 543,
+    "source": "https://www.keenfootwear.com/cdn/shop/articles/blog_trailrunForestPark_hero_eaa6140a-25c6-41b2-89ce-716ee221325e.jpg?v=1778887019&width=800",
+    "src": "assets/products/clothing-keen-outdoor-footwear-6a71ebcb.jpg",
+    "width": 800
+  },
+  "clothing|outerwear (select products)|patagonia": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|rain gear|didriksons": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|rain gear|houdini": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
   },
   "clothing|rain gear|jack wolfskin": {
     "height": 532,
@@ -70,6 +250,24 @@
     "source": "provided-by-diana",
     "src": "assets/products/clothing-starry-knight-design-shoes-kids-leather-with-minimal-sole-6ee20919.jpg",
     "width": 1024
+  },
+  "clothing|shoes, minimalist barefoot|tolos": {
+    "height": 1000,
+    "source": "https://weartolos.com/cdn/shop/files/06.28_WhiteRoll.jpg?v=1686887193",
+    "src": "assets/products/clothing-tolos-shoes-minimalist-barefoot-022c9c0f.jpg",
+    "width": 1000
+  },
+  "clothing|shoes, minimalist barefoot|vivobarefoot": {
+    "height": 900,
+    "source": "generated-fallback:clothing",
+    "src": "assets/products/fallback-clothing.jpg",
+    "width": 900
+  },
+  "clothing|shoes, minimalist barefoot|xero shoes": {
+    "height": 1238,
+    "source": "https://xeroshoes.com/cdn/shop/files/xero-shoes-in-real-life.jpg?v=1754561688",
+    "src": "assets/products/clothing-xero-shoes-shoes-minimalist-barefoot-cd90e03b.jpg",
+    "width": 2280
   },
   "clothing|socks, kids and adults|smartwool": {
     "height": 900,
@@ -89,6 +287,42 @@
     "src": "assets/products/clothing-randolph-engineering-sunglasses-8294ff36.jpg",
     "width": 680
   },
+  "cookware|always pan (non-stick pfas-free)|our place": {
+    "height": 2400,
+    "source": "https://fromourplace.com/cdn/shop/t/4367/assets/opengraph.jpg?v=92520740334726131061781213535",
+    "src": "assets/products/cookware-our-place-always-pan-non-stick-pfas-free-db4f8c7f.jpg",
+    "width": 2400
+  },
+  "cookware|ceramic cookware|xtrema": {
+    "height": 900,
+    "source": "generated-fallback:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "cookware|ceramic non-stick cookware|blue diamond": {
+    "height": 900,
+    "source": "generated-replacement:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "cookware|ceramic non-stick cookware|caraway": {
+    "height": 900,
+    "source": "generated-fallback:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "cookware|ceramic non-stick cookware|greenlife": {
+    "height": 900,
+    "source": "generated-replacement:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
+  },
+  "cookware|ceramic non-stick cookware|greenpan": {
+    "height": 800,
+    "source": "https://www.greenpan.us/cdn/shop/t/1010/assets/social.jpg?v=2836909299442889721781212218",
+    "src": "assets/products/cookware-greenpan-ceramic-non-stick-cookware-9124b694.jpg",
+    "width": 1200
+  },
   "cookware|glass bakeware|anchor hocking": {
     "height": 127,
     "source": "https://m.media-amazon.com/images/I/61g9oo1aWIL._AC_SY300_SX300_QL70_ML2_.jpg",
@@ -106,6 +340,12 @@
     "source": "https://m.media-amazon.com/images/I/61Q1k3UwzLL._AC_SY300_SX300_QL70_ML2_.jpg",
     "src": "assets/products/cookware-our-place-non-stick-pan-c72fdbea.jpg",
     "width": 300
+  },
+  "cookware|stainless steel cook's spoon|rada cutlery": {
+    "height": 900,
+    "source": "generated-replacement:cookware",
+    "src": "assets/products/fallback-cookware-cleaning.jpg",
+    "width": 900
   },
   "cookware|stainless steel serverspoon|rada cutlery": {
     "height": 274,
@@ -149,17 +389,65 @@
     "src": "assets/products/electronics-daylight-computer-blue-light-free-tablet-computer-77e5150c.jpg",
     "width": 1200
   },
+  "fridge|butter, salted, organic|365 whole foods": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
+  "fridge|butter, salted, organic|horizon organic": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
+  "home|furniture|ikea": {
+    "height": 900,
+    "source": "generated-fallback:home",
+    "src": "assets/products/fallback-home.jpg",
+    "width": 900
+  },
+  "home|home carpet|interface": {
+    "height": 900,
+    "source": "generated-replacement:home",
+    "src": "assets/products/fallback-home.jpg",
+    "width": 900
+  },
   "home|home carpet|shaw": {
     "height": 506,
     "source": "https://shawfloors.widen.net/content/gxei82xrok/jpeg/SHOT_01_BLENDED_TOUCH_FULL_ROOM_NO_TALENT.jpeg?w=1458&h=506&keep=c&crop=yes&color=ffffffff&quality=80&u=k2mbls",
     "src": "assets/products/home-shaw-home-carpet-55403c78.jpg",
     "width": 1458
   },
+  "home|mattresses and pillows|avocado green mattress": {
+    "height": 628,
+    "source": "https://cdn.shopify.com/s/files/1/0444/9488/0918/files/Avocado_Green_Mattress_eba2022f-d976-4415-af6c-f4bd66b6d3db.jpg?v=1621450781",
+    "src": "assets/products/home-avocado-green-mattress-mattresses-and-pillows-eebc3577.jpg",
+    "width": 1200
+  },
+  "home|mattresses|omi mattress": {
+    "height": 500,
+    "source": "https://www.omimattress.com/cdn/shop/products/Wave_Topper_Lifestyle.jpg?v=1581440948&width=750",
+    "src": "assets/products/home-omi-mattress-mattresses-3b9c1242.jpg",
+    "width": 750
+  },
+  "home|mattresses|plushbeds": {
+    "height": 1000,
+    "source": "https://cdn.shopify.com/s/files/1/0061/7195/1202/products/the-botanical-bliss-organic-latex-mattress-618537.jpg?v=1667792138",
+    "src": "assets/products/home-plushbeds-mattresses-d9b65b19.jpg",
+    "width": 1500
+  },
   "home|organic mattresses|naturepedic": {
-    "height": 443,
-    "source": "https://www.naturepedic.com/media/amasty/blog/cache/N/P/1280/443/NP_2025_PFAS_PostImage_1280x443px.jpg",
+    "height": 878,
+    "source": "https://www.naturepedic.com/media/wysiwyg/Ultra-Breathable-Mattress_Lifestyle-1.jpg",
     "src": "assets/products/home-naturepedic-organic-mattresses-071c9265.jpg",
-    "width": 1280
+    "width": 804
+  },
+  "home|trinova granite sealer|gold eagle": {
+    "height": 900,
+    "source": "generated-fallback:home",
+    "src": "assets/products/fallback-home.jpg",
+    "width": 900
   },
   "medical|bamboo bandages|febu": {
     "height": 2000,
@@ -172,6 +460,12 @@
     "source": "https://www.floraandfauna.com.au/cdn/shop/files/patch-bamboo-bandages-mixed-100-pack-front.jpg?v=1727899348",
     "src": "assets/products/medical-patch-bandages-f36307aa.jpg",
     "width": 1200
+  },
+  "medical|contact lenses|eiyan lens": {
+    "height": 900,
+    "source": "generated-fallback:beauty",
+    "src": "assets/products/fallback-beauty-medical.jpg",
+    "width": 900
   },
   "medical|medical supplies and ifak pouches|ltc creed": {
     "height": 927,
@@ -203,6 +497,12 @@
     "src": "assets/products/other-consumables-reel-paper-toilet-paper-bamboo-920139d5.jpg",
     "width": 983
   },
+  "pantry|coconut oil, organic virgin|dr bronner\u2019s": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
   "pantry|food packaging|chick-fil-a": {
     "height": 667,
     "source": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/04/CFA-Clean-Repeatable-Desktop-Header-Image.jpg",
@@ -215,11 +515,41 @@
     "src": "assets/products/pantry-great-lakes-wellness-gelatin-grass-fed-beef-6010212e.jpg",
     "width": 1200
   },
+  "pantry|ghee, organic valley pasture-raised|organic valley": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
+  "pantry|ghee|ancient organics": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
   "pantry|protein bars|jacob": {
     "height": 839,
     "source": "provided-by-diana",
     "src": "assets/products/pantry-jacob-protein-bars-a3123f2f.jpg",
     "width": 900
+  },
+  "pantry|salt, diamond crystal kosher salt|diamond crystal kosher salt": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
+  "pantry|salt, maldon sea salt flakes|maldon": {
+    "height": 900,
+    "source": "generated-fallback:pantry",
+    "src": "assets/products/fallback-pantry.jpg",
+    "width": 900
+  },
+  "pantry|salt, morton iodized salt|morton": {
+    "height": 300,
+    "source": "https://m.media-amazon.com/images/I/51MS7JuDs+L._SY300_SX300_QL70_FMwebp_.jpg",
+    "src": "assets/products/pantry-morton-salt-morton-iodized-salt-a8c163a1.jpg",
+    "width": 300
   },
   "pantry|spices and herbs|simply organic": {
     "height": 120,
@@ -233,17 +563,101 @@
     "src": "assets/products/pantry-zellies-xylitol-mints-1e5057fc.jpg",
     "width": 1080
   },
+  "personal care|baby skincare and bath|california baby": {
+    "height": 992,
+    "source": "https://californiababy.com/cdn/shop/products/2_NaturalBug-Repellent-2018_708x.jpg?v=1762457377",
+    "src": "assets/products/personal-care-california-baby-baby-skincare-and-bath-499355c5.jpg",
+    "width": 708
+  },
+  "personal care|cotton buds|clean skin club": {
+    "height": 900,
+    "source": "generated-fallback:personal",
+    "src": "assets/products/fallback-personal-care.jpg",
+    "width": 900
+  },
+  "personal care|dental floss picks|the humble co.": {
+    "height": 900,
+    "source": "generated-fallback:personal",
+    "src": "assets/products/fallback-personal-care.jpg",
+    "width": 900
+  },
+  "personal care|dental floss|coco floss": {
+    "height": 1024,
+    "source": "https://cocolab.com/cdn/shop/products/EHP_Cocofloss_OnGray_017_764d8494-7c4b-452c-a9f3-b8974d56c3e2_750x@2x.jpg?v=1771431396",
+    "src": "assets/products/personal-care-coco-floss-dental-floss-b0087821.jpg",
+    "width": 1024
+  },
+  "personal care|dental floss|dental lace": {
+    "height": 735,
+    "source": "https://www.dentallace.com/cdn/shop/files/DentalLace-588_2_52903b64-e0b8-461a-9c99-7690736464bc.jpg?v=1713992177",
+    "src": "assets/products/personal-care-dental-lace-dental-floss-ba77a410.jpg",
+    "width": 1103
+  },
+  "personal care|dental floss|hello products": {
+    "height": 940,
+    "source": "https://www.hello-products.com/cdn/shop/files/vJ28VCefGKi33PoJa5Zn0.png?v=1771950539&width=940",
+    "src": "assets/products/personal-care-hello-products-dental-floss-0403c148.jpg",
+    "width": 940
+  },
+  "personal care|dental floss|radius floss": {
+    "height": 703,
+    "source": "https://madebyradius.com/cdn/shop/collections/Radius_Category_0003_AdultFloss_70bc81a7-5f35-4974-9234-f2be23a0abec.png?v=1599255523",
+    "src": "assets/products/personal-care-radius-floss-dental-floss-2deb08aa.jpg",
+    "width": 812
+  },
+  "personal care|dry wipes, 100% cotton|whoopsie wipes": {
+    "height": 300,
+    "source": "https://m.media-amazon.com/images/I/51KIFguR3uL._SY300_SX300_QL70_FMwebp_.jpg",
+    "src": "assets/products/personal-care-whoopsie-wipes-dry-wipes-100-cotton-0fe75f75.jpg",
+    "width": 300
+  },
+  "personal care|facial tissues|caboo": {
+    "height": 900,
+    "source": "generated-fallback:personal",
+    "src": "assets/products/fallback-personal-care.jpg",
+    "width": 900
+  },
   "personal care|nail care tools and tweezers|bianco instruments": {
     "height": 1080,
     "source": "https://static.wixstatic.com/media/1bc45f_48b0aeb000484c8192210b7b3c3db4eb~mv2.jpg/v1/fill/w_1619,h_1080,al_c,q_85/1bc45f_48b0aeb000484c8192210b7b3c3db4eb~mv2.jpg",
     "src": "assets/products/personal-care-bianco-instruments-nail-care-tools-and-tweezers-a8256e6b.jpg",
     "width": 1619
   },
+  "personal care|period underwear and products|aisle": {
+    "height": 1365,
+    "source": "https://periodaisle.com/cdn/shop/files/S25_PA_Cheeky_Merlot_M02_31558_Cheeky_Merlot_33347_ad13f801-02fa-4756-a17d-1ba3518c930c.jpg?v=1767893880",
+    "src": "assets/products/personal-care-aisle-period-underwear-and-products-52657552.jpg",
+    "width": 2037
+  },
+  "personal care|period underwear and products|saalt": {
+    "height": 1090,
+    "source": "https://sfycdn.speedsize.com/580f55fb-12e3-4e00-8f82-e44e2431f676/saalt.com/cdn/shop/files/LeakproofUnderwear.webp?v=1763454395&width=832",
+    "src": "assets/products/personal-care-saalt-period-underwear-and-products-2316d3f3.jpg",
+    "width": 832
+  },
+  "personal care|period underwear|rael": {
+    "height": 920,
+    "source": "https://www.getrael.com/cdn/shop/files/RSITE_Target_DisposablePeriodUnderwear_SM_5CT_ListingImage_03.jpg?v=1780616575&width=920",
+    "src": "assets/products/personal-care-rael-period-underwear-bcadddd8.jpg",
+    "width": 920
+  },
   "personal care|skincare|annmarie skin care": {
     "height": 800,
     "source": "https://www.annmariegianni.com/wp-content/uploads/2020/08/clean-beauty-since-day-1.jpg",
     "src": "assets/products/personal-care-annmarie-skin-care-skincare-1b5fa51b.jpg",
     "width": 1200
+  },
+  "personal care|smart floss and activated charcoal floss|dr. tung's": {
+    "height": 1507,
+    "source": "https://drtungs.com/cdn/shop/articles/58_38952091-ea7d-4413-ac46-f8e3c57ab569.jpg?v=1771883716",
+    "src": "assets/products/personal-care-dr-tung-s-smart-floss-and-activated-charcoal-floss-ed10bdb7.jpg",
+    "width": 2000
+  },
+  "personal care|squalane + ectoin overnight rescue face cream|biossance": {
+    "height": 342,
+    "source": "https://m.media-amazon.com/images/I/41JCsMIMtTL._SX342_SY445_QL70_FMwebp_.jpg",
+    "src": "assets/products/personal-care-biossance-squalane-ectoin-overnight-rescue-face-cream-15fefc13.jpg",
+    "width": 342
   },
   "personal care|squalane + omega repair cream|biossance": {
     "height": 228,
@@ -269,6 +683,12 @@
     "src": "assets/products/personal-care-superteeth-toothpaste-fluoride-free-hydroxyapatite-08506096.jpg",
     "width": 720
   },
+  "personal care|wet wipes, face and diaper wipes|jackson reece": {
+    "height": 300,
+    "source": "https://m.media-amazon.com/images/I/41ucyNJQ9bL._SY300_SX300_QL70_FMwebp_.jpg",
+    "src": "assets/products/personal-care-jackson-reece-wet-wipes-face-and-diaper-wipes-05a16134.jpg",
+    "width": 300
+  },
   "storage & organization|glass jars, airtight, for canning and food storage|luigi bormioli": {
     "height": 754,
     "source": "provided-by-diana",
@@ -293,6 +713,12 @@
     "src": "assets/products/storage-organization-ball-stainless-steel-mason-jar-lids-61104637.jpg",
     "width": 1034
   },
+  "supplements|choline, alpha gpc|momentous": {
+    "height": 1000,
+    "source": "https://www.livemomentous.com/cdn/shop/files/AlphaGPC_HERO.png?v=1776790217&width=1200",
+    "src": "assets/products/supplements-momentous-choline-alpha-gpc-66e0a042.jpg",
+    "width": 1000
+  },
   "supplements|collagen (hydrolyzed wild-caught marine fish, types 1, 2, 3, and 4)|centenarius nutrition": {
     "height": 2000,
     "source": "https://centenariusnutrition.com/cdn/shop/files/IMG_6190.png?v=1776637434",
@@ -304,6 +730,12 @@
     "source": "https://cdn.shopify.com/s/files/1/0273/2802/0573/files/Puori_Photo-Packshots_US_CP1_Sept-25-2693-Edit_WEB.png?v=1762945610",
     "src": "assets/products/supplements-puori-collagen-peptides-hydrolyzed-bovine-type-1-and-3-317b39ad.jpg",
     "width": 2000
+  },
+  "supplements|collagen|momentous supplements": {
+    "height": 900,
+    "source": "generated-fallback:supplements",
+    "src": "assets/products/fallback-supplements.jpg",
+    "width": 900
   },
   "supplements|creatine monohydrate (from creapure)|bare performance nutrition": {
     "height": 1200,
@@ -328,6 +760,12 @@
     "source": "https://centenariusnutrition.com/cdn/shop/files/B9052FFD-1737-43ED-A7D3-C5BC7A44F7E6.png?v=1774931001",
     "src": "assets/products/supplements-centenarius-nutrition-glycine-powder-6f4cb5e2.jpg",
     "width": 2000
+  },
+  "supplements|magnesium l-threonate|momentous": {
+    "height": 1200,
+    "source": "https://www.livemomentous.com/cdn/shop/files/V3_Magnesium-L-Threonate-Bottle_2000x2000_07142025.png?v=1757606826&width=1200",
+    "src": "assets/products/supplements-momentous-magnesium-l-threonate-cf1fe249.jpg",
+    "width": 1200
   },
   "supplements|magnesium, malate and glycinate|innovix labs": {
     "height": 1500,
@@ -376,6 +814,54 @@
     "source": "https://tahanutrition.com/cdn/shop/files/20250307-TAHAPouch-WPI-NaturalF.png?v=1742315348",
     "src": "assets/products/supplements-taha-nutrition-whey-isolate-protein-powder-unflavored-93c824e7.jpg",
     "width": 1766
+  },
+  "tableware|baby spoon and fork|liberty tabletop": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|insulated stainless steel tumbler|yeti": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|silicone straw tops for mason jars (sippy cups)|mason bottle": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|stackable mason jar glasses|ball": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|stainless steel drinkware|hydro flask": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|stainless steel flatware|liberty tabletop": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|stainless steel mason jar straw cup / sippy cup for kids|mason bottle": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
+  },
+  "tableware|stainless steel plates and bowls|snow peak": {
+    "height": 900,
+    "source": "generated-fallback:tableware",
+    "src": "assets/products/fallback-tableware.jpg",
+    "width": 900
   },
   "tableware|titanium plate|snow peak": {
     "height": 1500,
