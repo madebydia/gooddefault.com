@@ -1,0 +1,109 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #12100d !important;
+    color: #f6efe4 !important;
+  }
+
+  .bg-brand-bg,
+  header,
+  nav {
+    background-color: #17130f !important;
+  }
+
+  .bg-white,
+  .bg-stone-100 {
+    background-color: #211c17 !important;
+  }
+
+  .bg-stone-900 {
+    background-color: #0b0907 !important;
+  }
+
+  .bg-stone-950 {
+    background-color: #050403 !important;
+  }
+
+  .text-white,
+  .text-stone-50,
+  .text-stone-100,
+  .text-stone-900,
+  .text-stone-800,
+  .text-stone-700 {
+    color: #f6efe4 !important;
+  }
+
+  .text-stone-600,
+  .text-stone-500,
+  .text-stone-400,
+  .text-stone-300 {
+    color: #c8bdae !important;
+  }
+
+  .border-stone-950,
+  .border-stone-900 {
+    border-color: #ead7a0 !important;
+  }
+
+  .border-stone-800,
+  .border-stone-300,
+  .border-stone-200 {
+    border-color: rgba(234, 215, 160, 0.38) !important;
+  }
+
+  .hover\:bg-stone-100:hover,
+  .hover\:bg-stone-200:hover,
+  .hover\:bg-stone-700:hover,
+  .hover\:bg-stone-800:hover,
+  .hover\:bg-stone-900:hover {
+    background-color: #2c251d !important;
+  }
+
+  .hover\:text-stone-900:hover,
+  .hover\:text-white:hover {
+    color: #ffe7a3 !important;
+  }
+
+  .nav-link-active,
+  .border-b-2.border-stone-900 {
+    border-color: #ffe18a !important;
+    color: #fff5d8 !important;
+  }
+
+  input,
+  select,
+  button {
+    background-color: #211c17;
+    color: #f6efe4;
+  }
+
+  input::placeholder {
+    color: #8f8374 !important;
+  }
+
+  .product-tile {
+    background:
+      radial-gradient(circle at 18px 18px, rgba(234, 215, 160, 0.13) 2px, transparent 2px),
+      linear-gradient(135deg, #1a1612, #241e18 55%, #302819) !important;
+  }
+
+  .compare-tile {
+    background:
+      linear-gradient(135deg, rgba(143, 174, 155, 0.2), rgba(33, 28, 23, 0.94)),
+      radial-gradient(circle at 30px 30px, rgba(234, 215, 160, 0.12) 2px, transparent 2px) !important;
+  }
+
+  .shadow-\[8px_8px_0_\#1c1917\],
+  .shadow-\[10px_10px_0_\#d6c08a\] {
+    box-shadow: 8px 8px 0 rgba(234, 215, 160, 0.34) !important;
+  }
+
+  .selection\:bg-stone-200::selection,
+  ::selection {
+    background: #6f4e11;
+    color: #fff5d8;
+  }
+}

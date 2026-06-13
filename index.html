@@ -1,1106 +1,454 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NontoxicGoods.com - Cleaner Products for a Healthier Life</title>
-    <meta name="description"
-        content="A curated collection of non-toxic products for your home, personal care, and more.">
-    <link rel="canonical" href="https://nontoxicgoods.com">
-
-    <!-- Open Graph / Facebook Metadata -->
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Good Default | Better Household Defaults</title>
+    <meta
+      name="description"
+      content="Good Default is a searchable catalog and newsletter for better household defaults: safer swaps, practical research, and zero sponsored placements."
+    >
+    <meta property="og:title" content="Good Default">
+    <meta
+      property="og:description"
+      content="Better household defaults for families who want safer swaps without the panic spiral."
+    >
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nontoxicgoods.com">
-    <meta property="og:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
-    <meta property="og:description"
-        content="A carefully selected collection of non-toxic products that my own family uses every day.">
-    <meta property="og:image" content="https://nontoxicgoods.com/social.png">
-    <meta property="og:site_name" content="NontoxicGoods">
-
-    <!-- Twitter Metadata -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://nontoxicgoods.com">
-    <meta name="twitter:title" content="NontoxicGoods.com - Clean Products for a Healthier Life">
-    <meta name="twitter:description"
-        content="A carefully selected collection of non-toxic products that my own family uses every day.">
-    <meta name="twitter:image" content="https://nontoxicgoods.com/social.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png">
-
+    <meta property="og:image" content="assets/gooddefault.png">
+    <link rel="icon" href="assets/good-default-logo.png">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script defer data-domain="nontoxicgoods.com" src="https://plausible.io/js/script.outbound-links.js"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="dark-mode.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Fraunces", "serif"],
+              sans: ["Inter", "sans-serif"]
+            },
+            colors: {
+              brand: {
+                bg: "#FDFDFB",
+                ink: "#222222",
+                muted: "#78716c"
+              }
+            }
+          }
+        }
+      };
+    </script>
     <style>
-        /* Base Styles and Variables */
-        :root {
-            /* Light Theme (default) */
-            --background: #f9f5f1;
-            --background-card: #ffffff;
-            --text-primary: #3e3a39;
-            --text-secondary: #5a5655;
-            --accent: #d8b3a5;
-            --accent-light: #e8d1c9;
-            --border: #e6e0dc;
-            --shadow: rgba(0, 0, 0, 0.05);
-
-            /* Category Colors */
-            --category-personal-care: #e6a4b4;
-            --category-kitchen: #b6d7a8;
-            --category-cleaning: #9fc5e8;
-            --category-home: #d5a6bd;
-            --category-beauty: #c27ba0;
-            --category-supplements: #ffd966;
-            --category-bags: #8c9a9e;
-            --category-books: #a18594;
-            --category-bread: #d2b48c;
-            --category-clothing: #75a3a3;
-            --category-drinks: #5499c7;
-            --category-electronics: #e2b6b3;
-            --category-fridge: #b3d9ff;
-            --category-medical: #f7dc6f;
-            --category-pantry: #a3e4d7;
-            --category-cookware: #b87333;
-            --category-other-consumables: #a9a9a9;
-            --category-storage-organization: #9370db;
-            --category-tableware: #dda0dd;
-            --category-baby: #f8c8dc;
-
-            /* Common variables */
-            --border-radius: 8px;
-            --container-max-width: 1200px;
-            --header-font: 'Playfair Display', serif;
-            --body-font: 'Lora', serif;
-            --ui-font: 'DM Sans', sans-serif;
-            --spacing-xs: 0.25rem;
-            --spacing-sm: 0.5rem;
-            --spacing-md: 1rem;
-            --spacing-lg: 2rem;
-            --spacing-xl: 3rem;
-        }
-
-        /* Media query for dark theme preference */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --background: #3e3a39;
-                --background-card: #4e4a49;
-                --text-primary: #f9f5f1;
-                --text-secondary: #e6e0dc;
-                --accent: #d8b3a5;
-                --accent-light: #86716a;
-                --border: #555050;
-                --shadow: rgba(0, 0, 0, 0.2);
-            }
-        }
-
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--body-font);
-            background-color: var(--background);
-            color: var(--text-primary);
-            line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .container {
-            width: 90%;
-            max-width: var(--container-max-width);
-            margin: 0 auto;
-            padding: var(--spacing-md);
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: var(--header-font);
-            margin-bottom: var(--spacing-md);
-            font-weight: 600;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        button,
-        input,
-        select {
-            font-family: var(--ui-font);
-            border: none;
-            outline: none;
-        }
-
-        /* Header Styles */
-        header {
-            padding: var(--spacing-lg) 0;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .header-logo {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto var(--spacing-md);
-            display: block;
-        }
-
-        .tagline {
-            color: var(--text-secondary);
-            font-family: var(--ui-font);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        /* Filters Section */
-        .filters {
-            margin: var(--spacing-lg) 0;
-            position: relative;
-        }
-
-        .search-container {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        #search {
-            width: 100%;
-            padding: var(--spacing-md);
-            font-size: 1rem;
-            border-radius: var(--border-radius);
-            background-color: var(--background-card);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        #search:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px var(--accent-light);
-        }
-
-        .filter-categories,
-        .filter-countries {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .filter-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .filter-chip {
-            display: inline-flex;
-            align-items: center;
-            padding: var(--spacing-xs) var(--spacing-md);
-            background-color: var(--background-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .filter-chip:hover {
-            background-color: var(--accent-light);
-            color: var(--text-primary);
-        }
-
-        .filter-chip.active {
-            color: black;
-            border-color: transparent;
-            text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
-            font-weight: 500;
-        }
-
-        /* Add a dark text version for lighter background colors */
-        .filter-chip[data-category="Supplements"].active,
-        .filter-chip[data-category="Bread"].active,
-        .filter-chip[data-category="Medical"].active,
-        .filter-chip[data-category="Pantry"].active,
-        .filter-chip[data-category="Fridge"].active,
-        .filter-chip[data-category="Tableware"].active {
-            color: var(--text-primary);
-        }
-
-        .flag-emoji {
-            margin-right: var(--spacing-xs);
-        }
-
-        /* Category-specific filter chip colors */
-        .filter-chip[data-category="Personal Care"] {
-            border-left: 3px solid var(--category-personal-care);
-        }
-
-        .filter-chip[data-category="Personal Care"].active {
-            background-color: var(--category-personal-care);
-        }
-
-        .filter-chip[data-category="Kitchen"] {
-            border-left: 3px solid var(--category-kitchen);
-        }
-
-        .filter-chip[data-category="Kitchen"].active {
-            background-color: var(--category-kitchen);
-        }
-
-        .filter-chip[data-category="Cleaning"] {
-            border-left: 3px solid var(--category-cleaning);
-        }
-
-        .filter-chip[data-category="Cleaning"].active {
-            background-color: var(--category-cleaning);
-        }
-
-        .filter-chip[data-category="Home"] {
-            border-left: 3px solid var(--category-home);
-        }
-
-        .filter-chip[data-category="Home"].active {
-            background-color: var(--category-home);
-        }
-
-        .filter-chip[data-category="Beauty"] {
-            border-left: 3px solid var(--category-beauty);
-        }
-
-        .filter-chip[data-category="Beauty"].active {
-            background-color: var(--category-beauty);
-        }
-
-        .filter-chip[data-category="Supplements"] {
-            border-left: 3px solid var(--category-supplements);
-        }
-
-        .filter-chip[data-category="Supplements"].active {
-            background-color: var(--category-supplements);
-        }
-
-        /* Bags Category */
-        .filter-chip[data-category="Bags"],
-        .product-card[data-category="Bags"] {
-            border-left: 4px solid var(--category-bags);
-        }
-
-        .filter-chip[data-category="Bags"].active {
-            background-color: var(--category-bags);
-        }
-
-        /* Beauty Category */
-        .filter-chip[data-category="Beauty"] {
-            border-left: 3px solid var(--category-beauty);
-        }
-
-        .filter-chip[data-category="Beauty"].active {
-            background-color: var(--category-beauty);
-        }
-
-        .product-card[data-category="Beauty"] {
-            border-left: 4px solid var(--category-beauty);
-        }
-
-        /* Books Category */
-        .filter-chip[data-category="Books"],
-        .product-card[data-category="Books"] {
-            border-left: 4px solid var(--category-books);
-        }
-
-        .filter-chip[data-category="Books"].active {
-            background-color: var(--category-books);
-        }
-
-        /* Bread Category */
-        .filter-chip[data-category="Bread"],
-        .product-card[data-category="Bread"] {
-            border-left: 4px solid var(--category-bread);
-        }
-
-        .filter-chip[data-category="Bread"].active {
-            background-color: var(--category-bread);
-        }
-
-        /* Cleaning Category */
-        .filter-chip[data-category="Cleaning"] {
-            border-left: 3px solid var(--category-cleaning);
-        }
-
-        .filter-chip[data-category="Cleaning"].active {
-            background-color: var(--category-cleaning);
-        }
-
-        .product-card[data-category="Cleaning"] {
-            border-left: 4px solid var(--category-cleaning);
-        }
-
-        /* Clothing Category */
-        .filter-chip[data-category="Clothing"],
-        .product-card[data-category="Clothing"] {
-            border-left: 4px solid var(--category-clothing);
-        }
-
-        .filter-chip[data-category="Clothing"].active {
-            background-color: var(--category-clothing);
-        }
-
-        /* Cookware Category */
-        .filter-chip[data-category="Cookware"],
-        .product-card[data-category="Cookware"] {
-            border-left: 4px solid var(--category-cookware);
-        }
-
-        .filter-chip[data-category="Cookware"].active {
-            background-color: var(--category-cookware);
-        }
-
-        /* Drinks Category */
-        .filter-chip[data-category="Drinks"],
-        .product-card[data-category="Drinks"] {
-            border-left: 4px solid var(--category-drinks);
-        }
-
-        .filter-chip[data-category="Drinks"].active {
-            background-color: var(--category-drinks);
-        }
-
-        /* Electronics Category */
-        .filter-chip[data-category="Electronics"],
-        .product-card[data-category="Electronics"] {
-            border-left: 4px solid var(--category-electronics);
-        }
-
-        .filter-chip[data-category="Electronics"].active {
-            background-color: var(--category-electronics);
-        }
-
-        /* Fridge Category */
-        .filter-chip[data-category="Fridge"],
-        .product-card[data-category="Fridge"] {
-            border-left: 4px solid var(--category-fridge);
-        }
-
-        .filter-chip[data-category="Fridge"].active {
-            background-color: var(--category-fridge);
-        }
-
-        /* Home Category */
-        .filter-chip[data-category="Home"] {
-            border-left: 3px solid var(--category-home);
-        }
-
-        .filter-chip[data-category="Home"].active {
-            background-color: var(--category-home);
-        }
-
-        .product-card[data-category="Home"] {
-            border-left: 4px solid var(--category-home);
-        }
-
-        /* Kitchen Category */
-        .filter-chip[data-category="Kitchen"] {
-            border-left: 3px solid var(--category-kitchen);
-        }
-
-        .filter-chip[data-category="Kitchen"].active {
-            background-color: var(--category-kitchen);
-        }
-
-        .product-card[data-category="Kitchen"] {
-            border-left: 4px solid var(--category-kitchen);
-        }
-
-        /* Medical Category */
-        .filter-chip[data-category="Medical"],
-        .product-card[data-category="Medical"] {
-            border-left: 4px solid var(--category-medical);
-        }
-
-        .filter-chip[data-category="Medical"].active {
-            background-color: var(--category-medical);
-        }
-
-        /* Other Consumables Category */
-        .filter-chip[data-category="Other Consumables"],
-        .product-card[data-category="Other Consumables"] {
-            border-left: 4px solid var(--category-other-consumables);
-        }
-
-        .filter-chip[data-category="Other Consumables"].active {
-            background-color: var(--category-other-consumables);
-        }
-
-        /* Pantry Category */
-        .filter-chip[data-category="Pantry"],
-        .product-card[data-category="Pantry"] {
-            border-left: 4px solid var(--category-pantry);
-        }
-
-        .filter-chip[data-category="Pantry"].active {
-            background-color: var(--category-pantry);
-        }
-
-        /* Personal Care Category */
-        .filter-chip[data-category="Personal Care"] {
-            border-left: 3px solid var(--category-personal-care);
-        }
-
-        .filter-chip[data-category="Personal Care"].active {
-            background-color: var(--category-personal-care);
-        }
-
-        .product-card[data-category="Personal Care"] {
-            border-left: 4px solid var(--category-personal-care);
-        }
-
-        /* Storage & Organization Category */
-        .filter-chip[data-category="Storage & Organization"],
-        .product-card[data-category="Storage & Organization"] {
-            border-left: 4px solid var(--category-storage-organization);
-        }
-
-        .filter-chip[data-category="Storage & Organization"].active {
-            background-color: var(--category-storage-organization);
-        }
-
-        /* Supplements Category */
-        .filter-chip[data-category="Supplements"] {
-            border-left: 3px solid var(--category-supplements);
-        }
-
-        .filter-chip[data-category="Supplements"].active {
-            background-color: var(--category-supplements);
-        }
-
-        .product-card[data-category="Supplements"] {
-            border-left: 4px solid var(--category-supplements);
-        }
-
-        /* Tableware Category */
-        .filter-chip[data-category="Tableware"],
-        .product-card[data-category="Tableware"] {
-            border-left: 4px solid var(--category-tableware);
-        }
-
-        .filter-chip[data-category="Tableware"].active {
-            background-color: var(--category-tableware);
-        }
-
-        /* Baby Category */
-        .filter-chip[data-category="Baby"],
-        .product-card[data-category="Baby"] {
-            border-left: 4px solid var(--category-baby);
-        }
-
-        .filter-chip[data-category="Baby"].active {
-            background-color: var(--category-baby);
-        }
-
-        .clear-btn {
-            background-color: transparent;
-            color: var(--accent);
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-            border: 1px solid var(--accent);
-            padding: var(--spacing-xs) var(--spacing-md);
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            align-self: flex-start;
-        }
-
-        .clear-btn:hover {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        /* Products Section */
-        #products-count {
-            margin-bottom: var(--spacing-md);
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: var(--spacing-md);
-        }
-
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: var(--spacing-xl);
-            color: var(--text-secondary);
-            font-family: var(--ui-font);
-        }
-
-        /* Product Card Styles */
-        .product-card {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--background-card);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-md);
-            box-shadow: 0 2px 8px var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            height: 100%;
-        }
-
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 12px var(--shadow);
-        }
-
-        .product-title {
-            font-family: var(--header-font);
-            font-size: 1.2rem;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .product-brand {
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .product-notes {
-            font-family: var(--body-font);
-            font-size: 0.95rem;
-            margin-bottom: var(--spacing-md);
-            color: var(--text-secondary);
-        }
-
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            font-family: var(--ui-font);
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: auto;
-            position: relative;
-            padding-bottom: var(--spacing-xs);
-            min-height: 24px;
-        }
-
-        .product-country {
-            display: flex;
-            align-items: center;
-        }
-
-        .product-category {
-            margin-left: auto;
-            position: absolute;
-            right: 0;
-            bottom: var(--spacing-xs);
-        }
-
-        .product-country {
-            display: flex;
-            align-items: center;
-        }
-
-        /* Footer Styles */
-        footer {
-            margin-top: var(--spacing-xl);
-            padding: var(--spacing-xl) 0 var(--spacing-md);
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-family: var(--ui-font);
-            font-size: 0.9rem;
-            background-color: var(--background);
-        }
-
-        .footer-grid {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .footer-column {
-            flex: 1;
-        }
-
-        .footer-column h4 {
-            font-family: var(--header-font);
-            font-size: 1.2rem;
-            margin-bottom: var(--spacing-md);
-            color: var(--text-primary);
-        }
-
-        .footer-logo {
-            font-family: var(--header-font);
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-bottom: var(--spacing-sm);
-            color: var(--text-primary);
-        }
-
-        .footer-email a {
-            color: var(--accent);
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer-email a:hover {
-            text-decoration: underline;
-        }
-
-        .last-updated {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            padding-top: var(--spacing-md);
-            border-top: 1px solid var(--border);
-        }
-
-        /* Responsive footer */
-        @media (min-width: 768px) {
-            .footer-grid {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            .footer-column {
-                padding: 0 var(--spacing-md);
-            }
-
-            .footer-column:first-child {
-                padding-left: 0;
-            }
-
-            .footer-column:last-child {
-                padding-right: 0;
-            }
-        }
-
-
-        /* Responsive Breakpoints */
-        @media (min-width: 500px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .products-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: var(--spacing-lg);
-                align-items: flex-start;
-            }
-
-            .search-container {
-                width: 100%;
-                margin-bottom: var(--spacing-md);
-            }
-
-            .filter-categories,
-            .filter-countries {
-                flex: 1;
-                min-width: 200px;
-                margin-bottom: var(--spacing-md);
-            }
-        }
+      body {
+        background-color: #fdfdfb;
+        color: #222222;
+      }
+
+      .painterly-filter {
+        filter: sepia(10%) saturate(115%) contrast(103%) brightness(0.98);
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .section-anchor {
+        scroll-margin-top: 5.75rem;
+      }
+
+      .nav-link-active {
+        border-bottom: 2px solid #1c1917;
+        color: #1c1917;
+        padding-bottom: 0.25rem;
+      }
     </style>
-</head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Good Default",
+        "url": "https://gooddefault.com/",
+        "description": "Better household defaults for families who want safer swaps without the panic spiral.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Good Default",
+          "url": "https://gooddefault.com/"
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans antialiased flex flex-col min-h-screen selection:bg-stone-200 selection:text-stone-900">
+    <div class="bg-stone-900 text-stone-100 text-xs py-2 px-6 text-center tracking-widest uppercase font-semibold">
+      A searchable catalog of better household defaults. Zero sponsored placements.
+    </div>
 
-<body>
-    <header>
-        <div class="container">
-            <img src="logo.png" alt="NontoxicGoods.com Logo" class="header-logo">
-            <h1>NontoxicGoods.com</h1>
-            <p class="tagline">Cleaner products for a healthier life.</p>
-            <p><i>The best and healthiest things I've found that my family uses every day!</i></p>
-        </div>
+    <header class="px-6 md:px-12 py-8 border-b-4 border-stone-900 flex flex-col md:flex-row justify-between items-center md:items-end gap-6 bg-brand-bg relative z-20">
+      <a href="./" class="block text-center md:text-left group">
+        <h1 class="font-serif font-black text-4xl md:text-5xl uppercase tracking-tighter leading-[0.85] text-stone-900 group-hover:text-stone-700 transition-colors">
+          Good<br>Default
+        </h1>
+      </a>
+      <div class="flex items-center gap-4">
+        <a
+          href="catalog.html"
+          aria-label="Open catalog"
+          class="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center text-stone-900 hover:bg-stone-100 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </a>
+        <a
+          href="https://blog.gooddefault.com/"
+          class="bg-stone-900 text-stone-50 px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-stone-700 transition-colors"
+        >
+          Subscribe
+        </a>
+      </div>
     </header>
 
-    <main class="container">
-        <section class="filters">
-            <div class="search-container">
-                <input type="text" id="search" placeholder="Search products...">
+    <nav class="border-b border-stone-200 bg-brand-bg sticky top-0 z-10">
+      <ul class="flex items-center gap-8 overflow-x-auto no-scrollbar px-6 md:px-12 py-4 text-xs md:text-sm font-bold uppercase tracking-widest text-stone-500 whitespace-nowrap max-w-[1600px] mx-auto">
+        <li><a href="#start" data-nav-section="start" aria-current="true" class="nav-link-active hover:text-stone-900 transition-colors">Start Here</a></li>
+        <li><a href="#guides" data-nav-section="guides" class="hover:text-stone-900 transition-colors">Product Guides</a></li>
+        <li><a href="catalog.html" class="hover:text-stone-900 transition-colors">Catalog</a></li>
+        <li><a href="compare.html" class="hover:text-stone-900 transition-colors">Compare</a></li>
+        <li><a href="#method" data-nav-section="method" class="hover:text-stone-900 transition-colors">Method</a></li>
+        <li><a href="https://blog.gooddefault.com/" class="hover:text-stone-900 transition-colors">Substack</a></li>
+      </ul>
+    </nav>
+
+    <main class="flex-grow w-full max-w-[1600px] mx-auto px-6 md:px-12 py-12 md:py-20">
+      <article id="start" class="section-anchor grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <h2 class="font-serif font-black text-6xl md:text-[5.5rem] leading-[0.9] tracking-tighter text-stone-900 mb-8 break-words">
+            The better choice, already narrowed down.
+          </h2>
+
+          <p class="text-2xl md:text-3xl font-bold text-stone-500 mb-8 leading-[1.3] max-w-2xl">
+            A practical catalog of household swaps chosen for materials, testing, usefulness, and real family life.
+          </p>
+
+          <div class="prose prose-lg text-stone-800 leading-relaxed max-w-2xl text-[1.1rem]">
+            <p class="mb-6">
+              I keep a running list of better household defaults: pans without forever chemicals, kids' cups that are not just another plastic workaround, and detergents that disclose what is actually in them.
+            </p>
+            <p class="mb-6">
+              Friends asked for the spreadsheet. Now the list is searchable here, and the research behind each recommendation lives in the Good Default newsletter.
+            </p>
+          </div>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-3">
+            <a href="https://blog.gooddefault.com/" class="bg-stone-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-stone-800 transition-colors inline-flex items-center justify-center gap-3">
+              Read the Substack
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            <a href="catalog.html" class="bg-white text-stone-900 border-2 border-stone-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-stone-100 transition-colors inline-flex items-center justify-center">
+              Open the Catalog
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 mt-12 lg:mt-0 relative group">
+          <div class="absolute inset-0 bg-[#e3ded8] transform translate-x-4 translate-y-4 rounded-sm -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
+          <div class="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[750px] border-[3px] border-stone-900 rounded-sm overflow-hidden bg-stone-100">
+            <img src="assets/gooddefault.png" alt="Illustrated household scene for Good Default" class="w-full h-full object-cover object-center painterly-filter transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-orange-900/5 mix-blend-multiply pointer-events-none"></div>
+          </div>
+          <div class="mt-4 text-right">
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-widest">Good Default / field notes</span>
+          </div>
+        </div>
+      </article>
+
+      <hr class="border-t-4 border-stone-900 my-24">
+
+      <section id="method" class="section-anchor grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+        <div class="lg:col-span-4">
+          <div class="sticky top-24">
+            <h2 class="font-serif font-black text-5xl md:text-6xl lg:text-[4.5rem] leading-[0.9] tracking-tighter text-stone-900">
+              What makes<br>a good default?
+            </h2>
+            <p class="mt-6 text-stone-500 font-medium text-lg leading-relaxed max-w-sm">
+              Better materials, transparent labels, fewer mystery coatings, and products that work in a real kitchen, bathroom, laundry room, or diaper bag.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="mb-16 border-t-2 border-stone-900 pt-6">
+            <h3 class="font-serif font-black text-3xl mb-4 text-stone-900">One swap, one room at a time.</h3>
+            <p class="text-xl text-stone-700 leading-relaxed max-w-3xl">
+              Kitchen, laundry, bathroom, kids' table. Each guide explains the conventional option, the better default, and the tradeoffs that matter in daily use.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+            <div class="border-t border-stone-300 pt-6">
+              <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-700" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg>
+              </div>
+              <h3 class="font-serif font-black text-2xl mb-3 text-stone-900">Zero sponsored placements.</h3>
+              <p class="text-stone-600 leading-relaxed text-lg">
+                Products are included for materials, testing, transparency, usefulness, and whether they hold up in a real home.
+              </p>
             </div>
 
-            <div class="filter-categories">
-                <h3>Categories</h3>
-                <div id="category-filters" class="filter-chips"></div>
+            <div class="border-t border-stone-300 pt-6">
+              <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-700" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <h3 class="font-serif font-black text-2xl mb-3 text-stone-900">The research behind the list.</h3>
+              <p class="text-stone-600 leading-relaxed text-lg">
+                The newsletter explains why products make the list and turn research into reusable patterns that save decision fatigue.
+              </p>
             </div>
 
-            <div class="filter-countries">
-                <h3>Made In</h3>
-                <div id="country-filters" class="filter-chips"></div>
+            <div class="border-t border-stone-300 pt-6 md:col-span-2">
+              <div class="w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-700" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 Z"></path></svg>
+              </div>
+              <h3 class="font-serif font-black text-2xl mb-3 text-stone-900">Better defaults, fewer open tabs.</h3>
+              <p class="text-stone-600 leading-relaxed text-lg max-w-3xl">
+                Make the next everyday household choice easier the next time you need salt, storage containers, skincare, cookware, laundry detergent, or something for your kid's table.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <button id="clear-filters" class="clear-btn">Clear All Filters</button>
-        </section>
+      <hr class="border-t-2 border-stone-200 my-24">
 
-        <section class="products">
-            <div id="products-count">Showing <span id="count">0</span> products</div>
-            <div id="products-grid" class="products-grid">
-                <!-- Products will be loaded here via JavaScript -->
-                <div class="loading">Loading products...</div>
+      <section id="guides" class="section-anchor">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 pb-4 border-b-4 border-stone-900">
+          <h2 class="font-serif font-black text-4xl md:text-5xl text-stone-900 tracking-tighter">Start Here</h2>
+          <a href="https://blog.gooddefault.com/" class="font-bold text-sm uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-1 pb-1">
+            View All <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
+          <a href="https://blog.gooddefault.com/p/good-default-why-this-publication" class="group block no-underline">
+            <div class="relative w-full aspect-[4/3] mb-6 overflow-hidden border-2 border-stone-900 rounded-sm bg-stone-100">
+              <img src="assets/posts/good-default-why-this-publication.jpg" alt="Countertop with household goods and Good Default supplies" class="w-full h-full object-cover painterly-filter transition-transform duration-500 group-hover:scale-105">
             </div>
-        </section>
+            <span class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3 block">Welcome</span>
+            <h3 class="font-serif font-black text-2xl leading-tight text-stone-900 mb-3 group-hover:underline decoration-2 underline-offset-4">
+              Good Default: Why This Publication Exists
+            </h3>
+            <p class="text-stone-600 line-clamp-3">
+              The catalog, the newsletter, the standards, and the promise: no sponsored placements.
+            </p>
+          </a>
+
+          <a href="https://blog.gooddefault.com/p/hidden-toxins-in-your-skincare-and" class="group block no-underline">
+            <div class="relative w-full aspect-[4/3] mb-6 overflow-hidden border-2 border-stone-900 rounded-sm bg-stone-100">
+              <img src="assets/posts/hidden-toxins-in-your-skincare.jpg" alt="Personal care products arranged for a skincare ingredients guide" class="w-full h-full object-cover painterly-filter transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <span class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3 block">Personal Care</span>
+            <h3 class="font-serif font-black text-2xl leading-tight text-stone-900 mb-3 group-hover:underline decoration-2 underline-offset-4">
+              Hidden Toxins in Your Skincare
+            </h3>
+            <p class="text-stone-600 line-clamp-3">
+              Fragrance, PFAS, phthalates, dyes, and the practical swaps to start with first.
+            </p>
+          </a>
+
+          <a href="https://blog.gooddefault.com/p/the-truth-about-bpa-free-plastics" class="group block no-underline">
+            <div class="relative w-full aspect-[4/3] mb-6 overflow-hidden border-2 border-stone-900 rounded-sm bg-stone-100">
+              <img src="assets/posts/the-truth-about-bpa-free-plastics.jpg" alt="Plastic containers and household items for a BPA-free plastics guide" class="w-full h-full object-cover painterly-filter transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <span class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3 block">Plastics</span>
+            <h3 class="font-serif font-black text-2xl leading-tight text-stone-900 mb-3 group-hover:underline decoration-2 underline-offset-4">
+              The Truth About BPA-Free Plastics
+            </h3>
+            <p class="text-stone-600 line-clamp-3">
+              Why "BPA-free" does not mean non-toxic, and the safer materials worth defaulting to.
+            </p>
+          </a>
+
+          <a href="https://blog.gooddefault.com/p/the-best-budget-non-toxic-glass-food" class="group block no-underline">
+            <div class="relative w-full aspect-[4/3] mb-6 overflow-hidden border-2 border-stone-900 rounded-sm bg-stone-100">
+              <img src="assets/posts/budget-glass-food-storage.jpg" alt="Glass food storage containers for a budget non-toxic kitchen guide" class="w-full h-full object-cover painterly-filter transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <span class="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3 block">Storage</span>
+            <h3 class="font-serif font-black text-2xl leading-tight text-stone-900 mb-3 group-hover:underline decoration-2 underline-offset-4">
+              The Best Budget Glass Food Storage
+            </h3>
+            <p class="text-stone-600 line-clamp-3">
+              Why glass wins for leftovers, broth, toddler food, pantry storage, and everyday reuse.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <hr class="border-t-2 border-stone-200 my-24">
+
+      <section id="catalog" class="section-anchor grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="font-serif font-black text-5xl md:text-6xl lg:text-[4.5rem] leading-[0.9] tracking-tighter text-stone-900">
+            Find a better default.
+          </h2>
+          <p class="mt-6 text-stone-500 font-medium text-lg leading-relaxed max-w-xl">
+            Search products, compare similar items, and start with the categories you replace most often.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 border-t-2 border-stone-900 pt-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+            <div class="bg-stone-100 border border-stone-300 p-6">
+              <div class="font-serif font-black text-5xl leading-none text-stone-900">146</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-widest text-stone-500">Catalog items</div>
+            </div>
+            <div class="bg-stone-100 border border-stone-300 p-6">
+              <div class="font-serif font-black text-5xl leading-none text-stone-900">61</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-widest text-stone-500">PFAS-free items</div>
+            </div>
+            <div class="bg-stone-100 border border-stone-300 p-6">
+              <div class="font-serif font-black text-5xl leading-none text-stone-900">18</div>
+              <div class="mt-2 text-xs font-bold uppercase tracking-widest text-stone-500">Categories</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Baby</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Beauty</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Cleaning</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Clothing</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Cookware</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Home</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Pantry</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Personal Care</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Storage & Organization</span>
+            <span class="px-4 py-2 bg-white border border-stone-300 text-sm font-bold text-stone-700">Tableware</span>
+          </div>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-3">
+            <a href="catalog.html" class="bg-stone-900 text-white px-6 py-3 rounded-full font-bold hover:bg-stone-800 transition-colors text-center">
+              Open the Catalog
+            </a>
+            <a href="compare.html" class="bg-white text-stone-900 border-2 border-stone-900 px-6 py-3 rounded-full font-bold hover:bg-stone-100 transition-colors text-center">
+              Compare Products
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="footer-logo">NontoxicGoods.com</div>
-                    <p>&copy; 2026 NontoxicGoods.com</p>
-                    <p>A curated collection of <span id="total-product-count"></span> non-toxic products for a healthier life.</p>
-                </div>
+    <footer class="bg-stone-900 text-stone-100 mt-24 pt-20 pb-12 px-6 md:px-12 border-t-8 border-stone-950">
+      <div class="max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+          <div class="lg:col-span-2 pr-8">
+            <h2 class="font-serif font-black text-5xl uppercase tracking-tighter leading-none mb-6">
+              Good<br>Default
+            </h2>
+            <p class="text-stone-400 text-lg max-w-md mb-8">
+              The searchable catalog of better household defaults. Research-backed, zero sponsored content.
+            </p>
+            <a href="https://blog.gooddefault.com/" class="bg-white text-stone-900 px-6 py-3 rounded-sm font-bold whitespace-nowrap hover:bg-stone-200 transition-colors inline-flex">
+              Subscribe on Substack
+            </a>
+          </div>
 
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <p>Have feedback, updates, or product suggestions? We'd love to hear from you!</p>
-                    <p class="footer-email"><a href="mailto:hello@nontoxicgoods.com">hello@nontoxicgoods.com</a></p>
-                </div>
+          <div>
+            <h4 class="font-bold uppercase tracking-widest text-sm text-stone-500 mb-6">Directory</h4>
+            <ul class="space-y-4 text-stone-300 font-medium">
+              <li><a href="#start" class="hover:text-white transition-colors">Start Here</a></li>
+              <li><a href="catalog.html" class="hover:text-white transition-colors">The Catalog</a></li>
+              <li><a href="compare.html" class="hover:text-white transition-colors">Compare Products</a></li>
+              <li><a href="#guides" class="hover:text-white transition-colors">Product Guides</a></li>
+              <li><a href="#method" class="hover:text-white transition-colors">Methodology</a></li>
+            </ul>
+          </div>
 
-                <div class="footer-column">
-                    <h4></h4>
-                    <p><em>If you choose to make a purchase through some of the links on this page, we may receive a
-                            small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your
-                            support!</em></p>
-                </div>
-            </div>
-            <div class="last-updated">
-                <span id="build-time">Last updated: June 11, 2026 at 04:05 PM CDT</span>
-            </div>
+          <div>
+            <h4 class="font-bold uppercase tracking-widest text-sm text-stone-500 mb-6">Categories</h4>
+            <ul class="space-y-4 text-stone-300 font-medium">
+              <li><a href="catalog.html?category=Baby" class="hover:text-white transition-colors">Baby & Kids</a></li>
+              <li><a href="catalog.html?category=Cookware" class="hover:text-white transition-colors">Kitchen & Cooking</a></li>
+              <li><a href="catalog.html?category=Cleaning" class="hover:text-white transition-colors">Cleaning Supplies</a></li>
+              <li><a href="catalog.html?category=Personal%20Care" class="hover:text-white transition-colors">Personal Care</a></li>
+              <li><a href="catalog.html?category=Home" class="hover:text-white transition-colors">Home Goods</a></li>
+            </ul>
+          </div>
         </div>
+
+        <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-stone-500 font-medium">
+          <p>© 2026 Good Default. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="https://blog.gooddefault.com/" class="hover:text-white transition-colors">Substack</a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-    <!-- Templates -->
-    <template id="product-card-template">
-        <a class="product-card" href="" target="_blank">
-            <h3 class="product-title"></h3>
-            <p class="product-brand"></p>
-            <p class="product-notes"></p>
-            <div class="product-meta">
-                <span class="product-country"><span class="flag-emoji"></span> <span class="country-name"></span></span>
-                <span class="product-category"></span>
-            </div>
-        </a>
-    </template>
-
-    <template id="filter-chip-template">
-        <button class="filter-chip" data-value=""></button>
-    </template>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // State
-            let products = [];
-            let activeFilters = {
-                categories: new Set(),
-                countries: new Set(),
-                search: ''
-            };
+      const nav = document.querySelector("nav");
+      const navLinks = Array.from(document.querySelectorAll("[data-nav-section]"));
+      const navBySection = new Map(navLinks.map((link) => [link.dataset.navSection, link]));
+      const observedSections = Array.from(document.querySelectorAll("#start, #guides, #method"));
+      let currentSection = "start";
 
-            // DOM elements
-            const productsGrid = document.getElementById('products-grid');
-            const productsCount = document.getElementById('count');
-            const totalProductCount = document.getElementById('total-product-count');
-            const searchInput = document.getElementById('search');
-            const categoryFilters = document.getElementById('category-filters');
-            const countryFilters = document.getElementById('country-filters');
-            const clearFiltersButton = document.getElementById('clear-filters');
+      function setActiveSection(sectionId) {
+        if (sectionId === currentSection) return;
+        currentSection = sectionId;
 
-            // Templates
-            const productCardTemplate = document.getElementById('product-card-template');
-            const filterChipTemplate = document.getElementById('filter-chip-template');
-
-            // Country flag emoji mapping
-            const countryFlags = {
-                'USA': '🇺🇸',
-                'Canada': '🇨🇦',
-                'China': '🇨🇳',
-                'Japan': '🇯🇵',
-                'Korea': '🇰🇷',
-                'UK': '🇬🇧',
-                'France': '🇫🇷',
-                'Germany': '🇩🇪',
-                'Italy': '🇮🇹',
-                'Spain': '🇪🇸',
-                'Australia': '🇦🇺',
-                'New Zealand': '🇳🇿',
-                'India': '🇮🇳',
-                'Brazil': '🇧🇷',
-                'Mexico': '🇲🇽',
-                'Sweden': '🇸🇪',
-                'Switzerland': '🇨🇭',
-                'Netherlands': '🇳🇱',
-                'Belgium': '🇧🇪',
-                'Denmark': '🇩🇰',
-                'Finland': '🇫🇮',
-                'Norway': '🇳🇴',
-                'Portugal': '🇵🇹',
-                'Greece': '🇬🇷',
-                'Russia': '🇷🇺',
-                'Turkey': '🇹🇷'
-                // Add more country-flag pairs as needed
-            };
-
-            // Helper function to get flag emoji for a country
-            function getFlagEmoji(country) {
-                return countryFlags[country] || '🌎'; // Default to globe if no specific flag
-            }
-
-            // ===== Data Loading =====
-            async function loadData() {
-                try {
-                    // Change this URL to the actual CSV file path in your repository
-                    const response = await fetch('products.csv');
-                    const csvData = await response.text();
-
-                    // Parse CSV to JSON
-                    Papa.parse(csvData, {
-                        header: true,
-                        dynamicTyping: true,
-                        complete: function (results) {
-                            products = results.data;
-
-                            // Remove any empty rows (often happens with CSVs)
-                            products = products.filter(product => product.Name && product.Name.trim() !== '');
-
-                            // Update total product count in footer
-                            totalProductCount.textContent = products.length;
-
-                            initializeFilters();
-                            renderProducts();
-                        },
-                        error: function (error) {
-                            console.error('Error parsing CSV:', error);
-                            productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
-                        }
-                    });
-                } catch (error) {
-                    console.error('Error fetching data:', error);
-                    productsGrid.innerHTML = '<div class="error">Error loading products. Please try again later.</div>';
-                }
-            }
-
-            // ===== Initialize Filter Chips =====
-            function initializeFilters() {
-                // Extract unique categories and countries
-                const categories = [...new Set(products.map(p => p.Category))].filter(Boolean).sort();
-                const countries = [...new Set(products.map(p => p['Made In']))].filter(Boolean).sort();
-
-                // Create category filter chips
-                categories.forEach(category => {
-                    const chip = createFilterChip(category, 'category');
-                    categoryFilters.appendChild(chip);
-                });
-
-                // Create country filter chips
-                countries.forEach(country => {
-                    const chip = createFilterChip(country, 'country');
-                    countryFilters.appendChild(chip);
-                });
-            }
-
-            function createFilterChip(value, type) {
-                const chipClone = filterChipTemplate.content.cloneNode(true);
-                const chip = chipClone.querySelector('.filter-chip');
-
-                // Set up the chip differently based on type
-                if (type === 'category') {
-                    chip.textContent = value;
-                    chip.dataset.category = value;
-                } else if (type === 'country') {
-                    // Add flag emoji for country
-                    const flagSpan = document.createElement('span');
-                    flagSpan.className = 'flag-emoji';
-                    flagSpan.textContent = getFlagEmoji(value);
-
-                    const countryName = document.createTextNode(value);
-
-                    chip.appendChild(flagSpan);
-                    chip.appendChild(countryName);
-                }
-
-                chip.dataset.value = value;
-                chip.dataset.type = type;
-
-                chip.addEventListener('click', toggleFilter);
-
-                return chip;
-            }
-
-            // ===== Filter Functionality =====
-            function toggleFilter(e) {
-                const chip = e.currentTarget;
-                const value = chip.dataset.value;
-                const type = chip.dataset.type;
-
-                // Toggle active state
-                chip.classList.toggle('active');
-
-                // Update active filters
-                if (type === 'category') {
-                    if (chip.classList.contains('active')) {
-                        activeFilters.categories.add(value);
-                    } else {
-                        activeFilters.categories.delete(value);
-                    }
-                } else if (type === 'country') {
-                    if (chip.classList.contains('active')) {
-                        activeFilters.countries.add(value);
-                    } else {
-                        activeFilters.countries.delete(value);
-                    }
-                }
-
-                renderProducts();
-            }
-
-            function clearFilters() {
-                // Reset active filters
-                activeFilters.categories.clear();
-                activeFilters.countries.clear();
-                activeFilters.search = '';
-
-                // Reset UI
-                searchInput.value = '';
-                document.querySelectorAll('.filter-chip').forEach(chip => {
-                    chip.classList.remove('active');
-                });
-
-                renderProducts();
-            }
-
-            // ===== Search Functionality =====
-            function handleSearch(e) {
-                activeFilters.search = e.target.value.toLowerCase().trim();
-                renderProducts();
-            }
-
-            // ===== Rendering Products =====
-            function renderProducts() {
-                // Clear the products grid
-                productsGrid.innerHTML = '';
-
-                // Filter products based on active filters
-                const filteredProducts = products.filter(product => {
-                    // Category filter
-                    if (activeFilters.categories.size > 0 && !activeFilters.categories.has(product.Category)) {
-                        return false;
-                    }
-
-                    // Country filter
-                    if (activeFilters.countries.size > 0 && !activeFilters.countries.has(product['Made In'])) {
-                        return false;
-                    }
-
-                    // Search filter
-                    if (activeFilters.search) {
-                        const searchableText = `
-                            ${product.Name || ''}
-                            ${product.Brand || ''}
-                            ${product.Notes || ''}
-                            ${product['Made In'] || ''}
-                            ${product.Category || ''}
-                        `.toLowerCase();
-
-                        if (!searchableText.includes(activeFilters.search)) {
-                            return false;
-                        }
-                    }
-
-                    return true;
-                });
-
-                // Update count
-                productsCount.textContent = filteredProducts.length;
-
-                // If no products found
-                if (filteredProducts.length === 0) {
-                    productsGrid.innerHTML = '<div class="no-results">No products found. Try adjusting your filters.</div>';
-                    return;
-                }
-
-                // Render each product card
-                filteredProducts.forEach(product => {
-                    const card = createProductCard(product);
-                    productsGrid.appendChild(card);
-                });
-            }
-
-            function createProductCard(product) {
-                const cardClone = productCardTemplate.content.cloneNode(true);
-                const card = cardClone.querySelector('.product-card');
-
-                // Set card data
-                card.href = product.Link || '#';
-                card.dataset.category = product.Category || '';
-
-                card.querySelector('.product-title').textContent = product.Name || 'Untitled Product';
-                card.querySelector('.product-brand').textContent = product.Brand || '';
-                card.querySelector('.product-notes').textContent = product.Notes || '';
-
-                if (product['Made In']) {
-                    card.querySelector('.flag-emoji').textContent = getFlagEmoji(product['Made In']);
-                    card.querySelector('.country-name').textContent = `Made in ${product['Made In']}`;
-                } else {
-                    card.querySelector('.product-country').style.display = 'none';
-                }
-
-                card.querySelector('.product-category').textContent = product.Category || '';
-
-                return card;
-            }
-
-            // ===== Event Listeners =====
-            searchInput.addEventListener('input', handleSearch);
-            clearFiltersButton.addEventListener('click', clearFilters);
-
-            // ===== Initialize =====
-            loadData();
+        navLinks.forEach((link) => {
+          const active = link.dataset.navSection === sectionId;
+          link.classList.toggle("nav-link-active", active);
+          link.setAttribute("aria-current", active ? "true" : "false");
+          if (active) {
+            link.scrollIntoView({ block: "nearest", inline: "center" });
+          }
         });
-    </script>
-</body>
+      }
 
+      function updateActiveFromScroll() {
+        const activationLine = nav.getBoundingClientRect().bottom + 32;
+        const activeSection = observedSections.reduce((current, section) => {
+          return section.getBoundingClientRect().top <= activationLine ? section.id : current;
+        }, "start");
+
+        setActiveSection(activeSection);
+      }
+
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+        section.scrollIntoView({ block: "start" });
+        setActiveSection(sectionId);
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const sectionId = link.dataset.navSection;
+          history.pushState(null, "", `#${sectionId}`);
+          scrollToSection(sectionId);
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        window.requestAnimationFrame(updateActiveFromScroll);
+      }, { passive: true });
+
+      window.addEventListener("hashchange", () => {
+        const sectionId = window.location.hash.slice(1);
+        if (navBySection.has(sectionId)) scrollToSection(sectionId);
+      });
+
+      if (window.location.hash && navBySection.has(window.location.hash.slice(1))) {
+        window.setTimeout(() => scrollToSection(window.location.hash.slice(1)), 0);
+      }
+
+      updateActiveFromScroll();
+    </script>
+  </body>
 </html>

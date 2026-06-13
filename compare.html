@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compare Products | Good Default</title>
+    <meta name="description" content="Compare similar Good Default catalog items by category, materials notes, origin, and practical fit.">
+    <link rel="icon" href="assets/good-default-logo.png">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dark-mode.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Fraunces", "serif"],
+              sans: ["Inter", "sans-serif"]
+            },
+            colors: {
+              brand: {
+                bg: "#FDFDFB",
+                green: "#3D5A41"
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body { background-color: #fdfdfb; color: #222222; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .compare-tile {
+        background:
+          linear-gradient(135deg, rgba(61,90,65,.18), rgba(245,245,244,.92)),
+          radial-gradient(circle at 30px 30px, rgba(28,25,23,.12) 2px, transparent 2px);
+        background-size: auto, 28px 28px;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased flex flex-col min-h-screen selection:bg-stone-200 selection:text-stone-900">
+    <div class="bg-stone-900 text-stone-100 text-xs py-2 px-6 text-center tracking-widest uppercase font-semibold">
+      Compare similar items before you make a default.
+    </div>
+
+    <header class="px-6 md:px-12 py-8 border-b-4 border-stone-900 flex flex-col md:flex-row justify-between items-center md:items-end gap-6 bg-brand-bg relative z-20">
+      <a href="./" class="block text-center md:text-left group">
+        <h1 class="font-serif font-black text-4xl md:text-5xl uppercase tracking-tighter leading-[0.85] text-stone-900 group-hover:text-stone-700 transition-colors">
+          Good<br>Default
+        </h1>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="catalog.html" class="border border-stone-300 text-stone-900 px-5 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-stone-100 transition-colors">
+          Catalog
+        </a>
+        <a href="https://blog.gooddefault.com/" class="bg-stone-900 text-stone-50 px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-stone-700 transition-colors">
+          Subscribe
+        </a>
+      </div>
+    </header>
+
+    <nav class="border-b border-stone-200 bg-brand-bg sticky top-0 z-10">
+      <ul class="flex items-center gap-8 overflow-x-auto no-scrollbar px-6 md:px-12 py-4 text-xs md:text-sm font-bold uppercase tracking-widest text-stone-500 whitespace-nowrap max-w-[1600px] mx-auto">
+        <li><a href="./" class="hover:text-stone-900 transition-colors">Start Here</a></li>
+        <li><a href="catalog.html" class="hover:text-stone-900 transition-colors">Catalog</a></li>
+        <li><a href="compare.html" class="text-stone-900 border-b-2 border-stone-900 pb-1">Compare</a></li>
+        <li><a href="./#method" class="hover:text-stone-900 transition-colors">Method</a></li>
+        <li><a href="https://blog.gooddefault.com/" class="hover:text-stone-900 transition-colors">Substack</a></li>
+      </ul>
+    </nav>
+
+    <main class="flex-grow w-full max-w-[1600px] mx-auto px-6 md:px-12 py-12">
+      <section class="mb-10 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+        <div>
+          <p class="text-xs font-black uppercase tracking-[0.28em] text-stone-500 mb-4">Comparison tool</p>
+          <h2 id="page-title" class="font-serif font-black text-5xl md:text-7xl tracking-tighter text-stone-900 mb-4">Similar items, side by side.</h2>
+          <p class="text-xl text-stone-500 max-w-2xl font-medium">Pick a category, choose up to three products, and compare the notes that matter before buying.</p>
+        </div>
+        <label class="block min-w-64">
+          <span class="block text-xs font-black uppercase tracking-widest text-stone-500 mb-2">Category</span>
+          <select id="category" class="w-full bg-white border-[3px] border-stone-900 rounded-sm px-4 py-3 font-bold text-stone-900 focus:outline-none"></select>
+        </label>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <aside class="lg:col-span-3">
+          <div class="sticky top-24 border-2 border-stone-900 bg-white rounded-sm p-5 shadow-[8px_8px_0_#1c1917]">
+            <h3 class="font-serif font-black text-2xl tracking-tighter text-stone-900 mb-4">Choose products</h3>
+            <p class="text-sm text-stone-500 mb-5">Select up to three items from the category.</p>
+            <div id="product-picker" class="space-y-3 max-h-[60vh] overflow-auto pr-2 no-scrollbar"></div>
+          </div>
+        </aside>
+
+        <section class="lg:col-span-9 overflow-hidden border-2 border-stone-900 rounded-sm bg-white shadow-[10px_10px_0_#d6c08a]">
+          <div class="px-6 md:px-8 py-7 border-b-2 border-stone-900 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <span class="bg-stone-900 text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest rounded-full">Good Default</span>
+              <h3 id="compare-heading" class="font-serif font-black text-3xl md:text-4xl tracking-tighter text-stone-900 mt-3">Product comparison</h3>
+            </div>
+            <button id="reset" class="px-5 py-3 border-2 border-stone-900 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-stone-100 transition-colors">Reset picks</button>
+          </div>
+
+          <div class="overflow-auto p-6 md:p-8 no-scrollbar">
+            <div id="comparison" class="min-w-[720px]"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-100 mt-24 pt-16 pb-10 px-6 md:px-12 border-t-8 border-stone-950">
+      <div class="max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between gap-8">
+        <div>
+          <h2 class="font-serif font-black text-4xl uppercase tracking-tighter leading-none mb-4">Good<br>Default</h2>
+          <p class="text-stone-400 max-w-md">The searchable catalog of better household defaults. Research-backed, zero sponsored content.</p>
+        </div>
+        <div class="flex flex-wrap gap-6 text-sm font-bold uppercase tracking-widest text-stone-400">
+          <a href="./" class="hover:text-white transition-colors">Home</a>
+          <a href="catalog.html" class="hover:text-white transition-colors">Catalog</a>
+          <a href="https://blog.gooddefault.com/" class="hover:text-white transition-colors">Substack</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const state = {
+        products: [],
+        productImages: {},
+        category: "Cookware",
+        selected: []
+      };
+
+      const categorySelect = document.querySelector("#category");
+      const productPicker = document.querySelector("#product-picker");
+      const comparison = document.querySelector("#comparison");
+      const compareHeading = document.querySelector("#compare-heading");
+      const reset = document.querySelector("#reset");
+
+      function parseCsv(text) {
+        const rows = [];
+        let row = [];
+        let value = "";
+        let quoted = false;
+        for (let i = 0; i < text.length; i += 1) {
+          const char = text[i];
+          const next = text[i + 1];
+          if (char === '"' && quoted && next === '"') {
+            value += '"';
+            i += 1;
+          } else if (char === '"') {
+            quoted = !quoted;
+          } else if (char === "," && !quoted) {
+            row.push(value);
+            value = "";
+          } else if ((char === "\n" || char === "\r") && !quoted) {
+            if (value || row.length) {
+              row.push(value);
+              rows.push(row);
+              row = [];
+              value = "";
+            }
+            if (char === "\r" && next === "\n") i += 1;
+          } else {
+            value += char;
+          }
+        }
+        if (value || row.length) {
+          row.push(value);
+          rows.push(row);
+        }
+        const [headers, ...records] = rows;
+        return records.map((record) => Object.fromEntries(headers.map((header, index) => [header, record[index] || ""])));
+      }
+
+      function initials(product) {
+        return (product.Brand || product.Name || "GD")
+          .split(/\s+/)
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((word) => word[0])
+          .join("")
+          .toUpperCase();
+      }
+
+      function esc(value) {
+        return String(value || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function normalizeKey(value) {
+        return String(value || "").trim().replace(/\s+/g, " ").toLowerCase();
+      }
+
+      function productKey(product) {
+        return [product.Category, product.Name, product.Brand].map(normalizeKey).join("|");
+      }
+
+      function dedupeProducts(products) {
+        const seen = new Set();
+        return products.filter((product) => {
+          const key = productKey(product);
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+
+      function productsInCategory() {
+        return state.products.filter((product) => product.Category === state.category);
+      }
+
+      function productImage(product) {
+        return state.productImages[productKey(product)];
+      }
+
+      function productVisual(product) {
+        const image = productImage(product);
+        if (image?.src) {
+          return `<img src="${esc(image.src)}" alt="${esc(`${product.Brand} ${product.Name}`)}" class="h-full w-full object-contain bg-white p-4">`;
+        }
+
+        return `
+          <div>
+            <div class="font-serif font-black text-5xl text-stone-900 tracking-tighter">${esc(initials(product))}</div>
+            <div class="mt-2 text-[10px] font-black uppercase tracking-[0.2em] text-stone-500">${esc(product.Brand)}</div>
+          </div>
+        `;
+      }
+
+      function selectedProducts() {
+        return state.selected
+          .map((key) => state.products.find((product) => productKey(product) === key && product.Category === state.category))
+          .filter(Boolean);
+      }
+
+      function renderCategories() {
+        const categories = [...new Set(state.products.map((product) => product.Category).filter(Boolean))].sort();
+        categorySelect.innerHTML = categories.map((category) => `<option value="${esc(category)}">${esc(category)}</option>`).join("");
+        categorySelect.value = state.category;
+      }
+
+      function chooseDefaults() {
+        const params = new URLSearchParams(window.location.search);
+        const requestedCategory = params.get("category");
+        const requestedItem = params.get("item");
+        const categories = new Set(state.products.map((product) => product.Category));
+        if (requestedCategory && categories.has(requestedCategory)) {
+          state.category = requestedCategory;
+        }
+        const categoryProducts = productsInCategory();
+        const requestedProduct = requestedItem
+          ? categoryProducts.find((product) => product.Name === requestedItem || productKey(product) === requestedItem)
+          : null;
+        const picks = requestedProduct
+          ? [requestedProduct, ...categoryProducts.filter((product) => productKey(product) !== productKey(requestedProduct)).slice(0, 2)]
+          : categoryProducts.slice(0, 3);
+        state.selected = picks.map(productKey).slice(0, 3);
+      }
+
+      function renderPicker() {
+        const selected = new Set(state.selected);
+        productPicker.innerHTML = productsInCategory().map((product) => {
+          const key = productKey(product);
+          const isChecked = selected.has(key);
+          const disabled = !isChecked && state.selected.length >= 3;
+          return `
+            <label class="flex gap-3 border ${isChecked ? "border-stone-900 bg-stone-100" : "border-stone-200 bg-white"} rounded-sm p-3 cursor-pointer">
+              <input type="checkbox" value="${esc(key)}" ${isChecked ? "checked" : ""} ${disabled ? "disabled" : ""} class="mt-1 accent-stone-900">
+              <span>
+                <span class="block text-sm font-black text-stone-900">${esc(product.Name)}</span>
+                <span class="block text-xs font-bold uppercase tracking-widest text-stone-500 mt-1">${esc(product.Brand || "Good Default")}</span>
+              </span>
+            </label>
+          `;
+        }).join("");
+      }
+
+      function renderComparison() {
+        const products = selectedProducts();
+        compareHeading.textContent = `${state.category} comparison`;
+        const emptyCells = Array.from({ length: Math.max(0, 3 - products.length) }, () => null);
+        const columns = [...products, ...emptyCells];
+        const row = (label, renderValue) => `
+          <tr class="border-t border-stone-200">
+            <td class="py-6 pr-4 font-bold text-stone-500 uppercase tracking-widest text-[10px] align-top">${label}</td>
+            ${columns.map((product) => `<td class="px-4 py-6 text-center align-top">${product ? renderValue(product) : ""}</td>`).join("")}
+          </tr>
+        `;
+        comparison.innerHTML = `
+          <table class="w-full border-collapse">
+            <thead>
+              <tr>
+                <th class="w-1/4 pb-8 text-left align-bottom">
+                  <div class="text-xs font-bold text-stone-400 uppercase tracking-widest">Selected</div>
+                  <div class="text-stone-900 font-serif text-xl font-black mt-1">Key notes</div>
+                </th>
+                ${columns.map((product) => product ? `
+                  <th class="w-1/4 px-4 pb-8 align-top">
+                    <div class="aspect-square w-full mb-4 border-2 border-stone-900 rounded-sm overflow-hidden compare-tile flex items-center justify-center">
+                      ${productVisual(product)}
+                    </div>
+                    <h4 class="font-serif font-black text-lg text-stone-900 leading-tight">${esc(product.Name)}</h4>
+                    <div class="mt-2 flex items-center justify-center gap-1">
+                      <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                      <span class="text-[10px] font-bold uppercase tracking-tighter text-stone-500">${esc(product.Source)}</span>
+                    </div>
+                  </th>
+                ` : `
+                  <th class="w-1/4 px-4 pb-8 align-top">
+                    <div class="aspect-square w-full mb-4 border-2 border-dashed border-stone-300 rounded-sm flex items-center justify-center bg-stone-50 text-stone-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+                    </div>
+                    <div class="text-center text-xs font-bold uppercase tracking-widest text-stone-400">Add product</div>
+                  </th>
+                `).join("")}
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              ${row("Brand", (product) => `<span class="font-bold text-stone-900">${esc(product.Brand || "Good Default")}</span>`)}
+              ${row("Made in", (product) => `<span class="font-medium text-stone-800">${esc(product["Made In"] || "Not listed")}</span>`)}
+              ${row("Why it made the list", (product) => `<p class="font-medium text-stone-700 leading-relaxed">${esc(product.Notes)}</p>`)}
+              ${row("Catalog source", (product) => `<span class="inline-flex bg-stone-100 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-stone-600">${esc(product.Source)}</span>`)}
+              ${row("Action", (product) => `<a href="${esc(product.Link)}" target="_blank" rel="noopener" class="inline-flex bg-stone-900 text-white px-5 py-3 rounded-full text-xs font-black uppercase tracking-widest hover:bg-stone-700 transition-colors">Open product</a>`)}
+            </tbody>
+          </table>
+        `;
+      }
+
+      function render() {
+        renderCategories();
+        renderPicker();
+        renderComparison();
+      }
+
+      categorySelect.addEventListener("change", () => {
+        state.category = categorySelect.value;
+        state.selected = productsInCategory().slice(0, 3).map(productKey);
+        render();
+      });
+
+      productPicker.addEventListener("change", (event) => {
+        const input = event.target.closest("input[type='checkbox']");
+        if (!input) return;
+        if (input.checked) {
+          state.selected = [...state.selected, input.value].slice(0, 3);
+        } else {
+          state.selected = state.selected.filter((name) => name !== input.value);
+        }
+        renderPicker();
+        renderComparison();
+      });
+
+      reset.addEventListener("click", () => {
+        state.selected = productsInCategory().slice(0, 3).map(productKey);
+        render();
+      });
+
+      Promise.all([
+        fetch("data/products.csv", { cache: "no-store" }).then((response) => response.text()),
+        fetch("data/pfas-free-products.csv", { cache: "no-store" }).then((response) => response.text()),
+        fetch("data/product-images.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : {}).catch(() => ({}))
+      ]).then(([productsCsv, pfasCsv, productImages]) => {
+        state.productImages = productImages;
+        state.products = dedupeProducts([
+          ...parseCsv(productsCsv).map((product) => ({ ...product, Source: "Good Default" })),
+          ...parseCsv(pfasCsv).map((product) => ({ ...product, Source: "PFAS-free" }))
+        ].filter((product) => product.Name && product.Category));
+        chooseDefaults();
+        render();
+      });
+    </script>
+  </body>
+</html>
