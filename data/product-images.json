@@ -24,10 +24,10 @@
     "width": 1920
   },
   "baby|purecosi mico 30 infant car seat|maxi-cosi": {
-    "height": 900,
-    "source": "generated-replacement:baby",
-    "src": "assets/products/fallback-baby.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/baby-maxi-cosi-purecosi-mico-30-infant-car-seat-user-20260613.png",
+    "width": 777
   },
   "baby|safewash emblem convertible car seat|britax": {
     "height": 630,
@@ -66,10 +66,10 @@
     "width": 810
   },
   "beauty|clean at sephora products|sephora": {
-    "height": 900,
-    "source": "generated-fallback:beauty",
-    "src": "assets/products/fallback-beauty-medical.jpg",
-    "width": 900
+    "height": 125,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sephora_logo.svg?width=900",
+    "src": "assets/products/beauty-sephora-clean-at-sephora-products-3ce4cb3f.jpg",
+    "width": 960
   },
   "beauty|cosmetics|crunchi": {
     "height": 1500,
@@ -114,10 +114,10 @@
     "width": 285
   },
   "cleaning|paper towels and tissue|scott brand": {
-    "height": 900,
-    "source": "generated-fallback:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 1344,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cleaning-scott-brand-paper-towels-and-tissue-user-20260613.png",
+    "width": 1344
   },
   "cleaning|paper towels, bamboo|reel paper": {
     "height": 1024,
@@ -126,22 +126,22 @@
     "width": 1024
   },
   "cleaning|stain and water repellent spray|detrapel": {
-    "height": 900,
-    "source": "generated-fallback:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 438,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cleaning-detrapel-stain-and-water-repellent-spray-user-20260613.png",
+    "width": 780
   },
   "cleaning|waterproof spray, pfas-free|nikwax": {
-    "height": 900,
-    "source": "generated-fallback:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 2000,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cleaning-nikwax-waterproof-spray-pfas-free-user-20260613.png",
+    "width": 2000
   },
   "clothing|beta lightweight jacket|arc'teryx": {
-    "height": 900,
-    "source": "generated-replacement:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 1710,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-arc-teryx-beta-lightweight-jacket-user-20260613.png",
+    "width": 1350
   },
   "clothing|clothing and shoes|h&m": {
     "height": 634,
@@ -222,22 +222,22 @@
     "width": 800
   },
   "clothing|outerwear (select products)|patagonia": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 188,
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Patagonia_%28Unternehmen%29_logo.svg?width=900",
+    "src": "assets/products/clothing-patagonia-outerwear-select-products-ee4c7d29.jpg",
+    "width": 960
   },
   "clothing|rain gear|didriksons": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 516,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-didriksons-rain-gear-user-20260613.png",
+    "width": 387
   },
   "clothing|rain gear|houdini": {
-    "height": 900,
-    "source": "generated-fallback:clothing",
-    "src": "assets/products/fallback-clothing.jpg",
-    "width": 900
+    "height": 2880,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/clothing-houdini-rain-gear-user-20260613.png",
+    "width": 1920
   },
   "clothing|rain gear|jack wolfskin": {
     "height": 532,
@@ -300,10 +300,10 @@
     "width": 2048
   },
   "cookware|ceramic non-stick cookware|blue diamond": {
-    "height": 900,
-    "source": "generated-replacement:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 400,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cookware-blue-diamond-ceramic-non-stick-cookware-user-20260613.png",
+    "width": 600
   },
   "cookware|ceramic non-stick cookware|caraway": {
     "height": 628,
@@ -329,6 +329,12 @@
     "src": "assets/products/cookware-anchor-hocking-glass-bakeware-e2f71b03.jpg",
     "width": 300
   },
+  "cookware|instant pot duo plus 9-in-1 multicooker|instant pot": {
+    "height": 1023,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cookware-instant-pot-duo-plus-9-in-1-multicooker-user-20260613.png",
+    "width": 1500
+  },
   "cookware|kitchen knife set|bianco instruments": {
     "height": 266,
     "source": "https://m.media-amazon.com/images/I/61o6WdUUVJL._AC_SY300_SX300_QL70_ML2_.jpg",
@@ -342,10 +348,10 @@
     "width": 300
   },
   "cookware|stainless steel cook's spoon|rada cutlery": {
-    "height": 900,
-    "source": "generated-replacement:cookware",
-    "src": "assets/products/fallback-cookware-cleaning.jpg",
-    "width": 900
+    "height": 1080,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/cookware-rada-cutlery-stainless-steel-cook-s-spoon-user-20260613.png",
+    "width": 1080
   },
   "cookware|stainless steel serverspoon|rada cutlery": {
     "height": 274,
@@ -390,16 +396,16 @@
     "width": 1200
   },
   "fridge|butter, salted, organic|365 whole foods": {
-    "height": 960,
-    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Whole_Foods_Market_201x_logo.svg?width=900",
-    "src": "assets/products/fridge-365-whole-foods-butter-salted-organic-1a001cb5.jpg",
-    "width": 960
+    "height": 896,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/fridge-365-whole-foods-butter-salted-organic-user-20260613.png",
+    "width": 1050
   },
   "fridge|butter, salted, organic|horizon organic": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 1080,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/fridge-horizon-organic-butter-salted-organic-user-20260613.png",
+    "width": 1208
   },
   "home|furniture|ikea": {
     "height": 506,
@@ -444,10 +450,10 @@
     "width": 804
   },
   "home|trinova granite sealer|gold eagle": {
-    "height": 900,
-    "source": "generated-fallback:home",
-    "src": "assets/products/fallback-home.jpg",
-    "width": 900
+    "height": 500,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/home-gold-eagle-trinova-granite-sealer-user-20260613.png",
+    "width": 750
   },
   "medical|bamboo bandages|febu": {
     "height": 2000,
@@ -462,10 +468,10 @@
     "width": 1200
   },
   "medical|contact lenses|eiyan lens": {
-    "height": 900,
-    "source": "generated-fallback:beauty",
-    "src": "assets/products/fallback-beauty-medical.jpg",
-    "width": 900
+    "height": 494,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/medical-eiyan-lens-contact-lenses-user-20260613.png",
+    "width": 640
   },
   "medical|medical supplies and ifak pouches|ltc creed": {
     "height": 927,
@@ -516,16 +522,16 @@
     "width": 1200
   },
   "pantry|ghee, organic valley pasture-raised|organic valley": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 1044,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/pantry-organic-valley-ghee-organic-valley-pasture-raised-user-20260613.png",
+    "width": 1044
   },
   "pantry|ghee|ancient organics": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 800,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/pantry-ancient-organics-ghee-user-20260613.png",
+    "width": 800
   },
   "pantry|protein bars|jacob": {
     "height": 839,
@@ -534,10 +540,10 @@
     "width": 900
   },
   "pantry|salt, diamond crystal kosher salt|diamond crystal kosher salt": {
-    "height": 900,
-    "source": "generated-fallback:pantry",
-    "src": "assets/products/fallback-pantry.jpg",
-    "width": 900
+    "height": 1000,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/pantry-diamond-crystal-kosher-salt-user-20260613.png",
+    "width": 1000
   },
   "pantry|salt, maldon sea salt flakes|maldon": {
     "height": 683,
@@ -571,8 +577,8 @@
   },
   "personal care|cotton buds|clean skin club": {
     "height": 1080,
-    "source": "https://cdn.shopify.com/s/files/1/2774/0528/files/sensitive_skin_towels_50_count.png?v=1767892557",
-    "src": "assets/products/personal-care-clean-skin-club-cotton-buds-d4021ab5.jpg",
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/personal-care-clean-skin-club-cotton-buds-user-20260613.png",
     "width": 1080
   },
   "personal care|dental floss picks|the humble co.": {
@@ -612,10 +618,10 @@
     "width": 300
   },
   "personal care|facial tissues|caboo": {
-    "height": 1667,
-    "source": "https://cabooproducts.com/cdn/shop/files/SHOT22a_Adult-Wipe-Wrapped-Papper_1709_main_c129996b-3414-47ba-8576-54eb843f4d1e_2500x1667.jpg?v=1747758511",
-    "src": "assets/products/personal-care-caboo-facial-tissues-211736ad.jpg",
-    "width": 2500
+    "height": 1272,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/personal-care-caboo-facial-tissues-user-20260613.png",
+    "width": 1500
   },
   "personal care|nail care tools and tweezers|bianco instruments": {
     "height": 1080,
@@ -815,29 +821,29 @@
     "src": "assets/products/supplements-taha-nutrition-whey-isolate-protein-powder-unflavored-93c824e7.jpg",
     "width": 1766
   },
-  "tableware|baby spoon and fork|liberty tabletop": {
-    "height": 624,
-    "source": "https://libertytabletop.com/cdn/shop/files/Picture1.jpg?crop=center&height=1200&v=1778778604&width=1200",
-    "src": "assets/products/tableware-liberty-tabletop-baby-spoon-and-fork-e025c3c8.jpg",
-    "width": 1200
+  "tableware|arctic friends baby silverware|kleynimals": {
+    "height": 1468,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-kleynimals-arctic-friends-baby-silverware-user-20260613.png",
+    "width": 1445
   },
   "tableware|insulated stainless steel tumbler|yeti": {
-    "height": 263,
-    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/YETI_Holdings_logo.svg?width=900",
-    "src": "assets/products/tableware-yeti-insulated-stainless-steel-tumbler-0145a2f6.jpg",
-    "width": 960
+    "height": 1500,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-yeti-insulated-stainless-steel-tumbler-user-20260613.png",
+    "width": 731
   },
   "tableware|silicone straw tops for mason jars (sippy cups)|mason bottle": {
-    "height": 1000,
-    "source": "https://cdn.shopify.com/s/files/1/1000/3488/files/Drink_Top.png?v=1778877210",
-    "src": "assets/products/tableware-mason-bottle-silicone-straw-tops-for-mason-jars-sippy-cups-913c6446.jpg",
-    "width": 1000
+    "height": 1500,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-mason-bottle-silicone-straw-tops-for-mason-jars-user-20260613.png",
+    "width": 1500
   },
   "tableware|stackable mason jar glasses|ball": {
-    "height": 900,
-    "source": "generated-fallback:tableware",
-    "src": "assets/products/fallback-tableware.jpg",
-    "width": 900
+    "height": 566,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-ball-stackable-mason-jar-glasses-user-20260613.png",
+    "width": 594
   },
   "tableware|stainless steel drinkware|hydro flask": {
     "height": 630,
@@ -846,22 +852,22 @@
     "width": 1200
   },
   "tableware|stainless steel flatware|liberty tabletop": {
-    "height": 624,
-    "source": "https://libertytabletop.com/cdn/shop/files/Picture1.jpg?crop=center&height=1200&v=1778778604&width=1200",
-    "src": "assets/products/tableware-liberty-tabletop-stainless-steel-flatware-5a1e3d6b.jpg",
-    "width": 1200
+    "height": 1500,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-liberty-tabletop-stainless-steel-flatware-user-20260613.png",
+    "width": 1437
   },
   "tableware|stainless steel mason jar straw cup / sippy cup for kids|mason bottle": {
-    "height": 1000,
-    "source": "https://cdn.shopify.com/s/files/1/1000/3488/files/DrinkBottleMBB.png?v=1776100577",
-    "src": "assets/products/tableware-mason-bottle-stainless-steel-mason-jar-straw-cup-sippy-cup-for-kids-e66adf32.jpg",
-    "width": 1000
+    "height": 1500,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-mason-bottle-stainless-steel-mason-jar-straw-cup-user-20260613.png",
+    "width": 1500
   },
   "tableware|stainless steel plates and bowls|snow peak": {
-    "height": 226,
-    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Snow_Peak_logo.svg?width=900",
-    "src": "assets/products/tableware-snow-peak-stainless-steel-plates-and-bowls-2625fee8.jpg",
-    "width": 960
+    "height": 542,
+    "source": "user-supplied:2026-06-13",
+    "src": "assets/products/tableware-snow-peak-stainless-steel-plates-and-bowls-user-20260613.png",
+    "width": 1264
   },
   "tableware|titanium plate|snow peak": {
     "height": 1500,
