@@ -413,6 +413,12 @@
     "src": "assets/products/home-ikea-furniture-5b9997ae.jpg",
     "width": 900
   },
+  "home|american flags|gettysburg flag works": {
+    "height": 270,
+    "source": "https://www.gettysburgflag.com/media/catalog/product/cache/c831b74073e8f93ee349897f877fc397/7/4/74_1.jpg",
+    "src": "assets/products/home-gettysburg-flag-works-american-flags-74_1.jpg",
+    "width": 270
+  },
   "home|home carpet|interface": {
     "height": 318,
     "source": "https://shop.interface.com/dw/image/v2/BGTH_PRD/on/demandware.static/-/Library-Sites-int-content-global/default/dw5c4ecabc/images/nav/ams-nav/nav-carpet-tile-area-rugs-2026.jpg",
@@ -442,6 +448,12 @@
     "source": "https://cdn.shopify.com/s/files/1/0061/7195/1202/products/the-botanical-bliss-organic-latex-mattress-618537.jpg?v=1667792138",
     "src": "assets/products/home-plushbeds-mattresses-d9b65b19.jpg",
     "width": 1500
+  },
+  "home|organic 2 arms modular loveseat|the futon shop": {
+    "height": 525,
+    "source": "https://www.thefutonshop.com/media/catalog/product/2/a/2armloveseat2_3.jpg?width=700&height=525&optimize=high&fit=bounds",
+    "src": "assets/products/home-the-futon-shop-organic-2-arms-modular-loveseat-34e80c17.jpg",
+    "width": 700
   },
   "home|organic mattresses|naturepedic": {
     "height": 878,
