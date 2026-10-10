@@ -277,10 +277,11 @@
       }
 
       function filteredProducts() {
-        const query = state.query.trim().toLowerCase();
+        const terms = state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
         return state.products.filter((product) => {
           const categoryMatch = state.category === "All" || product.Category === state.category;
-          const queryMatch = !query || normalized(product).includes(query);
+          const searchableText = normalized(product);
+          const queryMatch = terms.every((term) => searchableText.includes(term));
           return categoryMatch && queryMatch;
         });
       }
