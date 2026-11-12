@@ -308,7 +308,7 @@
                 <h4 class="text-[10px] uppercase tracking-[0.2em] font-black text-stone-400 mb-5">The Vetted Picks</h4>
                 <div class="space-y-5">
                   {{ range $vettedPicks }}
-                    <a href="{{ .link }}" class="group grid grid-cols-[4.25rem_1fr] gap-4 items-center no-underline" target="_blank" rel="noopener">
+                    <a href="{{ .link }}" class="group grid grid-cols-[4.25rem_1fr] gap-4 items-center no-underline" target="_blank" rel="noopener sponsored">
                       <div class="aspect-square rounded-sm border border-stone-200 bg-stone-50 overflow-hidden flex items-center justify-center">
                         {{ if .image }}
                           <img src="{{ .image }}" alt="" class="w-full h-full object-contain mix-blend-multiply p-1.5 transition-transform duration-300 group-hover:scale-105">
