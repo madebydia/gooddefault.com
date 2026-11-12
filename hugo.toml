@@ -8,7 +8,7 @@ summaryLength = 32
 [params]
   description = "A searchable catalog of better household defaults, safer swaps, practical research, and zero sponsored placements."
   author = "Diana Park"
-  images = ["/assets/gooddefault.png"]
+  images = ["/assets/gooddefault.jpg"]
 
 [outputs]
   home = ["HTML", "RSS"]

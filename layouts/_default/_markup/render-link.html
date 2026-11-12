@@ -1,0 +1,6 @@
+{{- $url := .Destination -}}
+{{- if or (strings.HasPrefix $url "https://amzn.to") (strings.HasPrefix $url "https://www.amazon.com") -}}
+<a href="{{ $url | safeURL }}" target="_blank" rel="noopener sponsored">{{ .Text }}</a>
+{{- else -}}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+{{- end -}}

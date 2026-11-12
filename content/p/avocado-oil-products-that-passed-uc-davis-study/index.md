@@ -26,6 +26,10 @@ But the most useful part is not the shocking percentage. It is the very short li
 
 > **The strongest avocado oil results:** [Grove AvoYeah! Mayo Sauce](https://amzn.to/4weBLAb) and [Grove AvoYeah! Garlic Aioli](https://amzn.to/4g0kmFv). All tested lots of both products matched authentic avocado oil. No avocado oil chips or salad dressing passed in both lots. Prefer olive oil? [Graza "Original" Mayo](https://amzn.to/4hYXZTd) and [Graza "Fancy" Mayo](https://amzn.to/4wSPOwA) also passed both lots. [See every olive oil product that passed twice](#olive-oil-products-did-much-better).
 
+{{< affiliate-notice >}}
+If you choose to make a purchase through some of the links on this page, I may receive a small thank-you commission as an Amazon affiliate—at no cost to you! Thank you for your support!
+{{< /affiliate-notice >}}
+
 ## The Two Avocado Oil Products That Passed Both Lots
 
 ### [Grove AvoYeah! Mayo Sauce](https://amzn.to/4weBLAb)
