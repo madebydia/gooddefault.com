@@ -940,5 +940,41 @@
     "source": "https://cdn.shopify.com/s/files/1/0395/6359/1839/files/plant-based-floss-picks-kids-mint-50-pcs-6433486.png?v=1779305787",
     "src": "assets/products/personal-care-the-humble-co-kids-dinosaur-floss-picks.png",
     "width": 2048
+  },
+  "cookware|304 stainless steel test solution|wotermly": {
+    "height": 466,
+    "source": "https://m.media-amazon.com/images/I/71m7QTHBGjL._SX466_.jpg",
+    "src": "assets/products/cookware-wotermly-steel-test-solution.jpg",
+    "width": 466
+  },
+  "cookware|dinosaur cookie cutters (3-piece set)|ann clark": {
+    "height": 800,
+    "source": "https://m.media-amazon.com/images/I/718u8vOC2VL._SY800_.jpg",
+    "src": "assets/products/cookware-ann-clark-dinosaur-cutters.jpg",
+    "width": 800
+  },
+  "tableware|safari friends baby silverware|kleynimals": {
+    "height": 933,
+    "source": "https://cdn.shopify.com/s/files/1/0965/3629/7751/files/kleyflatware-267-Edit.jpg?v=1775514870",
+    "src": "assets/products/tableware-kleynimals-safari-friends.jpg",
+    "width": 1400
+  },
+  "tableware|stainless steel divided toddler plates (set of 4)|ahimsa": {
+    "height": 1024,
+    "source": "https://ahimsahome.com/cdn/shop/files/balanced-bites-plates-14_aa32757b-9fe0-4b66-ae63-1b61211087d0.webp?crop=center&height=1024&v=1765302859&width=1024",
+    "src": "assets/products/tableware-ahimsa-divided-plates-classic.webp",
+    "width": 1024
+  },
+  "tableware|stainless steel kids cups (set of 4)|ahimsa": {
+    "height": 1800,
+    "source": "https://ahimsahome.com/cdn/shop/files/3-conscious-cups-8-oz-rnb2-small-rainbow-cups-set-stainless-steel.webp?crop=center&height=1800&v=1754436932&width=1800",
+    "src": "assets/products/tableware-ahimsa-kids-cups-rainbow.webp",
+    "width": 1800
+  },
+  "tableware|stainless steel toddler plate / container|u konserve": {
+    "height": 1400,
+    "source": "https://cdn.shopify.com/s/files/1/0011/7545/3781/files/UKDR001_DividedRectangle3_Side2.png?v=1727185523",
+    "src": "assets/products/tableware-ukonserve-three-compartment-clear.png",
+    "width": 1399
   }
 }
