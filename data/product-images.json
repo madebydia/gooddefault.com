@@ -545,7 +545,7 @@
     "src": "assets/products/pantry-grove-avoyeah-mayo-sauce-ad8931ad.jpg",
     "width": 1024
   },
-  "pantry|coconut oil, organic virgin|dr bronner\u2019s": {
+  "pantry|coconut oil, organic virgin|dr bronner’s": {
     "height": 2048,
     "source": "https://cdn.shopify.com/s/files/1/0424/3475/6772/files/dr-bronners-virgin-coconut-oil-14oz-whole-kernel-1.jpg?v=1739602235",
     "src": "assets/products/pantry-dr-bronner-s-coconut-oil-organic-virgin-35fa39a8.jpg",
@@ -934,5 +934,11 @@
     "source": "https://www.outsidersstore.com/cdn/shop/files/614070900_OS.jpg?v=1694690900&width=1027",
     "src": "assets/products/tableware-snow-peak-titanium-plate-cc01e92d.jpg",
     "width": 1027
+  },
+  "personal care|kids dinosaur floss picks, mint (50 count)|the humble co.": {
+    "height": 2048,
+    "source": "https://cdn.shopify.com/s/files/1/0395/6359/1839/files/plant-based-floss-picks-kids-mint-50-pcs-6433486.png?v=1779305787",
+    "src": "assets/products/personal-care-the-humble-co-kids-dinosaur-floss-picks.png",
+    "width": 2048
   }
 }
